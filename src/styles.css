@@ -4,6 +4,33 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* ——— Imersão Equilíbrio Sistêmico: paleta editorial (off-white quente + dourado) ——— */
+@theme {
+  --color-bone: #faf7ef;
+  --color-cream: #f3ecdd;
+  --color-ink: #1a160f;
+  --color-espresso: #12100b;
+  --color-graphite: #4a443a;
+  --color-gold: #c2a24c;
+  --color-gold-deep: #9a7b2e;
+  --color-gold-soft: #e4d3a3;
+  --color-line: #e7dfcf;
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Inter", system-ui, sans-serif;
+
+  --radius-card: 14px;
+  --shadow-soft: 0 10px 40px -12px rgba(26, 22, 15, 0.18);
+}
+
+@utility grain {
+  position: relative;
+}
+
+@utility grain-overlay {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+}
+
 /*
  * Design system definition.
  *
@@ -138,7 +165,21 @@
   }
 
   body {
-    background-color: var(--color-background);
-    color: var(--color-foreground);
+    background-color: var(--color-bone);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-optical-sizing: auto;
+  }
+
+  ::selection {
+    background: var(--color-gold-soft);
+    color: var(--color-ink);
   }
 }
