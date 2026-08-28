@@ -52,6 +52,34 @@ export const IMERSAO = {
   cta: "Quero Restaurar Meu Equilíbrio",
   suporte: "https://wa.me/55XXXXXXXXXXX",
 
+  // ——— Stack de valor da oferta ———
+  stackValor: [
+    {
+      icone: "Video",
+      titulo: `Imersão Online e Ao Vivo (2 dias, ${IMERSAO.dataDia1} e ${IMERSAO.dataDia2})`,
+      descricao:
+        "Aulas transmitidas em Zoom com interação em tempo real, exercícios práticos e vivências sistêmicas conduzidas pelo Jonas.",
+    },
+    {
+      icone: "PlayCircle",
+      titulo: "Acesso às gravações por 6 meses",
+      descricao:
+        "Revise o conteúdo quantas vezes quiser. O acesso fica disponível para você aprofundar os pontos que mais fizerem sentido.",
+    },
+    {
+      icone: "FileText",
+      titulo: "Material de apoio: guia prático com exercícios sistêmicos",
+      descricao:
+        "PDF com roteiros, perguntas-gatilho e mapas para aplicar o método no seu dia a dia, nas relações e nas finanças.",
+    },
+    {
+      icone: "Gift",
+      titulo: "Bônus exclusivo: aula 'A Postura Sistêmica Diante do Dinheiro'",
+      descricao:
+        "Uma aula extra sobre o campo do dinheiro, lealdades invisíveis e como assumir a postura de adulto potente na prosperidade.",
+    },
+  ],
+
   // ——— Autoridade (placeholders) ———
   autoridade: {
     nome: "Jonas Peres",
