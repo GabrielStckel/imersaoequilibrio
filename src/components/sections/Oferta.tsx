@@ -90,7 +90,7 @@ export function Oferta() {
                 </div>
 
                 <div className="mt-8">
-                  <PrecoLote size="lg" className="justify-center" />
+                  <PrecoLote size="lg" align="center" />
                 </div>
 
                 <CtaButton origem="oferta" size="lg" className="mt-8 w-full" />
