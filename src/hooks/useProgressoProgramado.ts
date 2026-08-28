@@ -13,7 +13,7 @@ function calcular(): number {
 }
 
 export function useProgressoProgramado(): number {
-  const [pct, setPct] = useState(IMERSAO.progresso.percentInicial);
+  const [pct, setPct] = useState<number>(IMERSAO.progresso.percentInicial);
 
   useEffect(() => {
     setPct(calcular());

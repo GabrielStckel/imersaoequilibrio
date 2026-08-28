@@ -9,7 +9,10 @@ function resolver(): { lote: Lote; indice: number } {
 }
 
 export function useLoteAtivo() {
-  const [estado, setEstado] = useState(() => ({ lote: IMERSAO.lotes[0]!, indice: 0 }));
+  const [estado, setEstado] = useState<{ lote: Lote; indice: number }>(() => ({
+    lote: IMERSAO.lotes[0]!,
+    indice: 0,
+  }));
 
   useEffect(() => {
     setEstado(resolver());
