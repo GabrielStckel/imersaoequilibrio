@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import { IMERSAO } from "@/config/imersao";
 import { Countdown } from "@/components/Countdown";
 import { CtaButton } from "@/components/CtaButton";
@@ -33,12 +34,12 @@ export function CtaFinal() {
             © 2026 {IMERSAO.marca} · {IMERSAO.nome}
           </p>
           <nav className="flex flex-wrap gap-x-6 gap-y-2">
-            <a href="/termos" className="transition-colors hover:text-gold">
+            <Link to="/termos" className="transition-colors hover:text-gold">
               Termos de uso
-            </a>
-            <a href="/privacidade" className="transition-colors hover:text-gold">
+            </Link>
+            <Link to="/privacidade" className="transition-colors hover:text-gold">
               Política de privacidade
-            </a>
+            </Link>
             <a
               href={IMERSAO.suporte}
               target="_blank"
