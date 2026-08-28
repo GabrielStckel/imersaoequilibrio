@@ -1,24 +1,49 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+import { Tracking } from "@/components/Tracking";
+import { StickyBar } from "@/components/sections/StickyBar";
+import { Hero } from "@/components/sections/Hero";
+import { Diagnostico } from "@/components/sections/Diagnostico";
+import { CausaRaiz } from "@/components/sections/CausaRaiz";
+import { Metodo } from "@/components/sections/Metodo";
+import { Cronograma } from "@/components/sections/Cronograma";
+import { ParaQuem } from "@/components/sections/ParaQuem";
+import { Autoridade } from "@/components/sections/Autoridade";
+import { Oferta } from "@/components/sections/Oferta";
+import { Faq } from "@/components/sections/Faq";
+import { CtaFinal } from "@/components/sections/CtaFinal";
+
+const titulo = "Imersão Equilíbrio Sistêmico — 06 e 07 de outubro, ao vivo";
+const descricao =
+  "Dois dias ao vivo de terapia sistêmica para desarmar a carência que faz você aceitar migalhas no amor e na vida financeira. Vagas por lote, a partir de R$ 47.";
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: titulo },
+      { name: "description", content: descricao },
+      { property: "og:title", content: titulo },
+      { property: "og:description", content: descricao },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <main className="bg-bone">
+      <Tracking />
+      <StickyBar />
+      <Hero />
+      <Diagnostico />
+      <CausaRaiz />
+      <Metodo />
+      <Cronograma />
+      <ParaQuem />
+      <Autoridade />
+      <Oferta />
+      <Faq />
+      <CtaFinal />
+    </main>
   );
 }
