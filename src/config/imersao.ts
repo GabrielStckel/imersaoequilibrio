@@ -1,14 +1,17 @@
 // Arquivo único de configuração da página.
 // Edite datas, preços, lotes, links e textos aqui — nenhum componente precisa ser tocado.
 
+const DATA_DIA_1 = "06/10/2026";
+const DATA_DIA_2 = "07/10/2026";
+
 export const IMERSAO = {
   nome: "Equilíbrio Sistêmico",
   marca: "Antiparadigma",
 
   // ——— Countdown (conta até o início do Dia 1) ———
   inicioEvento: "2026-10-06T19:30:00-03:00",
-  dataDia1: "06/10/2026",
-  dataDia2: "07/10/2026",
+  dataDia1: DATA_DIA_1,
+  dataDia2: DATA_DIA_2,
   horario: "19h30 às 21h30",
 
   // ——— Barra de progresso programada por data ———
@@ -52,6 +55,34 @@ export const IMERSAO = {
   cta: "Quero Restaurar Meu Equilíbrio",
   suporte: "https://wa.me/55XXXXXXXXXXX",
 
+  // ——— Stack de valor da oferta ———
+  stackValor: [
+    {
+      icone: "Video",
+      titulo: `Imersão Online e Ao Vivo (2 dias, ${DATA_DIA_1} e ${DATA_DIA_2})`,
+      descricao:
+        "Aulas transmitidas em Zoom com interação em tempo real, exercícios práticos e vivências sistêmicas conduzidas pelo Jonas.",
+    },
+    {
+      icone: "PlayCircle",
+      titulo: "Acesso às gravações por 6 meses",
+      descricao:
+        "Revise o conteúdo quantas vezes quiser. O acesso fica disponível para você aprofundar os pontos que mais fizerem sentido.",
+    },
+    {
+      icone: "FileText",
+      titulo: "Material de apoio: guia prático com exercícios sistêmicos",
+      descricao:
+        "PDF com roteiros, perguntas-gatilho e mapas para aplicar o método no seu dia a dia, nas relações e nas finanças.",
+    },
+    {
+      icone: "Gift",
+      titulo: "Bônus exclusivo: aula 'A Postura Sistêmica Diante do Dinheiro'",
+      descricao:
+        "Uma aula extra sobre o campo do dinheiro, lealdades invisíveis e como assumir a postura de adulto potente na prosperidade.",
+    },
+  ],
+
   // ——— Autoridade (placeholders) ———
   autoridade: {
     nome: "Jonas Peres",
@@ -70,3 +101,4 @@ export const IMERSAO = {
 } as const;
 
 export type Lote = (typeof IMERSAO.lotes)[number];
+export type StackValor = (typeof IMERSAO.stackValor)[number];
