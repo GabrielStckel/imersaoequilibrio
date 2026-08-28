@@ -1,14 +1,17 @@
 // Arquivo único de configuração da página.
 // Edite datas, preços, lotes, links e textos aqui — nenhum componente precisa ser tocado.
 
+const DATA_DIA_1 = "06/10/2026";
+const DATA_DIA_2 = "07/10/2026";
+
 export const IMERSAO = {
   nome: "Equilíbrio Sistêmico",
   marca: "Antiparadigma",
 
   // ——— Countdown (conta até o início do Dia 1) ———
   inicioEvento: "2026-10-06T19:30:00-03:00",
-  dataDia1: "06/10/2026",
-  dataDia2: "07/10/2026",
+  dataDia1: DATA_DIA_1,
+  dataDia2: DATA_DIA_2,
   horario: "19h30 às 21h30",
 
   // ——— Barra de progresso programada por data ———
@@ -56,7 +59,7 @@ export const IMERSAO = {
   stackValor: [
     {
       icone: "Video",
-      titulo: `Imersão Online e Ao Vivo (2 dias, ${IMERSAO.dataDia1} e ${IMERSAO.dataDia2})`,
+      titulo: `Imersão Online e Ao Vivo (2 dias, ${DATA_DIA_1} e ${DATA_DIA_2})`,
       descricao:
         "Aulas transmitidas em Zoom com interação em tempo real, exercícios práticos e vivências sistêmicas conduzidas pelo Jonas.",
     },
@@ -98,3 +101,4 @@ export const IMERSAO = {
 } as const;
 
 export type Lote = (typeof IMERSAO.lotes)[number];
+export type StackValor = (typeof IMERSAO.stackValor)[number];
