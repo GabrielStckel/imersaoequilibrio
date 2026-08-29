@@ -52,7 +52,9 @@ export const IMERSAO = {
   metaPixelId: "", // preencha com o ID do Meta Pixel
   utmifyAtivo: true,
 
-  cta: "Quero Restaurar Meu Equilíbrio",
+  // Texto base do botão. O nome do lote ativo é adicionado automaticamente:
+  // "Garantir Vaga" → "Garantir Vaga 1º Lote"
+  cta: "Garantir Vaga",
   suporte: "https://wa.me/55XXXXXXXXXXX",
 
   // ——— Stack de valor da oferta ———
