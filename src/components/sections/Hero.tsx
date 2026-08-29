@@ -53,15 +53,21 @@ export function Hero() {
       />
 
       <div className="relative mx-auto grid max-w-6xl gap-x-14 px-5 pb-20 pt-20 sm:px-8 lg:grid-cols-[1.02fr_0.98fr] lg:items-start lg:pb-28 lg:pt-28">
-        {/* Topo: label + título (menor) */}
+        {/* Topo: label + título (sempre 3 linhas) */}
         <div className="lg:col-start-1 lg:row-start-1">
           <Reveal>
             <SectionLabel tone="dark">Imersão Online e Ao Vivo · 06 e 07 de Outubro</SectionLabel>
           </Reveal>
           <Reveal delay={80}>
-            <h1 className="mt-7 font-display text-[1.7rem] font-semibold leading-[1.2] tracking-[-0.005em] text-bone sm:text-[2rem] lg:max-w-[34ch] lg:text-[1.55rem]">
-              Por que doar-se demais está afastando o respeito na sua relação amorosa e travando o
-              fluxo do seu dinheiro?
+            {/* Título com quebras fixas → sempre 3 linhas em qualquer dispositivo.
+                A fonte é fluida (clamp) e encolhe no mobile o suficiente para cada
+                linha caber. Se editar o texto, reveja as quebras <br />. */}
+            <h1 className="mt-7 font-display text-[clamp(0.9rem,3.9vw,1.6rem)] font-semibold leading-[1.16] tracking-[-0.005em] text-bone">
+              Por que doar-se demais está afastando
+              <br />
+              o respeito na sua relação amorosa
+              <br />
+              e travando o fluxo do seu dinheiro?
             </h1>
           </Reveal>
         </div>
