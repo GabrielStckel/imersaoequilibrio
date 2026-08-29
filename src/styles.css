@@ -16,7 +16,7 @@
   --color-gold-soft: #e4d3a3;
   --color-line: #e7dfcf;
 
-  --font-display: "Fraunces", Georgia, serif;
+  --font-display: "Inter", system-ui, sans-serif;
   --font-body: "Inter", system-ui, sans-serif;
 
   --radius-card: 14px;
