@@ -29,7 +29,7 @@ export function StickyBar() {
           </p>
           <CountdownInline className="text-[0.8rem] text-bone/70" />
         </div>
-        <CtaButton label="Garantir vaga" size="sm" origem="sticky" className="shrink-0" />
+        <CtaButton size="sm" origem="sticky" className="shrink-0" />
       </div>
     </div>
   );
