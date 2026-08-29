@@ -20,6 +20,7 @@ export function CtaButton({
   origem,
 }: Props) {
   const { lote } = useLoteAtivo();
+  const textoCta = label ?? `${IMERSAO.cta} ${lote.nome}`;
 
   const sizes = {
     sm: "px-4 py-2 text-[0.78rem]",
@@ -32,7 +33,7 @@ export function CtaButton({
       href={lote.checkout}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label={label ?? IMERSAO.cta}
+      aria-label={textoCta}
       onClick={() =>
         trackInitiateCheckout({ origem, lote: lote.nome, value: lote.preco, currency: "BRL" })
       }
@@ -46,7 +47,7 @@ export function CtaButton({
         className,
       )}
     >
-      {label ?? IMERSAO.cta}
+      {textoCta}
       <ArrowRight
         className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
         strokeWidth={1.5}
