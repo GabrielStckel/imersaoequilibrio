@@ -8,25 +8,39 @@ import { SectionLabel } from "@/components/SectionLabel";
 import { Reveal } from "@/components/Reveal";
 
 function HeroVideo() {
+  const { embedUrl, legenda } = IMERSAO.video;
+
   return (
     <div>
       <div className="relative aspect-video w-full overflow-hidden rounded-card border border-gold/20 bg-ink/60">
-        <span
-          aria-hidden="true"
-          className="absolute left-3.5 top-3.5 h-12 w-12 border-l border-t border-gold/50"
-        />
-        <span
-          aria-hidden="true"
-          className="absolute bottom-3.5 right-3.5 h-12 w-12 border-b border-r border-gold/50"
-        />
-        <div className="absolute inset-0 flex flex-col items-center justify-center gap-3.5">
-          <span className="flex h-[74px] w-[74px] items-center justify-center rounded-full bg-gold shadow-[0_12px_40px_-8px_rgba(194,162,76,0.7)]">
-            <Play className="ml-1 h-6 w-6 text-ink" fill="currentColor" strokeWidth={0} />
-          </span>
-          <span className="font-body text-[0.64rem] uppercase tracking-[0.22em] text-gold-soft/70">
-            Assista ao vídeo de convite
-          </span>
-        </div>
+        {embedUrl ? (
+          <iframe
+            src={embedUrl}
+            title={legenda}
+            className="absolute inset-0 h-full w-full"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        ) : (
+          <>
+            <span
+              aria-hidden="true"
+              className="absolute left-3.5 top-3.5 h-12 w-12 border-l border-t border-gold/50"
+            />
+            <span
+              aria-hidden="true"
+              className="absolute bottom-3.5 right-3.5 h-12 w-12 border-b border-r border-gold/50"
+            />
+            <div className="absolute inset-0 flex flex-col items-center justify-center gap-3.5">
+              <span className="flex h-[74px] w-[74px] items-center justify-center rounded-full bg-gold shadow-[0_12px_40px_-8px_rgba(194,162,76,0.7)]">
+                <Play className="ml-1 h-6 w-6 text-ink" fill="currentColor" strokeWidth={0} />
+              </span>
+              <span className="font-body text-[0.64rem] uppercase tracking-[0.22em] text-gold-soft/70">
+                {legenda}
+              </span>
+            </div>
+          </>
+        )}
       </div>
 
       <p className="mt-[18px] max-w-[48ch] font-body text-[0.9rem] leading-[1.6] text-bone/60">

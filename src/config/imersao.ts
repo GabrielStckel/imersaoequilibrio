@@ -14,6 +14,14 @@ export const IMERSAO = {
   dataDia2: DATA_DIA_2,
   horario: "19h30 às 21h30",
 
+  // ——— Vídeo do hero (VSL) ———
+  video: {
+    // Cole a URL de EMBED do seu player (YouTube, Vimeo, Panda, etc).
+    // Ex.: "https://www.youtube.com/embed/XXXXXXXX". Vazio = mostra o player-placeholder.
+    embedUrl: "",
+    legenda: "Assista antes de garantir sua vaga",
+  },
+
   // ——— Barra de progresso programada por data ———
   progresso: {
     aberturaVendas: "2026-09-05T09:00:00-03:00",
