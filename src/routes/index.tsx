@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 
 import { Tracking } from "@/components/Tracking";
-import { StickyBar } from "@/components/sections/StickyBar";
+import { Header } from "@/components/sections/Header";
 import { Hero } from "@/components/sections/Hero";
 import { Diagnostico } from "@/components/sections/Diagnostico";
 import { CausaRaiz } from "@/components/sections/CausaRaiz";
@@ -33,7 +33,7 @@ function Index() {
   return (
     <main className="bg-bone">
       <Tracking />
-      <StickyBar />
+      <Header />
       <Hero />
       <Diagnostico />
       <CausaRaiz />
