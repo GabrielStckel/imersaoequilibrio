@@ -102,11 +102,11 @@ export function Oferta() {
                         <span className="relative flex h-10 w-10 items-center justify-center rounded-xl border border-gold/25 bg-bone/80 text-gold-deep shadow-sm transition-colors duration-300 group-hover:border-gold/50 group-hover:bg-bone group-hover:text-gold sm:h-11 sm:w-11">
                           <Icon className="h-4 w-4 sm:h-5 sm:w-5" strokeWidth={1.5} aria-hidden="true" />
                         </span>
-                        <h3 className="relative mt-4 font-display text-[0.95rem] font-semibold leading-snug text-ink sm:mt-5 sm:text-[1.05rem] lg:mt-3 lg:text-[0.95rem] xl:text-[1.05rem]">
+                        <h3 className="relative mt-4 font-display text-[0.95rem] font-semibold leading-snug text-ink sm:mt-5 sm:text-[1.05rem] lg:mt-3 lg:text-[1rem] xl:text-[1.05rem]">
                           {item.titulo}
                         </h3>
                       </div>
-                      <p className="relative mt-2 font-body text-[0.8rem] leading-[1.65] text-graphite sm:mt-3 sm:text-[0.9rem] lg:mt-0 lg:text-[0.82rem] xl:text-[0.9rem]">
+                      <p className="relative mt-2 line-clamp-4 font-body text-[0.8rem] leading-[1.6] text-graphite sm:mt-3 sm:text-[0.9rem] lg:mt-0 lg:text-[0.82rem] xl:text-[0.85rem]">
                         {item.descricao}
                       </p>
                     </article>
