@@ -90,23 +90,23 @@ export function Oferta() {
                   return (
                     <article
                       key={item.titulo}
-                      className="group relative flex flex-col overflow-hidden rounded-[var(--radius-card)] border border-line bg-cream/40 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-gold/40 hover:bg-cream/80 hover:shadow-[var(--shadow-soft)] sm:p-6 lg:aspect-square lg:justify-between lg:p-5"
+                      className="group relative flex flex-col overflow-hidden rounded-[var(--radius-card)] border border-line bg-cream/40 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-gold/40 hover:bg-cream/80 hover:shadow-[var(--shadow-soft)] sm:p-6 lg:aspect-square lg:justify-between lg:gap-2 lg:p-4 xl:p-5"
                     >
                       <span
                         aria-hidden="true"
-                        className="absolute right-2 top-1 font-display text-[3.5rem] font-semibold leading-none text-gold/[0.06] transition-colors duration-300 group-hover:text-gold/[0.12] sm:right-3 sm:top-2 sm:text-[4rem]"
+                        className="absolute right-2 top-1 font-display text-[2.75rem] font-semibold leading-none text-gold/[0.06] transition-colors duration-300 group-hover:text-gold/[0.12]"
                       >
                         0{i + 1}
                       </span>
                       <div>
-                        <span className="relative flex h-10 w-10 items-center justify-center rounded-xl border border-gold/25 bg-bone/80 text-gold-deep shadow-sm transition-colors duration-300 group-hover:border-gold/50 group-hover:bg-bone group-hover:text-gold sm:h-11 sm:w-11">
-                          <Icon className="h-4 w-4 sm:h-5 sm:w-5" strokeWidth={1.5} aria-hidden="true" />
+                        <span className="relative flex h-10 w-10 items-center justify-center rounded-xl border border-gold/25 bg-bone/80 text-gold-deep shadow-sm transition-colors duration-300 group-hover:border-gold/50 group-hover:bg-bone group-hover:text-gold sm:h-11 sm:w-11 lg:h-9 lg:w-9">
+                          <Icon className="h-4 w-4" strokeWidth={1.5} aria-hidden="true" />
                         </span>
-                        <h3 className="relative mt-4 font-display text-[0.95rem] font-semibold leading-snug text-ink sm:mt-5 sm:text-[1.05rem] lg:mt-3 lg:text-[1rem] xl:text-[1.05rem]">
+                        <h3 className="relative mt-4 font-display text-[0.95rem] font-semibold leading-snug text-ink sm:mt-5 sm:text-[1.05rem] lg:mt-2.5 lg:text-[0.95rem] lg:leading-tight">
                           {item.titulo}
                         </h3>
                       </div>
-                      <p className="relative mt-2 line-clamp-4 font-body text-[0.8rem] leading-[1.6] text-graphite sm:mt-3 sm:text-[0.9rem] lg:mt-0 lg:text-[0.82rem] xl:text-[0.85rem]">
+                      <p className="relative mt-2 line-clamp-4 font-body text-[0.8rem] leading-[1.6] text-graphite sm:mt-3 sm:text-[0.9rem] lg:mt-0 lg:line-clamp-3 lg:text-[0.78rem] lg:leading-[1.5] xl:text-[0.8rem]">
                         {item.descricao}
                       </p>
                     </article>
