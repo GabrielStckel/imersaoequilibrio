@@ -44,7 +44,7 @@ export function Oferta() {
         className="pointer-events-none absolute -right-40 bottom-0 h-[32rem] w-[32rem] rounded-full bg-gold/5 blur-[120px]"
       />
 
-      <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
+      <div className="relative mx-auto max-w-6xl px-5 sm:px-8 lg:max-w-[88rem]">
         {/* Header */}
         <Reveal>
           <div className="flex flex-col items-center text-center">
@@ -72,9 +72,9 @@ export function Oferta() {
 
         {/* Main offer grid */}
         <Reveal delay={120}>
-          <div className="mt-14 grid overflow-hidden rounded-[28px] border border-gold/12 bg-bone shadow-[0_60px_140px_-50px_rgba(12,10,8,0.75)] lg:grid-cols-[1.25fr_0.75fr]">
+          <div className="mt-14 grid overflow-hidden rounded-[28px] border border-gold/12 bg-bone shadow-[0_60px_140px_-50px_rgba(12,10,8,0.75)] lg:grid-cols-[1fr_1.15fr]">
             {/* ——— Esquerda: stack de valor ——— */}
-            <div className="p-8 sm:p-12 lg:p-10 xl:p-12">
+            <div className="p-8 sm:p-12 lg:p-8 xl:p-10">
               <div className="mb-8 flex items-center gap-3">
                 <span className="flex h-9 w-9 items-center justify-center rounded-full bg-gold/10 text-gold-deep">
                   <Check className="h-5 w-5" strokeWidth={2.5} />
