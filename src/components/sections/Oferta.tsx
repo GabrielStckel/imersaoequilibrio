@@ -179,7 +179,7 @@ export function Oferta() {
                     return (
                       <div
                         key={l.nome}
-                        className="flex flex-col items-center justify-center rounded-2xl border border-gold-soft/15 bg-white/[0.02] px-3 py-5 transition-all duration-300"
+                        className="flex flex-col items-center justify-center rounded-2xl border border-gold-soft/15 bg-white/[0.02] px-3 py-5 transition-all duration-300 lg:py-6"
                       >
                         <span className="font-body text-[0.58rem] font-semibold uppercase tracking-[0.14em] text-gold-soft/45 lg:text-[0.68rem]">
                           {l.nome}
