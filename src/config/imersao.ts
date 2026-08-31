@@ -85,6 +85,12 @@ export const IMERSAO = {
       descricao:
         "Uma aula extra sobre o campo do dinheiro, lealdades invisíveis e como assumir a postura de adulto potente na prosperidade.",
     },
+    {
+      icone: "Sparkles",
+      titulo: "Valor total do programa",
+      descricao:
+        "Programa completo com imersão ao vivo, material de apoio e bônus exclusivo. Valor real de R$ 497, hoje por uma fração.",
+    },
   ],
 
   // ——— Autoridade (placeholders) ———

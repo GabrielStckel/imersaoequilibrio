@@ -12,6 +12,7 @@ const iconMap: Record<string, LucideIcon> = {
   PlayCircle,
   FileText,
   Gift,
+  Sparkles,
 };
 
 function precoPartes(preco: string) {
