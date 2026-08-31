@@ -44,7 +44,7 @@ export function Oferta() {
         className="pointer-events-none absolute -right-40 bottom-0 h-[32rem] w-[32rem] rounded-full bg-gold/5 blur-[120px]"
       />
 
-      <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
+      <div className="relative mx-auto max-w-6xl px-5 sm:px-8 lg:max-w-[88rem]">
         {/* Header */}
         <Reveal>
           <div className="flex flex-col items-center text-center">
@@ -72,9 +72,9 @@ export function Oferta() {
 
         {/* Main offer grid */}
         <Reveal delay={120}>
-          <div className="mt-14 grid overflow-hidden rounded-[28px] border border-gold/12 bg-bone shadow-[0_60px_140px_-50px_rgba(12,10,8,0.75)] lg:grid-cols-[1.25fr_0.75fr]">
+          <div className="mt-14 grid overflow-hidden rounded-[28px] border border-gold/12 bg-bone shadow-[0_60px_140px_-50px_rgba(12,10,8,0.75)] lg:grid-cols-[1fr_1.15fr]">
             {/* ——— Esquerda: stack de valor ——— */}
-            <div className="p-8 sm:p-12 lg:p-10 xl:p-12">
+            <div className="p-8 sm:p-12 lg:p-8 xl:p-10">
               <div className="mb-8 flex items-center gap-3">
                 <span className="flex h-9 w-9 items-center justify-center rounded-full bg-gold/10 text-gold-deep">
                   <Check className="h-5 w-5" strokeWidth={2.5} />
@@ -99,14 +99,14 @@ export function Oferta() {
                         0{i + 1}
                       </span>
                       <div>
-                        <span className="relative flex h-10 w-10 items-center justify-center rounded-xl border border-gold/25 bg-bone/80 text-gold-deep shadow-sm transition-colors duration-300 group-hover:border-gold/50 group-hover:bg-bone group-hover:text-gold sm:h-11 sm:w-11 lg:h-9 lg:w-9">
+                        <span className="relative flex h-11 w-11 items-center justify-center rounded-xl border border-gold/25 bg-bone/80 text-gold-deep shadow-sm transition-colors duration-300 group-hover:border-gold/50 group-hover:bg-bone group-hover:text-gold lg:h-9 lg:w-9">
                           <Icon className="h-4 w-4" strokeWidth={1.5} aria-hidden="true" />
                         </span>
-                        <h3 className="relative mt-4 font-display text-[0.95rem] font-semibold leading-snug text-ink sm:mt-5 sm:text-[1.05rem] lg:mt-2.5 lg:text-[0.95rem] lg:leading-tight">
+                        <h3 className="relative mt-4 font-display text-[0.95rem] font-semibold leading-snug text-ink sm:text-[1.05rem] lg:mt-2.5 lg:text-[0.9rem] lg:leading-tight">
                           {item.titulo}
                         </h3>
                       </div>
-                      <p className="relative mt-2 line-clamp-4 font-body text-[0.8rem] leading-[1.6] text-graphite sm:mt-3 sm:text-[0.9rem] lg:mt-0 lg:line-clamp-3 lg:text-[0.78rem] lg:leading-[1.5] xl:text-[0.8rem]">
+                      <p className="relative mt-2 line-clamp-4 font-body text-[0.85rem] leading-[1.6] text-graphite sm:text-[0.92rem] lg:mt-0 lg:line-clamp-3 lg:text-[0.75rem] lg:leading-[1.5] xl:text-[0.78rem]">
                         {item.descricao}
                       </p>
                     </article>
@@ -116,7 +116,7 @@ export function Oferta() {
             </div>
 
             {/* ——— Direita: painel de preço ——— */}
-            <div className="relative flex flex-col items-center bg-espresso px-8 py-12 text-center sm:px-12 lg:border-l lg:border-gold/15 lg:py-14">
+            <div className="relative flex flex-col items-center bg-espresso px-8 py-12 text-center sm:px-12 lg:border-l lg:border-gold/15 lg:px-10 lg:py-16 xl:px-12 xl:py-20">
               {/* Top gold accent line */}
               <div
                 aria-hidden="true"
@@ -129,7 +129,7 @@ export function Oferta() {
                 className="pointer-events-none absolute left-1/2 top-1/3 h-[22rem] w-[22rem] -translate-x-1/2 rounded-full bg-gold/8 blur-[90px]"
               />
 
-              <span className="relative inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-4 py-2 font-body text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-gold">
+              <span className="relative inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-4 py-2 font-body text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-gold lg:px-5 lg:py-2.5 lg:text-[0.7rem]">
                 <span className="relative flex h-1.5 w-1.5">
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-gold opacity-75" />
                   <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-gold" />
@@ -137,17 +137,17 @@ export function Oferta() {
                 {IMERSAO.lotes[indice]?.nome} · Valor promocional
               </span>
 
-              <p className="relative mt-5 max-w-[34ch] font-body text-[0.9rem] leading-[1.6] text-bone/55">
+              <p className="relative mt-5 max-w-[34ch] font-body text-[0.9rem] leading-[1.6] text-bone/55 lg:max-w-[38ch] lg:text-[0.95rem]">
                 Para que mais pessoas possam viver essa experiência,{" "}
                 <b className="font-medium italic text-gold-soft">
                   o primeiro lote tem valor especial.
                 </b>
               </p>
 
-              <div className="relative mt-7 font-body text-[1rem] text-bone/80">
+              <div className="relative mt-7 font-body text-[1rem] text-bone/80 lg:text-[1.1rem]">
                 Hoje você garante tudo isso por:
               </div>
-              <div className="relative mt-1 font-body text-[0.95rem] text-bone/35">
+              <div className="relative mt-1 font-body text-[0.95rem] text-bone/35 lg:text-[1.05rem]">
                 De <s className="line-through">{IMERSAO.valorCheio}</s>
               </div>
 
@@ -158,13 +158,13 @@ export function Oferta() {
                   const l = IMERSAO.lotes[indice] ?? IMERSAO.lotes[0];
                   const { cifra, numero } = precoPartes(l.preco);
                   return (
-                    <div className="flex w-full flex-col items-center justify-center rounded-2xl border-[1.5px] border-gold bg-gradient-to-b from-gold/18 to-gold/[0.03] px-3 py-6 shadow-[0_0_55px_-10px_rgba(194,162,76,0.45)] transition-all duration-300">
-                      <span className="font-body text-[0.62rem] font-semibold uppercase tracking-[0.14em] text-gold">
+                    <div className="flex w-full flex-col items-center justify-center rounded-2xl border-[1.5px] border-gold bg-gradient-to-b from-gold/18 to-gold/[0.03] px-3 py-6 shadow-[0_0_55px_-10px_rgba(194,162,76,0.45)] transition-all duration-300 lg:py-8">
+                      <span className="font-body text-[0.62rem] font-semibold uppercase tracking-[0.14em] text-gold lg:text-[0.72rem]">
                         Lote especial
                       </span>
                       <span className="mt-2 font-display font-semibold leading-none text-gold">
-                        <span className="align-top text-[1.35rem]">{cifra}</span>{" "}
-                        <span className="text-[3rem]">{numero}</span>
+                        <span className="align-top text-[1.35rem] lg:text-[1.65rem]">{cifra}</span>{" "}
+                        <span className="text-[3rem] lg:text-[3.75rem]">{numero}</span>
                       </span>
                     </div>
                   );
@@ -179,16 +179,16 @@ export function Oferta() {
                     return (
                       <div
                         key={l.nome}
-                        className="flex flex-col items-center justify-center rounded-2xl border border-gold-soft/15 bg-white/[0.02] px-3 py-5 transition-all duration-300"
+                        className="flex flex-col items-center justify-center rounded-2xl border border-gold-soft/15 bg-white/[0.02] px-3 py-5 transition-all duration-300 lg:py-6"
                       >
-                        <span className="font-body text-[0.58rem] font-semibold uppercase tracking-[0.14em] text-gold-soft/45">
+                        <span className="font-body text-[0.58rem] font-semibold uppercase tracking-[0.14em] text-gold-soft/45 lg:text-[0.68rem]">
                           {l.nome}
                         </span>
                         <span className="mt-2 font-display font-semibold leading-none text-bone/40">
-                          <span className="align-top text-[0.85rem]">{cifra}</span>{" "}
-                          <span className={cn("text-[1.6rem]", passado && "line-through")}>{numero}</span>
+                          <span className="align-top text-[0.85rem] lg:text-[1rem]">{cifra}</span>{" "}
+                          <span className={cn("text-[1.6rem] lg:text-[2rem]", passado && "line-through")}>{numero}</span>
                         </span>
-                        <span className="mt-1.5 font-body text-[0.65rem] font-medium uppercase tracking-[0.12em] text-bone/30">
+                        <span className="mt-1.5 font-body text-[0.65rem] font-medium uppercase tracking-[0.12em] text-bone/30 lg:text-[0.72rem]">
                           Em breve
                         </span>
                       </div>
@@ -197,19 +197,19 @@ export function Oferta() {
                 </div>
               </div>
 
-              <div className="relative mt-6 font-body text-[0.66rem] uppercase tracking-[0.16em] text-bone/50">
+              <div className="relative mt-6 font-body text-[0.66rem] uppercase tracking-[0.16em] text-bone/50 lg:text-[0.72rem]">
                 Preço exclusivo enquanto durar o lote
               </div>
 
-              <CtaButton origem="oferta" size="lg" className="relative mt-5 w-full" />
+              <CtaButton origem="oferta" size="lg" className="relative mt-5 w-full lg:py-5 lg:text-lg" />
 
               <ProgressoLote tone="dark" className="relative mt-5 max-w-none" />
 
-              <div className="relative mt-6 flex w-full items-center justify-center gap-2.5 border-t border-gold/12 pt-5 font-body text-[0.8rem] text-bone/55">
+              <div className="relative mt-6 flex w-full items-center justify-center gap-2.5 border-t border-gold/12 pt-5 font-body text-[0.8rem] text-bone/55 lg:text-[0.85rem]">
                 <Lock className="h-4 w-4 text-gold" strokeWidth={1.6} aria-hidden="true" />
                 Pagamento Seguro · Hotmart · Garantia de 7 dias
               </div>
-              <p className="relative mt-3 max-w-[42ch] font-body text-[0.74rem] leading-[1.6] text-bone/40">
+              <p className="relative mt-3 max-w-[42ch] font-body text-[0.74rem] leading-[1.6] text-bone/40 lg:max-w-[46ch] lg:text-[0.8rem]">
                 7 dias de garantia incondicional. Se sentir que a profundidade do conteúdo não é para
                 você, devolvemos 100% do valor.
               </p>
