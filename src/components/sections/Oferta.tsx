@@ -84,7 +84,7 @@ export function Oferta() {
                 </span>
               </div>
 
-              <div className="grid grid-cols-2 gap-5 lg:grid-cols-4">
+              <div className="grid grid-cols-2 gap-5 lg:grid-cols-2">
                 {IMERSAO.stackValor.map((item, i) => {
                   const Icon = iconMap[item.icone] || Check;
                   return (
