@@ -116,7 +116,7 @@ export function Oferta() {
             </div>
 
             {/* ——— Direita: painel de preço ——— */}
-            <div className="relative flex flex-col items-center bg-espresso px-8 py-12 text-center sm:px-12 lg:border-l lg:border-gold/15 lg:py-14">
+            <div className="relative flex flex-col items-center bg-espresso px-8 py-12 text-center sm:px-12 lg:border-l lg:border-gold/15 lg:px-10 lg:py-16 xl:px-12 xl:py-20">
               {/* Top gold accent line */}
               <div
                 aria-hidden="true"
@@ -129,7 +129,7 @@ export function Oferta() {
                 className="pointer-events-none absolute left-1/2 top-1/3 h-[22rem] w-[22rem] -translate-x-1/2 rounded-full bg-gold/8 blur-[90px]"
               />
 
-              <span className="relative inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-4 py-2 font-body text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-gold">
+              <span className="relative inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-4 py-2 font-body text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-gold lg:px-5 lg:py-2.5 lg:text-[0.7rem]">
                 <span className="relative flex h-1.5 w-1.5">
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-gold opacity-75" />
                   <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-gold" />
@@ -137,17 +137,17 @@ export function Oferta() {
                 {IMERSAO.lotes[indice]?.nome} · Valor promocional
               </span>
 
-              <p className="relative mt-5 max-w-[34ch] font-body text-[0.9rem] leading-[1.6] text-bone/55">
+              <p className="relative mt-5 max-w-[34ch] font-body text-[0.9rem] leading-[1.6] text-bone/55 lg:max-w-[38ch] lg:text-[0.95rem]">
                 Para que mais pessoas possam viver essa experiência,{" "}
                 <b className="font-medium italic text-gold-soft">
                   o primeiro lote tem valor especial.
                 </b>
               </p>
 
-              <div className="relative mt-7 font-body text-[1rem] text-bone/80">
+              <div className="relative mt-7 font-body text-[1rem] text-bone/80 lg:text-[1.1rem]">
                 Hoje você garante tudo isso por:
               </div>
-              <div className="relative mt-1 font-body text-[0.95rem] text-bone/35">
+              <div className="relative mt-1 font-body text-[0.95rem] text-bone/35 lg:text-[1.05rem]">
                 De <s className="line-through">{IMERSAO.valorCheio}</s>
               </div>
 
