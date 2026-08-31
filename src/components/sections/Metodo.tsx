@@ -5,47 +5,105 @@ import { CtaButton } from "@/components/CtaButton";
 const pilares = [
   {
     n: "1",
+    tag: "Entendimento",
     titulo: "Aula Expositiva — Clareza Epistemológica",
     texto:
       "Utilizaremos o pensamento sistêmico e a filosofia profunda para desarmar as defesas do seu ego. Você entenderá a lógica por trás dos seus comportamentos de autossabotagem e como a Terceira Lei de Hellinger governa seus resultados.",
+    pontos: ["Pensamento sistêmico aplicado", "Raiz da autossabotagem", "Terceira Lei de Hellinger"],
   },
   {
     n: "2",
+    tag: "Experiência",
     titulo: "Vivências Sistêmicas — Consolidação da Postura",
     texto:
       "Ao vivo pelo Zoom, conduziremos movimentos sistêmicos coletivos. Através do campo mórfico, você sentirá no corpo a transição da criança carente para o adulto potente. Não é teoria; é uma atualização do seu sistema operacional emocional para que o 'não' e o limite surjam com naturalidade, sem culpa.",
+    pontos: ["Movimentos sistêmicos ao vivo", "Transição para o adulto potente", "Limite sem culpa"],
   },
 ];
 
 export function Metodo() {
   return (
-    <section className="bg-bone py-24 lg:py-32">
-      <div className="mx-auto max-w-6xl px-5 sm:px-8">
+    <section className="relative overflow-hidden bg-bone py-24 lg:py-32">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -right-40 top-10 h-[26rem] w-[26rem] rounded-full bg-gold/10 blur-3xl"
+      />
+      <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
         <Reveal>
           <SectionLabel>O MÉTODO DA IMERSÃO</SectionLabel>
-          <h2 className="mt-6 font-display text-[2rem] font-semibold leading-[1.12] text-ink sm:text-[2.75rem]">
-            Dois pilares para romper o ciclo.
-          </h2>
+          <div className="mt-6 grid gap-6 lg:grid-cols-[1.1fr_1fr] lg:items-end">
+            <h2 className="font-display text-[2rem] font-semibold leading-[1.1] tracking-[-0.02em] text-ink sm:text-[2.75rem]">
+              Dois pilares para{" "}
+              <span className="relative inline-block">
+                romper o ciclo
+                <span
+                  aria-hidden
+                  className="absolute inset-x-0 -bottom-1 h-[0.35em] -z-10 rounded-full bg-gold/25"
+                />
+              </span>
+              .
+            </h2>
+            <p className="font-body text-[0.98rem] leading-[1.8] text-graphite lg:pb-2">
+              Compreensão e vivência caminham juntas: primeiro você enxerga o padrão com nitidez,
+              depois consolida no corpo a nova postura. É essa combinação que transforma insight em
+              mudança real.
+            </p>
+          </div>
         </Reveal>
 
-        <div className="mt-16 space-y-px">
+        <div className="mt-14 grid gap-5 lg:grid-cols-2 lg:gap-6">
           {pilares.map((p, i) => (
             <Reveal key={p.n} delay={i * 90}>
-              <article className="grid gap-6 border-t border-line py-10 lg:grid-cols-[auto_1fr_1.1fr] lg:gap-12">
-                <span className="font-display text-[2.5rem] leading-none text-gold/60">
+              <article className="group relative flex h-full flex-col overflow-hidden rounded-[var(--radius-card)] border border-line bg-cream/40 p-7 transition-all duration-300 hover:-translate-y-1 hover:border-gold/50 hover:bg-cream/70 hover:shadow-[var(--shadow-soft)] sm:p-9">
+                <span
+                  aria-hidden
+                  className="absolute right-5 top-3 font-display text-[5.5rem] font-semibold leading-none text-gold/10 transition-colors duration-300 group-hover:text-gold/20"
+                >
                   0{p.n}
                 </span>
-                <h3 className="font-display text-xl font-semibold leading-snug text-ink lg:max-w-[14ch]">
+
+                <span className="inline-flex w-fit items-center gap-2 rounded-full border border-gold/35 bg-bone/70 px-3 py-1 font-body text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-gold-deep">
+                  Pilar 0{p.n} · {p.tag}
+                </span>
+
+                <h3 className="relative mt-5 font-display text-xl font-semibold leading-snug text-ink sm:text-[1.4rem] lg:max-w-[18ch]">
                   {p.titulo}
                 </h3>
-                <p className="font-body text-[0.95rem] leading-[1.8] text-graphite">{p.texto}</p>
+
+                <p className="relative mt-4 font-body text-[0.95rem] leading-[1.8] text-graphite">
+                  {p.texto}
+                </p>
+
+                <ul className="relative mt-6 space-y-2 border-t border-line pt-5">
+                  {p.pontos.map((ponto) => (
+                    <li
+                      key={ponto}
+                      className="flex items-start gap-3 font-body text-[0.9rem] leading-relaxed text-ink/80"
+                    >
+                      <span
+                        aria-hidden
+                        className="mt-[0.5em] h-1.5 w-1.5 shrink-0 rounded-full bg-gold"
+                      />
+                      {ponto}
+                    </li>
+                  ))}
+                </ul>
               </article>
             </Reveal>
           ))}
         </div>
 
         <Reveal>
-          <CtaButton origem="metodo" variant="outline" className="mt-10 border-gold-deep/40 text-gold-deep hover:bg-gold/10" />
+          <div className="mt-12 flex flex-col items-start gap-4 border-t border-line pt-8 sm:flex-row sm:items-center sm:justify-between">
+            <p className="font-body text-[0.9rem] leading-relaxed text-graphite sm:max-w-[46ch]">
+              Dois encontros ao vivo pelo Zoom, conduzidos do começo ao fim.
+            </p>
+            <CtaButton
+              origem="metodo"
+              variant="outline"
+              className="w-full border-gold-deep/40 text-gold-deep hover:bg-gold/10 sm:w-auto"
+            />
+          </div>
         </Reveal>
       </div>
     </section>
