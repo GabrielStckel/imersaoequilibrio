@@ -158,13 +158,13 @@ export function Oferta() {
                   const l = IMERSAO.lotes[indice] ?? IMERSAO.lotes[0];
                   const { cifra, numero } = precoPartes(l.preco);
                   return (
-                    <div className="flex w-full flex-col items-center justify-center rounded-2xl border-[1.5px] border-gold bg-gradient-to-b from-gold/18 to-gold/[0.03] px-3 py-6 shadow-[0_0_55px_-10px_rgba(194,162,76,0.45)] transition-all duration-300">
-                      <span className="font-body text-[0.62rem] font-semibold uppercase tracking-[0.14em] text-gold">
+                    <div className="flex w-full flex-col items-center justify-center rounded-2xl border-[1.5px] border-gold bg-gradient-to-b from-gold/18 to-gold/[0.03] px-3 py-6 shadow-[0_0_55px_-10px_rgba(194,162,76,0.45)] transition-all duration-300 lg:py-8">
+                      <span className="font-body text-[0.62rem] font-semibold uppercase tracking-[0.14em] text-gold lg:text-[0.72rem]">
                         Lote especial
                       </span>
                       <span className="mt-2 font-display font-semibold leading-none text-gold">
-                        <span className="align-top text-[1.35rem]">{cifra}</span>{" "}
-                        <span className="text-[3rem]">{numero}</span>
+                        <span className="align-top text-[1.35rem] lg:text-[1.65rem]">{cifra}</span>{" "}
+                        <span className="text-[3rem] lg:text-[3.75rem]">{numero}</span>
                       </span>
                     </div>
                   );
@@ -181,14 +181,14 @@ export function Oferta() {
                         key={l.nome}
                         className="flex flex-col items-center justify-center rounded-2xl border border-gold-soft/15 bg-white/[0.02] px-3 py-5 transition-all duration-300"
                       >
-                        <span className="font-body text-[0.58rem] font-semibold uppercase tracking-[0.14em] text-gold-soft/45">
+                        <span className="font-body text-[0.58rem] font-semibold uppercase tracking-[0.14em] text-gold-soft/45 lg:text-[0.68rem]">
                           {l.nome}
                         </span>
                         <span className="mt-2 font-display font-semibold leading-none text-bone/40">
-                          <span className="align-top text-[0.85rem]">{cifra}</span>{" "}
-                          <span className={cn("text-[1.6rem]", passado && "line-through")}>{numero}</span>
+                          <span className="align-top text-[0.85rem] lg:text-[1rem]">{cifra}</span>{" "}
+                          <span className={cn("text-[1.6rem] lg:text-[2rem]", passado && "line-through")}>{numero}</span>
                         </span>
-                        <span className="mt-1.5 font-body text-[0.65rem] font-medium uppercase tracking-[0.12em] text-bone/30">
+                        <span className="mt-1.5 font-body text-[0.65rem] font-medium uppercase tracking-[0.12em] text-bone/30 lg:text-[0.72rem]">
                           Em breve
                         </span>
                       </div>
@@ -197,19 +197,19 @@ export function Oferta() {
                 </div>
               </div>
 
-              <div className="relative mt-6 font-body text-[0.66rem] uppercase tracking-[0.16em] text-bone/50">
+              <div className="relative mt-6 font-body text-[0.66rem] uppercase tracking-[0.16em] text-bone/50 lg:text-[0.72rem]">
                 Preço exclusivo enquanto durar o lote
               </div>
 
-              <CtaButton origem="oferta" size="lg" className="relative mt-5 w-full" />
+              <CtaButton origem="oferta" size="lg" className="relative mt-5 w-full lg:py-5 lg:text-lg" />
 
               <ProgressoLote tone="dark" className="relative mt-5 max-w-none" />
 
-              <div className="relative mt-6 flex w-full items-center justify-center gap-2.5 border-t border-gold/12 pt-5 font-body text-[0.8rem] text-bone/55">
+              <div className="relative mt-6 flex w-full items-center justify-center gap-2.5 border-t border-gold/12 pt-5 font-body text-[0.8rem] text-bone/55 lg:text-[0.85rem]">
                 <Lock className="h-4 w-4 text-gold" strokeWidth={1.6} aria-hidden="true" />
                 Pagamento Seguro · Hotmart · Garantia de 7 dias
               </div>
-              <p className="relative mt-3 max-w-[42ch] font-body text-[0.74rem] leading-[1.6] text-bone/40">
+              <p className="relative mt-3 max-w-[42ch] font-body text-[0.74rem] leading-[1.6] text-bone/40 lg:max-w-[46ch] lg:text-[0.8rem]">
                 7 dias de garantia incondicional. Se sentir que a profundidade do conteúdo não é para
                 você, devolvemos 100% do valor.
               </p>
