@@ -74,12 +74,6 @@ export const IMERSAO = {
         "Aulas transmitidas em Zoom com interação em tempo real, exercícios práticos e vivências sistêmicas conduzidas pelo Jonas.",
     },
     {
-      icone: "PlayCircle",
-      titulo: "Acesso às gravações por 6 meses",
-      descricao:
-        "Revise o conteúdo quantas vezes quiser. O acesso fica disponível para você aprofundar os pontos que mais fizerem sentido.",
-    },
-    {
       icone: "FileText",
       titulo: "Material de apoio: guia prático com exercícios sistêmicos",
       descricao:
