@@ -26,7 +26,7 @@ export function Cronograma() {
       />
       <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
         <Reveal>
-          <SectionLabel tone="dark">04 — Sua jornada em 2 encontros</SectionLabel>
+          <SectionLabel tone="dark">SUA JORNADA EM 2 ENCONTROS</SectionLabel>
         </Reveal>
 
         <div className="mt-14 grid gap-6 lg:grid-cols-2">

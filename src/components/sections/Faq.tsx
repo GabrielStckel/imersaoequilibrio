@@ -27,7 +27,7 @@ export function Faq() {
     <section className="bg-bone py-24 lg:py-32">
       <div className="mx-auto grid max-w-6xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.7fr_1.3fr] lg:gap-20">
         <Reveal>
-          <SectionLabel>08 — Perguntas frequentes</SectionLabel>
+          <SectionLabel>PERGUNTAS FREQUENTES</SectionLabel>
           <h2 className="mt-6 font-display text-[1.9rem] font-semibold leading-[1.14] text-ink sm:text-[2.3rem]">
             Ainda com dúvidas?
           </h2>

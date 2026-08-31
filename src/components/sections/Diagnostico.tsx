@@ -38,7 +38,7 @@ export function Diagnostico() {
     <section className="bg-bone py-24 lg:py-32">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <Reveal>
-          <SectionLabel>01 — O Diagnóstico</SectionLabel>
+          <SectionLabel>O DIAGNÓSTICO</SectionLabel>
           <h2 className="mt-6 max-w-[16ch] font-display text-[2rem] font-semibold leading-[1.12] text-ink sm:text-[2.75rem]">
             A vida não funciona em gavetas.
           </h2>
