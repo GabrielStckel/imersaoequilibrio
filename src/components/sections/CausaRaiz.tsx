@@ -4,7 +4,7 @@ import { CtaButton } from "@/components/CtaButton";
 
 export function CausaRaiz() {
   return (
-    <section className="relative overflow-hidden bg-bone py-24 lg:py-32">
+    <section className="relative overflow-hidden bg-cream py-24 lg:py-32">
       {/* Warm ambient glows */}
       <div
         aria-hidden
