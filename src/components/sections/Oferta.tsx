@@ -152,7 +152,7 @@ export function Oferta() {
               </div>
 
               {/* Pílulas dos lotes */}
-              <div className="relative mt-6 flex w-full items-stretch gap-3">
+              <div className="relative mt-6 flex w-full flex-col gap-3">
                 {IMERSAO.lotes.map((l, i) => {
                   const ativo = i === indice;
                   const passado = i < indice;
@@ -163,7 +163,7 @@ export function Oferta() {
                       className={cn(
                         "flex flex-col items-center justify-center rounded-2xl px-3 py-5 transition-all duration-300",
                         ativo
-                          ? "flex-[1.5] border-[1.5px] border-gold bg-gradient-to-b from-gold/18 to-gold/[0.03] shadow-[0_0_45px_-12px_rgba(194,162,76,0.4)]"
+                          ? "w-full border-[1.5px] border-gold bg-gradient-to-b from-gold/18 to-gold/[0.03] py-6 shadow-[0_0_55px_-10px_rgba(194,162,76,0.45)]"
                           : "flex-1 border border-gold-soft/15 bg-white/[0.02]",
                       )}
                     >
@@ -181,18 +181,23 @@ export function Oferta() {
                           ativo ? "text-gold" : "text-bone/40",
                         )}
                       >
-                        <span className={ativo ? "align-top text-[1.2rem]" : "align-top text-[0.85rem]"}>
+                        <span className={ativo ? "align-top text-[1.35rem]" : "align-top text-[0.85rem]"}>
                           {cifra}
                         </span>{" "}
                         <span
                           className={cn(
-                            ativo ? "text-[2.6rem]" : "text-[1.6rem]",
+                            ativo ? "text-[3rem]" : "text-[1.6rem]",
                             passado && "line-through",
                           )}
                         >
                           {numero}
                         </span>
                       </span>
+                      {!ativo && (
+                        <span className="mt-1.5 font-body text-[0.65rem] font-medium uppercase tracking-[0.12em] text-bone/30">
+                          Em breve
+                        </span>
+                      )}
                     </div>
                   );
                 })}
