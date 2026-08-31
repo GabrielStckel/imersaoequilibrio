@@ -153,54 +153,48 @@ export function Oferta() {
 
               {/* Pílulas dos lotes */}
               <div className="relative mt-6 flex w-full flex-col gap-3">
-                {IMERSAO.lotes.map((l, i) => {
-                  const ativo = i === indice;
-                  const passado = i < indice;
+                {/* Lote ativo — destaque em cima */}
+                {(() => {
+                  const l = IMERSAO.lotes[indice];
                   const { cifra, numero } = precoPartes(l.preco);
                   return (
-                    <div
-                      key={l.nome}
-                      className={cn(
-                        "flex flex-col items-center justify-center rounded-2xl px-3 py-5 transition-all duration-300",
-                        ativo
-                          ? "w-full border-[1.5px] border-gold bg-gradient-to-b from-gold/18 to-gold/[0.03] py-6 shadow-[0_0_55px_-10px_rgba(194,162,76,0.45)]"
-                          : "flex-1 border border-gold-soft/15 bg-white/[0.02]",
-                      )}
-                    >
-                      <span
-                        className={cn(
-                          "font-body text-[0.58rem] font-semibold uppercase tracking-[0.14em]",
-                          ativo ? "text-gold" : "text-gold-soft/45",
-                        )}
-                      >
-                        {ativo ? "Lote especial" : l.nome}
+                    <div className="flex w-full flex-col items-center justify-center rounded-2xl border-[1.5px] border-gold bg-gradient-to-b from-gold/18 to-gold/[0.03] px-3 py-6 shadow-[0_0_55px_-10px_rgba(194,162,76,0.45)] transition-all duration-300">
+                      <span className="font-body text-[0.62rem] font-semibold uppercase tracking-[0.14em] text-gold">
+                        Lote especial
                       </span>
-                      <span
-                        className={cn(
-                          "mt-2 font-display font-semibold leading-none",
-                          ativo ? "text-gold" : "text-bone/40",
-                        )}
+                      <span className="mt-2 font-display font-semibold leading-none text-gold">
+                        <span className="align-top text-[1.35rem]">{cifra}</span>{" "}
+                        <span className="text-[3rem]">{numero}</span>
+                      </span>
+                    </div>
+                  );
+                })()}
+
+                {/* Lotes futuros — lado a lado */}
+                <div className="grid w-full grid-cols-2 gap-3">
+                  {IMERSAO.lotes.map((l, i) => {
+                    if (i === indice) return null;
+                    const passado = i < indice;
+                    const { cifra, numero } = precoPartes(l.preco);
+                    return (
+                      <div
+                        key={l.nome}
+                        className="flex flex-col items-center justify-center rounded-2xl border border-gold-soft/15 bg-white/[0.02] px-3 py-5 transition-all duration-300"
                       >
-                        <span className={ativo ? "align-top text-[1.35rem]" : "align-top text-[0.85rem]"}>
-                          {cifra}
-                        </span>{" "}
-                        <span
-                          className={cn(
-                            ativo ? "text-[3rem]" : "text-[1.6rem]",
-                            passado && "line-through",
-                          )}
-                        >
-                          {numero}
+                        <span className="font-body text-[0.58rem] font-semibold uppercase tracking-[0.14em] text-gold-soft/45">
+                          {l.nome}
                         </span>
-                      </span>
-                      {!ativo && (
+                        <span className="mt-2 font-display font-semibold leading-none text-bone/40">
+                          <span className="align-top text-[0.85rem]">{cifra}</span>{" "}
+                          <span className={cn("text-[1.6rem]", passado && "line-through")}>{numero}</span>
+                        </span>
                         <span className="mt-1.5 font-body text-[0.65rem] font-medium uppercase tracking-[0.12em] text-bone/30">
                           Em breve
                         </span>
-                      )}
-                    </div>
-                  );
-                })}
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
 
               <div className="relative mt-6 font-body text-[0.66rem] uppercase tracking-[0.16em] text-bone/50">
