@@ -28,7 +28,7 @@ export function Autoridade() {
         </Reveal>
 
         <Reveal delay={90} className="lg:pt-6">
-          <SectionLabel>06 — Quem conduz</SectionLabel>
+          <SectionLabel>QUEM CONDUZ</SectionLabel>
           <h2 className="mt-6 font-display text-[1.9rem] font-semibold leading-[1.14] text-ink sm:text-[2.4rem]">
             {autoridade.nome}
           </h2>

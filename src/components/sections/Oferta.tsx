@@ -24,7 +24,7 @@ export function Oferta() {
       <div className="relative mx-auto max-w-5xl px-5 sm:px-8">
         <Reveal>
           <SectionLabel tone="dark" className="justify-center">
-            07 — Garanta sua vaga
+            GARANTA SUA VAGA
           </SectionLabel>
         </Reveal>
 
