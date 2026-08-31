@@ -12,6 +12,7 @@ const iconMap: Record<string, LucideIcon> = {
   PlayCircle,
   FileText,
   Gift,
+  Sparkles,
 };
 
 function precoPartes(preco: string) {
@@ -83,57 +84,34 @@ export function Oferta() {
                 </span>
               </div>
 
-              <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              <div className="grid grid-cols-2 gap-5 lg:grid-cols-2">
                 {IMERSAO.stackValor.map((item, i) => {
                   const Icon = iconMap[item.icone] || Check;
-                  const isLastOdd =
-                    IMERSAO.stackValor.length % 2 !== 0 && i === IMERSAO.stackValor.length - 1;
                   return (
                     <article
                       key={item.titulo}
-                      className={cn(
-                        "group relative overflow-hidden rounded-[var(--radius-card)] border border-line bg-cream/40 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-gold/40 hover:bg-cream/80 hover:shadow-[var(--shadow-soft)]",
-                        isLastOdd && "sm:col-span-2 lg:col-span-1",
-                      )}
+                      className="group relative flex flex-col overflow-hidden rounded-[var(--radius-card)] border border-line bg-cream/40 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-gold/40 hover:bg-cream/80 hover:shadow-[var(--shadow-soft)] sm:p-6 lg:aspect-square lg:justify-between lg:p-5"
                     >
                       <span
                         aria-hidden="true"
-                        className="absolute right-3 top-2 font-display text-[4rem] font-semibold leading-none text-gold/[0.06] transition-colors duration-300 group-hover:text-gold/[0.12]"
+                        className="absolute right-2 top-1 font-display text-[3.5rem] font-semibold leading-none text-gold/[0.06] transition-colors duration-300 group-hover:text-gold/[0.12] sm:right-3 sm:top-2 sm:text-[4rem]"
                       >
                         0{i + 1}
                       </span>
-                      <span className="relative flex h-11 w-11 items-center justify-center rounded-xl border border-gold/25 bg-bone/80 text-gold-deep shadow-sm transition-colors duration-300 group-hover:border-gold/50 group-hover:bg-bone group-hover:text-gold">
-                        <Icon className="h-5 w-5" strokeWidth={1.5} aria-hidden="true" />
-                      </span>
-                      <h3 className="relative mt-5 font-display text-[1.05rem] font-semibold leading-snug text-ink">
-                        {item.titulo}
-                      </h3>
-                      <p className="relative mt-3 font-body text-[0.9rem] leading-[1.7] text-graphite">
+                      <div>
+                        <span className="relative flex h-10 w-10 items-center justify-center rounded-xl border border-gold/25 bg-bone/80 text-gold-deep shadow-sm transition-colors duration-300 group-hover:border-gold/50 group-hover:bg-bone group-hover:text-gold sm:h-11 sm:w-11">
+                          <Icon className="h-4 w-4 sm:h-5 sm:w-5" strokeWidth={1.5} aria-hidden="true" />
+                        </span>
+                        <h3 className="relative mt-4 font-display text-[0.95rem] font-semibold leading-snug text-ink sm:mt-5 sm:text-[1.05rem] lg:mt-3 lg:text-[1rem] xl:text-[1.05rem]">
+                          {item.titulo}
+                        </h3>
+                      </div>
+                      <p className="relative mt-2 line-clamp-4 font-body text-[0.8rem] leading-[1.6] text-graphite sm:mt-3 sm:text-[0.9rem] lg:mt-0 lg:text-[0.82rem] xl:text-[0.85rem]">
                         {item.descricao}
                       </p>
                     </article>
                   );
                 })}
-              </div>
-
-              {/* Value summary */}
-              <div className="mt-8 flex flex-col gap-4 rounded-[var(--radius-card)] border border-line bg-cream/60 p-6 sm:flex-row sm:items-center sm:justify-between">
-                <div>
-                  <p className="font-body text-[0.75rem] uppercase tracking-[0.18em] text-graphite/70">
-                    Valor total do programa
-                  </p>
-                  <p className="mt-1 font-display text-2xl font-semibold text-ink/40 line-through">
-                    {IMERSAO.valorCheio}
-                  </p>
-                </div>
-                <div className="flex items-center gap-3">
-                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-gold/15 text-gold-deep">
-                    <Sparkles className="h-4 w-4" strokeWidth={2.5} />
-                  </span>
-                  <p className="max-w-[24ch] font-body text-[0.85rem] leading-snug text-graphite">
-                    Hoje você leva tudo por uma fração do valor real
-                  </p>
-                </div>
               </div>
             </div>
 

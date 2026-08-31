@@ -69,21 +69,26 @@ export const IMERSAO = {
   stackValor: [
     {
       icone: "Video",
-      titulo: `Imersão Online e Ao Vivo (2 dias, ${DATA_DIA_1} e ${DATA_DIA_2})`,
-      descricao:
-        "Aulas transmitidas em Zoom com interação em tempo real, exercícios práticos e vivências sistêmicas conduzidas pelo Jonas.",
+      titulo: "Imersão Online e Ao Vivo",
+      descricao: `2 encontros ao vivo pelo Zoom (${DATA_DIA_1} e ${DATA_DIA_2}), com interação, exercícios práticos e vivências sistêmicas.`,
     },
     {
       icone: "FileText",
-      titulo: "Material de apoio: guia prático com exercícios sistêmicos",
+      titulo: "Material de apoio prático",
       descricao:
-        "PDF com roteiros, perguntas-gatilho e mapas para aplicar o método no seu dia a dia, nas relações e nas finanças.",
+        "PDF com roteiros, perguntas-gatilho e mapas sistêmicos para aplicar no dia a dia, nas relações e nas finanças.",
     },
     {
       icone: "Gift",
-      titulo: "Bônus exclusivo: aula 'A Postura Sistêmica Diante do Dinheiro'",
+      titulo: "Bônus exclusivo",
       descricao:
-        "Uma aula extra sobre o campo do dinheiro, lealdades invisíveis e como assumir a postura de adulto potente na prosperidade.",
+        "Aula 'A Postura Sistêmica Diante do Dinheiro': lealdades invisíveis e como assumir a postura de adulto potente na prosperidade.",
+    },
+    {
+      icone: "Sparkles",
+      titulo: "Valor total do programa",
+      descricao:
+        "Programa completo com imersão, material e bônus. Valor real de R$ 497, hoje por uma fração.",
     },
   ],
 
