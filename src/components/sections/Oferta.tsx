@@ -198,31 +198,17 @@ export function Oferta() {
                           ativo ? "text-gold" : "text-bone/40",
                         )}
                       >
+                        <span className={ativo ? "align-top text-[1.2rem]" : "align-top text-[0.85rem]"}>
+                          {cifra}
+                        </span>{" "}
                         <span
-                          className={ativo ? "align-top text-[1.2rem]" : "align-top text-[0.85rem]"}
-                        style={{ fontSize: ativo ? "1.2rem" : "0.85rem" }}
-                        aria-hidden="true"
-                        aria-label=""
-                        role="none"
-                        tabIndex={-1}
-                        // suppress hydration warning for static size classes
-                        suppressHydrationWarning
-                        className={ativo ? "align-top text-[1.2rem]" : "align-top text-[0.85rem]"}
-                        dangerouslySetInnerHTML={{ __html: "" }}
-                        // The above is a placeholder to avoid type issues; the real content is below.
-                        // We use a clean span below for the actual cifra.
-                        // Removing the invalid props and keeping only className.
-                        // This comment block is for reasoning only.
-                      >
-                        {cifra}
-                      </span>
-                      <span
-                        className={cn(
-                          ativo ? "text-[2.6rem]" : "text-[1.6rem]",
-                          passado && "line-through",
-                        )}
-                      >
-                        {numero}
+                          className={cn(
+                            ativo ? "text-[2.6rem]" : "text-[1.6rem]",
+                            passado && "line-through",
+                          )}
+                        >
+                          {numero}
+                        </span>
                       </span>
                     </div>
                   );
