@@ -155,7 +155,7 @@ export function Oferta() {
               <div className="relative mt-6 flex w-full flex-col gap-3">
                 {/* Lote ativo — destaque em cima */}
                 {(() => {
-                  const l = IMERSAO.lotes[indice];
+                  const l = IMERSAO.lotes[indice] ?? IMERSAO.lotes[0];
                   const { cifra, numero } = precoPartes(l.preco);
                   return (
                     <div className="flex w-full flex-col items-center justify-center rounded-2xl border-[1.5px] border-gold bg-gradient-to-b from-gold/18 to-gold/[0.03] px-3 py-6 shadow-[0_0_55px_-10px_rgba(194,162,76,0.45)] transition-all duration-300">
