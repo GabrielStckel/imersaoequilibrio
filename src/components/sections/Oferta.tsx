@@ -99,14 +99,14 @@ export function Oferta() {
                         0{i + 1}
                       </span>
                       <div>
-                        <span className="relative flex h-10 w-10 items-center justify-center rounded-xl border border-gold/25 bg-bone/80 text-gold-deep shadow-sm transition-colors duration-300 group-hover:border-gold/50 group-hover:bg-bone group-hover:text-gold sm:h-11 sm:w-11 lg:h-9 lg:w-9">
+                        <span className="relative flex h-11 w-11 items-center justify-center rounded-xl border border-gold/25 bg-bone/80 text-gold-deep shadow-sm transition-colors duration-300 group-hover:border-gold/50 group-hover:bg-bone group-hover:text-gold lg:h-9 lg:w-9">
                           <Icon className="h-4 w-4" strokeWidth={1.5} aria-hidden="true" />
                         </span>
-                        <h3 className="relative mt-4 font-display text-[0.95rem] font-semibold leading-snug text-ink sm:mt-5 sm:text-[1.05rem] lg:mt-2.5 lg:text-[0.95rem] lg:leading-tight">
+                        <h3 className="relative mt-4 font-display text-[0.95rem] font-semibold leading-snug text-ink sm:text-[1.05rem] lg:mt-2.5 lg:text-[0.9rem] lg:leading-tight">
                           {item.titulo}
                         </h3>
                       </div>
-                      <p className="relative mt-2 line-clamp-4 font-body text-[0.8rem] leading-[1.6] text-graphite sm:mt-3 sm:text-[0.9rem] lg:mt-0 lg:line-clamp-3 lg:text-[0.78rem] lg:leading-[1.5] xl:text-[0.8rem]">
+                      <p className="relative mt-2 line-clamp-4 font-body text-[0.85rem] leading-[1.6] text-graphite sm:text-[0.92rem] lg:mt-0 lg:line-clamp-3 lg:text-[0.75rem] lg:leading-[1.5] xl:text-[0.78rem]">
                         {item.descricao}
                       </p>
                     </article>
