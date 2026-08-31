@@ -83,13 +83,18 @@ export function Oferta() {
                 </span>
               </div>
 
-              <div className="grid gap-5 sm:grid-cols-2">
+              <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
                 {IMERSAO.stackValor.map((item, i) => {
                   const Icon = iconMap[item.icone] || Check;
+                  const isLastOdd =
+                    IMERSAO.stackValor.length % 2 !== 0 && i === IMERSAO.stackValor.length - 1;
                   return (
                     <article
                       key={item.titulo}
-                      className="group relative overflow-hidden rounded-[var(--radius-card)] border border-line bg-cream/40 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-gold/40 hover:bg-cream/80 hover:shadow-[var(--shadow-soft)]"
+                      className={cn(
+                        "group relative overflow-hidden rounded-[var(--radius-card)] border border-line bg-cream/40 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-gold/40 hover:bg-cream/80 hover:shadow-[var(--shadow-soft)]",
+                        isLastOdd && "sm:col-span-2 lg:col-span-1",
+                      )}
                     >
                       <span
                         aria-hidden="true"
