@@ -72,7 +72,7 @@ export function Oferta() {
 
         {/* Main offer grid */}
         <Reveal delay={120}>
-          <div className="mt-14 grid overflow-hidden rounded-[28px] border border-gold/12 bg-bone shadow-[0_60px_140px_-50px_rgba(12,10,8,0.75)] lg:grid-cols-[1fr_1.15fr]">
+          <div className="mt-14 grid overflow-hidden rounded-[28px] border border-gold/12 bg-bone shadow-[0_60px_140px_-50px_rgba(12,10,8,0.75)] lg:grid-cols-[1.1fr_1fr]">
             {/* ——— Esquerda: stack de valor ——— */}
             <div className="p-8 sm:p-12 lg:p-8 xl:p-10">
               <div className="mb-8 flex items-center gap-3">
@@ -90,7 +90,7 @@ export function Oferta() {
                   return (
                     <article
                       key={item.titulo}
-                      className="group relative flex flex-col overflow-hidden rounded-[var(--radius-card)] border border-line bg-cream/40 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-gold/40 hover:bg-cream/80 hover:shadow-[var(--shadow-soft)] sm:p-6 lg:aspect-square lg:justify-between lg:gap-2 lg:p-4 xl:p-5"
+                       className="group relative flex flex-col overflow-hidden rounded-[var(--radius-card)] border border-line bg-cream/40 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-gold/40 hover:bg-cream/80 hover:shadow-[var(--shadow-soft)] sm:p-6 lg:aspect-square lg:justify-between lg:gap-3 lg:p-5 xl:p-6"
                     >
                       <span
                         aria-hidden="true"
@@ -99,14 +99,14 @@ export function Oferta() {
                         0{i + 1}
                       </span>
                       <div>
-                        <span className="relative flex h-11 w-11 items-center justify-center rounded-xl border border-gold/25 bg-bone/80 text-gold-deep shadow-sm transition-colors duration-300 group-hover:border-gold/50 group-hover:bg-bone group-hover:text-gold lg:h-9 lg:w-9">
-                          <Icon className="h-4 w-4" strokeWidth={1.5} aria-hidden="true" />
+                         <span className="relative flex h-11 w-11 items-center justify-center rounded-xl border border-gold/25 bg-bone/80 text-gold-deep shadow-sm transition-colors duration-300 group-hover:border-gold/50 group-hover:bg-bone group-hover:text-gold">
+                           <Icon className="h-[1.125rem] w-[1.125rem]" strokeWidth={1.5} aria-hidden="true" />
                         </span>
-                        <h3 className="relative mt-4 font-display text-[0.95rem] font-semibold leading-snug text-ink sm:text-[1.05rem] lg:mt-2.5 lg:text-[0.9rem] lg:leading-tight">
+                         <h3 className="relative mt-4 font-display text-[0.95rem] font-semibold leading-snug text-ink sm:text-[1.05rem] lg:text-[1rem] lg:leading-snug xl:text-[1.08rem]">
                           {item.titulo}
                         </h3>
                       </div>
-                      <p className="relative mt-2 line-clamp-4 font-body text-[0.85rem] leading-[1.6] text-graphite sm:text-[0.92rem] lg:mt-0 lg:line-clamp-3 lg:text-[0.75rem] lg:leading-[1.5] xl:text-[0.78rem]">
+                       <p className="relative mt-2 line-clamp-4 font-body text-[0.85rem] leading-[1.6] text-graphite sm:text-[0.92rem] lg:mt-0 lg:line-clamp-5 lg:text-[0.84rem] lg:leading-[1.5] xl:text-[0.9rem]">
                         {item.descricao}
                       </p>
                     </article>
