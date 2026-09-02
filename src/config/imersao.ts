@@ -22,12 +22,12 @@ export const IMERSAO = {
     legenda: "Assista antes de garantir sua vaga",
   },
 
-  // ——— Barra de tempo do lote (janela real, sem percentual de vendas) ———
+  // ——— Barra de progresso programada por data ———
   progresso: {
-    // Início da janela: data de publicação da página / abertura de vendas.
-    inicioJanela: "2026-09-05T09:00:00-03:00",
-    // Fim da janela: encerramento do 1º lote (horário de Brasília).
-    fimJanela: "2026-10-05T23:59:00-03:00",
+    aberturaVendas: "2026-09-05T09:00:00-03:00",
+    percentInicial: 8,
+    percentAlvo: 96,
+    curva: "easeOut" as "linear" | "easeOut",
   },
 
   // ——— Lotes ———
