@@ -71,7 +71,7 @@ export function CausaRaiz() {
               A boa notícia: o que foi aprendido pode ser desaprendido — quando você enxerga a raiz, o
               padrão perde a força.
             </p>
-            <CtaButton origem="causa-raiz" variant="outline" className="w-full shrink-0" />
+            <CtaButton origem="causa-raiz" variant="outline" className="w-full shrink-0 sm:w-auto" />
           </div>
         </Reveal>
       </div>
