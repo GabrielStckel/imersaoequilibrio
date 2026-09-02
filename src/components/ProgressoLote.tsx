@@ -1,5 +1,11 @@
-import { useProgressoProgramado } from "@/hooks/useProgressoProgramado";
+import { useJanelaLote } from "@/hooks/useProgressoProgramado";
+import { IMERSAO } from "@/config/imersao";
+import { useLoteAtivo } from "@/hooks/useLoteAtivo";
 import { cn } from "@/lib/utils";
+
+export function textoEncerramento(nomeLote: string, dias: number) {
+  return dias <= 0 ? `${nomeLote} encerra hoje` : `${nomeLote} encerra em ${dias} dias`;
+}
 
 export function ProgressoLote({
   tone = "dark",
@@ -8,18 +14,20 @@ export function ProgressoLote({
   tone?: "light" | "dark";
   className?: string;
 }) {
-  const pct = useProgressoProgramado();
+  const { pct, diasRestantes } = useJanelaLote();
+  const { lote } = useLoteAtivo();
+  const rotulo = textoEncerramento(lote.nome ?? IMERSAO.lotes[0]!.nome, diasRestantes);
 
   return (
     <div className={cn("w-full max-w-sm", className)}>
       <div
-        className="h-[5px] w-full overflow-hidden rounded-full"
-        style={{ backgroundColor: tone === "dark" ? "color-mix(in srgb, var(--color-ouro-luz) 18%, transparent)" : "var(--color-borda)" }}
+        className="h-[6px] w-full overflow-hidden rounded-full"
+        style={{ backgroundColor: "rgba(122,95,28,.20)" }}
         role="progressbar"
         aria-valuenow={pct}
         aria-valuemin={0}
         aria-valuemax={100}
-        aria-label="Ingressos garantidos neste lote"
+        aria-label={rotulo}
       >
         <div
           className="ouro-metal h-full rounded-full transition-[width] duration-1000 ease-out"
@@ -28,12 +36,11 @@ export function ProgressoLote({
       </div>
       <p
         className={cn(
-          "mt-2.5 font-body text-[0.9375rem]",
+          "mt-2.5 font-body text-[13px]",
           tone === "dark" ? "text-pergaminho/80" : "text-corpo",
         )}
       >
-        <span className={tone === "dark" ? "text-ouro-luz" : "text-ouro-tinta"}>{pct}%</span> dos
-        ingressos deste lote já garantidos
+        {rotulo}
       </p>
     </div>
   );
