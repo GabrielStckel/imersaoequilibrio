@@ -94,7 +94,7 @@ export function Header() {
               Começa em{" "}
               <CountdownInline className="text-xs font-semibold text-ouro-luz" />
             </span>
-            <CtaButton size="sm" origem="header" className="min-h-11" />
+            <CtaButton to="oferta" size="sm" origem="header" className="min-h-11" />
           </div>
         </div>
       </div>

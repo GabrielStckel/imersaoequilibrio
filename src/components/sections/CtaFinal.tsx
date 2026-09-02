@@ -21,7 +21,7 @@ export function CtaFinal() {
         <Reveal delay={90}>
           <div className="mt-12 flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
             <Countdown className="[&>div]:border-borda [&>div]:bg-white [&>div>div:first-child]:text-tinta [&>div>div:last-child]:text-ouro-tinta" />
-            <CtaButton origem="cta-final" size="lg" surface="light" />
+            <CtaButton to="checkout" origem="cta-final" size="lg" surface="light" />
           </div>
         </Reveal>
 
