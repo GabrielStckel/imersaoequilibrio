@@ -69,6 +69,10 @@ function MobilePurchase() {
 
         <CtaButton to="oferta" origem="hero" size="lg" className="mt-5 h-[52px] w-full" />
 
+        <p className="mt-[10px] text-center font-body text-xs text-pergaminho/75 md:hidden">
+          06 e 07 de outubro · 19h30 às 21h30 · ao vivo pelo Zoom
+        </p>
+
         <p className="mt-3 font-body text-xs leading-relaxed text-pergaminho/80">
           Pagamento seguro via Hotmart · Garantia incondicional de 7 dias
         </p>
