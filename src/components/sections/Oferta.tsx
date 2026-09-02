@@ -97,7 +97,7 @@ export function Oferta() {
                       )}
                     >
                       {destaque && (
-                        <span className="absolute right-3 top-3 rounded-full bg-ouro-tinta px-2.5 py-1 font-body text-xs font-semibold uppercase tracking-[0.1em] text-white">
+                        <span className="absolute right-3 top-3 rounded-full bg-ouro-tinta px-2.5 py-1 font-body text-xs font-semibold uppercase tracking-[0.1em] text-pergaminho">
                           Bônus
                         </span>
                       )}
@@ -159,7 +159,7 @@ export function Oferta() {
                   const { cifra, numero } = precoPartes(l.preco);
                   return (
                     <div className="card-nivel-c relative flex w-full flex-col items-center justify-center px-3 py-6 transition-all duration-300 lg:py-8">
-                      <span className="absolute right-3 top-3 rounded-full bg-ouro-tinta px-2.5 py-1 font-body text-xs font-semibold uppercase tracking-[0.1em] text-white">
+                      <span className="absolute right-3 top-3 rounded-full bg-ouro-tinta px-2.5 py-1 font-body text-xs font-semibold uppercase tracking-[0.1em] text-pergaminho">
                         Oferta principal
                       </span>
                       <span className="font-body text-xs font-semibold uppercase tracking-[0.12em] text-ouro-tinta">
