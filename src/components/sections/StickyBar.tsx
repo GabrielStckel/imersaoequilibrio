@@ -2,12 +2,13 @@ import { useEffect, useState } from "react";
 import { CtaButton } from "@/components/CtaButton";
 import { IMERSAO } from "@/config/imersao";
 import { useLoteAtivo } from "@/hooks/useLoteAtivo";
-import { useProgressoProgramado } from "@/hooks/useProgressoProgramado";
+import { useJanelaLote } from "@/hooks/useProgressoProgramado";
+import { textoEncerramento } from "@/components/ProgressoLote";
 import { cn } from "@/lib/utils";
 
 export function StickyBar() {
   const { lote } = useLoteAtivo();
-  const pct = useProgressoProgramado();
+  const { pct, diasRestantes } = useJanelaLote();
   const [aposRolagem, setAposRolagem] = useState(false);
   const [ofertaVisivel, setOfertaVisivel] = useState(false);
 
@@ -50,14 +51,14 @@ export function StickyBar() {
           aria-valuenow={pct}
           aria-valuemin={0}
           aria-valuemax={100}
-          aria-label="Ingressos garantidos neste lote"
+          aria-label={textoEncerramento(lote.nome, diasRestantes)}
         />
       </div>
 
       <div className="mx-auto flex max-w-6xl items-center gap-4 px-4 pt-2.5">
         <div className="min-w-0 flex-1">
           <p className="font-body text-[9px] font-medium uppercase leading-none tracking-[0.1em] text-ouro-luz">
-            {lote.nome} · {pct}% vendido
+            {textoEncerramento(lote.nome, diasRestantes)}
           </p>
           <p className="mt-0.5 flex items-baseline">
             <span className="font-display text-2xl font-bold leading-none text-pergaminho tabular-nums">

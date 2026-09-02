@@ -3,7 +3,8 @@ import { IMERSAO } from "@/config/imersao";
 import { CtaButton } from "@/components/CtaButton";
 import { CountdownInline } from "@/components/Countdown";
 import { useLoteAtivo } from "@/hooks/useLoteAtivo";
-import { useProgressoProgramado } from "@/hooks/useProgressoProgramado";
+import { useJanelaLote } from "@/hooks/useProgressoProgramado";
+import { textoEncerramento } from "@/components/ProgressoLote";
 
 // Animação do marquee (injetada uma vez). Desliga em prefers-reduced-motion.
 const MARQUEE_CSS = `
@@ -14,15 +15,13 @@ const MARQUEE_CSS = `
 
 function Faixa({ ocultar = false }: { ocultar?: boolean }) {
   const { lote } = useLoteAtivo();
-  const pct = useProgressoProgramado();
+  const { diasRestantes } = useJanelaLote();
   const d1 = IMERSAO.dataDia1.slice(0, 5);
   const d2 = IMERSAO.dataDia2.slice(0, 5);
   const hora = IMERSAO.horario.split(" ")[0];
 
   const mensagens: ReactNode[] = [
-    <>
-      {pct}% dos ingressos do {lote.nome} já garantidos
-    </>,
+    <>{textoEncerramento(lote.nome, diasRestantes)}</>,
     <>
       {lote.nome} por {lote.preco} · valor promocional
     </>,
