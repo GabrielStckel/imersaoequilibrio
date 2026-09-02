@@ -10,6 +10,7 @@ type Props = {
   size?: "sm" | "md" | "lg";
   variant?: "solid" | "outline";
   surface?: "light" | "dark";
+  semSeta?: boolean;
   origem: string;
 };
 
@@ -19,6 +20,7 @@ export function CtaButton({
   size = "md",
   variant = "solid",
   surface = "dark",
+  semSeta = false,
   origem,
 }: Props) {
   const { lote } = useLoteAtivo();
@@ -55,11 +57,13 @@ export function CtaButton({
       )}
     >
       <span className="relative z-10">{textoCta}</span>
-      <ArrowRight
-        className="relative z-10 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
-        strokeWidth={1.5}
-        aria-hidden="true"
-      />
+      {!semSeta && (
+        <ArrowRight
+          className="relative z-10 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+          strokeWidth={1.5}
+          aria-hidden="true"
+        />
+      )}
     </a>
   );
 }
