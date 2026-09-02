@@ -1,6 +1,5 @@
 import { SectionLabel } from "@/components/SectionLabel";
 import { Reveal } from "@/components/Reveal";
-import { CtaButton } from "@/components/CtaButton";
 
 export function CausaRaiz() {
   return (
@@ -66,12 +65,11 @@ export function CausaRaiz() {
         </div>
 
         <Reveal>
-          <div className="mt-16 flex flex-col items-start gap-5 border-t border-borda pt-8 sm:flex-row sm:items-center sm:justify-between">
+          <div className="mt-16 border-t border-borda pt-8 pb-14">
             <p className="texto-justificado max-w-[52ch] font-body text-[0.95rem] leading-relaxed text-corpo">
               A boa notícia: o que foi aprendido pode ser desaprendido. Quando você enxerga a raiz, o
               padrão perde a força.
             </p>
-            <CtaButton to="oferta" origem="causa-raiz" variant="outline" className="w-full shrink-0 sm:w-auto" />
           </div>
         </Reveal>
       </div>

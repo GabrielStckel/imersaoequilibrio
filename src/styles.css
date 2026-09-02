@@ -235,32 +235,6 @@
   }
 }
 
-@utility botao-secundario {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  min-height: 52px;
-  border: 1.5px solid #7d5f1c;
-  border-radius: 12px;
-  background-color: #ffffff;
-  padding: 0 1.5rem;
-  font-family: var(--font-display);
-  font-size: 16px;
-  font-weight: 600;
-  color: #7d5f1c;
-  box-shadow: 0 1px 2px rgb(25 21 16 / 6%), 0 6px 16px rgb(25 21 16 / 8%);
-  transition: background-color 200ms ease, box-shadow 200ms ease, transform 200ms ease;
-
-  &:hover {
-    background-color: #f6f2e8;
-  }
-
-  &:active {
-    transform: translateY(1px);
-    box-shadow: 0 1px 2px rgb(25 21 16 / 6%), 0 3px 8px rgb(25 21 16 / 8%);
-  }
-}
 
 @utility selo-flutuante {
   display: inline-flex;
