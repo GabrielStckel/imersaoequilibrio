@@ -86,11 +86,7 @@ export function Diagnostico() {
               O desequilíbrio não escolhe área. Ele se mostra no amor, no dinheiro, no trabalho e na
               família — até que você restaure a ordem dentro de si.
             </p>
-            <CtaButton
-              origem="diagnostico"
-              variant="outline"
-              className="w-full shrink-0 border-ouro-tinta/40 text-ouro-tinta hover:bg-ouro/10 sm:w-auto"
-            />
+            <CtaButton origem="diagnostico" variant="outline" className="w-full shrink-0" />
           </div>
         </Reveal>
       </div>
