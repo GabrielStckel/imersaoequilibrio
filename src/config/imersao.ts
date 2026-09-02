@@ -65,25 +65,28 @@ export const IMERSAO = {
   cta: "Garantir Vaga",
   suporte: "https://wa.me/55XXXXXXXXXXX",
 
-  // ——— Stack de valor da oferta ———
+  // ——— Checklist de entregáveis da oferta ———
   stackValor: [
     {
-      icone: "Video",
-      titulo: "Imersão Online e Ao Vivo",
-      descricao: `2 encontros ao vivo pelo Zoom (${DATA_DIA_1} e ${DATA_DIA_2}), com interação, exercícios práticos e vivências sistêmicas.`,
+      texto: `2 encontros ao vivo pelo Zoom, ${DATA_DIA_1.slice(0, 5)} e ${DATA_DIA_2.slice(0, 5)}, das 19h30 às 21h30`,
+      bonus: false,
     },
+    { texto: "Interação direta, exercícios práticos e vivências sistêmicas", bonus: false },
+    { texto: "PDF com roteiros, perguntas-gatilho e mapas sistêmicos", bonus: false },
+    { texto: "Áudio de meditação guiada para prática entre os encontros", bonus: false },
+    { texto: "Aula 'A Postura Sistêmica Diante do Dinheiro'", bonus: true },
     {
-      icone: "FileText",
-      titulo: "Material de apoio prático",
-      descricao:
-        "PDF com roteiros, perguntas-gatilho e mapas sistêmicos para aplicar no dia a dia, nas relações e nas finanças.",
+      texto:
+        "Lealdades invisíveis: como assumir a postura de adulto potente na prosperidade",
+      bonus: true,
     },
-    {
-      icone: "Gift",
-      titulo: "Bônus exclusivo",
-      descricao:
-        "Aula 'A Postura Sistêmica Diante do Dinheiro': lealdades invisíveis e como assumir a postura de adulto potente na prosperidade.",
-    },
+  ],
+
+  // ——— Composição do valor ———
+  composicaoValor: [
+    { label: "Imersão ao vivo (2 encontros)", valor: "R$ 497" },
+    { label: "Material de apoio: PDF + áudio guiado", valor: "R$ 103" },
+    { label: "Bônus: A Postura Sistêmica", valor: "R$ 197" },
   ],
 
   // ——— Autoridade (placeholders) ———
