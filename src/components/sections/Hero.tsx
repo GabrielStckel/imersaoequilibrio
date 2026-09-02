@@ -114,9 +114,6 @@ function DesktopPurchase() {
           <span aria-hidden="true" className="filete-ouro absolute inset-x-0 top-0" />
           <PrecoLote />
           <CtaButton to="oferta" origem="hero" size="lg" className="mt-6 w-auto" />
-          <p className="mt-4 text-left font-body text-[0.75rem] leading-relaxed text-pergaminho/80">
-            Pagamento seguro via Hotmart · Garantia incondicional de 7 dias
-          </p>
         </div>
       </Reveal>
     </div>
