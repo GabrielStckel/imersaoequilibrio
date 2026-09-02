@@ -62,13 +62,13 @@ export function ParaQuem() {
           </Reveal>
 
           <Reveal delay={240}>
-            <div className="mt-6 rounded-[18px] border border-terracota/25 bg-areia p-5">
+            <div className="mt-6 rounded-[18px] border border-terracota/25 bg-areia px-[18px] py-3.5">
               <h3 className="font-display text-[15px] font-semibold text-tinta">
                 Esta imersão não é para:
               </h3>
-              <ul className="mt-3.5 space-y-3">
+              <ul className="mt-2 space-y-2">
                 {naoItens.map((item) => (
-                  <li key={item} className="grid grid-cols-[18px_1fr] gap-3 font-body text-[15px] leading-[1.45] text-corpo">
+                  <li key={item} className="grid grid-cols-[18px_1fr] gap-3 font-body text-[15px] leading-[1.38] text-corpo">
                     <X
                       size={16}
                       strokeWidth={2}
