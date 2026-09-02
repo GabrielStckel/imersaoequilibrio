@@ -32,10 +32,15 @@ export function Cronograma() {
         <div className="mt-14 grid gap-6 lg:grid-cols-2">
           {dias.map((d, i) => (
             <Reveal key={d.titulo} delay={i * 90}>
-              <article className="h-full rounded-card border border-borda bg-white p-8 lg:p-10">
-                <p className="font-body text-xs uppercase tracking-[0.12em] text-ouro-tinta">
-                  {d.data} · {IMERSAO.horario}
-                </p>
+              <article className="card-nivel-a h-full lg:p-10">
+                <div className="flex items-center gap-3">
+                  <span className="marcador-sequencia" aria-label={`Encontro ${i + 1}`}>
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <p className="font-body text-xs uppercase tracking-[0.12em] text-ouro-tinta">
+                    {d.data} · {IMERSAO.horario}
+                  </p>
+                </div>
                 <h3 className="mt-5 font-display text-[1.4rem] font-semibold leading-snug text-tinta">
                   {d.titulo}
                 </h3>

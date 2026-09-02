@@ -9,22 +9,14 @@ export function Autoridade() {
     <section className="bg-areia py-24 lg:py-32">
       <div className="mx-auto grid max-w-6xl gap-14 px-5 sm:px-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
         <Reveal>
-          {autoridade.foto ? (
-            <img
-              src={autoridade.foto}
-              alt={`Retrato de ${autoridade.nome}`}
-              width={640}
-              height={800}
-              loading="lazy"
-              className="w-full rounded-card object-cover shadow-[var(--shadow-soft)]"
-            />
-          ) : (
-            <div className="flex aspect-[4/5] w-full items-center justify-center rounded-card border border-borda bg-pergaminho">
-              <span className="px-8 text-center font-body text-xs uppercase tracking-[0.12em] text-corpo">
-                Foto real de {autoridade.nome}
-              </span>
-            </div>
-          )}
+          <img
+            src={autoridade.foto}
+            alt={`Retrato de ${autoridade.nome}`}
+            width={640}
+            height={800}
+            loading="lazy"
+            className="aspect-[4/5] w-full rounded-[18px] object-cover shadow-[var(--shadow-soft)]"
+          />
         </Reveal>
 
         <Reveal delay={90} className="lg:pt-6">

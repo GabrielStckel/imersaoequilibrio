@@ -25,11 +25,13 @@ export function ParaQuem() {
           </p>
         </Reveal>
 
-        <ul className="space-y-px lg:pt-4">
+        <ul className="space-y-4 lg:pt-4">
           {itens.map((t, i) => (
             <Reveal as="li" key={t} delay={i * 60}>
-              <div className="flex gap-4 border-b border-borda py-5">
-                <Check className="mt-0.5 h-4 w-4 shrink-0 text-ouro-tinta" strokeWidth={1.5} aria-hidden="true" />
+              <div className="card-nivel-a flex gap-4">
+                <span className="icone-card">
+                  <Check strokeWidth={1.5} aria-hidden="true" />
+                </span>
                 <span className="font-body text-[0.95rem] leading-[1.7] text-tinta">{t}</span>
               </div>
             </Reveal>

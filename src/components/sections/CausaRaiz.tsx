@@ -49,7 +49,7 @@ export function CausaRaiz() {
                 estratégia de sobrevivência.
               </p>
 
-              <blockquote className="relative overflow-hidden rounded-[var(--radius-card)] border border-borda bg-white p-7 sm:p-9">
+              <blockquote className="card-nivel-a relative overflow-hidden sm:p-9">
                 <span
                   aria-hidden
                   className="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-ouro via-ouro-luz to-ouro/30"
