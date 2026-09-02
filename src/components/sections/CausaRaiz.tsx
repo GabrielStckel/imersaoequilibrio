@@ -78,7 +78,7 @@ export function CausaRaiz() {
             <CtaButton
               origem="causa-raiz"
               variant="outline"
-              className="w-full shrink-0 border-ouro-deep/40 text-ouro-tinta hover:bg-ouro/10 sm:w-auto"
+              className="w-full shrink-0 border-ouro-tinta/40 text-ouro-tinta hover:bg-ouro/10 sm:w-auto"
             />
           </div>
         </Reveal>

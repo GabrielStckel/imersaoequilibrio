@@ -22,7 +22,7 @@ export function ProgressoLote({
         aria-label="Ingressos garantidos neste lote"
       >
         <div
-          className="h-full rounded-full bg-ouro transition-[width] duration-1000 ease-out"
+          className="ouro-metal h-full rounded-full transition-[width] duration-1000 ease-out"
           style={{ width: `${pct}%` }}
         />
       </div>
