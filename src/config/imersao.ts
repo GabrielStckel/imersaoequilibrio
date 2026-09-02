@@ -38,7 +38,7 @@ export const IMERSAO = {
       preco: "R$ 47",
       parcela: "ou 5x de R$ 9,68",
       ateData: "2026-09-20T23:59:00-03:00",
-      checkout: "https://pay.hotmart.com/XXXXX?off=lote1",
+      checkout: "https://pay.hotmart.com/R107409111D?off=19cnl1jc&checkoutMode=10",
     },
     {
       nome: "2º Lote",
