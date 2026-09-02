@@ -40,7 +40,7 @@ export function Faq() {
       <div className="mx-auto grid max-w-6xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.7fr_1.3fr] lg:gap-20">
         <Reveal>
           <SectionLabel>PERGUNTAS FREQUENTES</SectionLabel>
-          <h2 className="mt-6 font-display text-[1.9rem] font-semibold leading-[1.14] text-tinta sm:text-[2.3rem]">
+          <h2 className="mx-auto mt-6 max-w-[320px] text-balance text-center font-display text-[clamp(1.5rem,5.6vw,2.5rem)] font-semibold leading-[1.18] tracking-[-0.02em] text-tinta md:mx-0 md:max-w-none md:text-left md:text-[2.3rem] md:leading-[1.14]">
             Ainda com dúvidas?
           </h2>
         </Reveal>

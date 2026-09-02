@@ -9,10 +9,10 @@ export function CtaFinal() {
     <footer className="bg-areia">
       <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 lg:py-32">
         <Reveal>
-          <h2 className="max-w-[18ch] font-display text-[2rem] font-semibold leading-[1.1] text-tinta sm:text-[2.9rem]">
+          <h2 className="mx-auto max-w-[320px] text-balance text-center font-display text-[clamp(1.5rem,5.6vw,2.5rem)] font-semibold leading-[1.18] tracking-[-0.02em] text-tinta md:mx-0 md:max-w-[18ch] md:text-left md:text-[2.9rem] md:leading-[1.1]">
             O respeito não se pede. Ele nasce de quem sustenta o próprio limite.
           </h2>
-          <p className="mt-6 max-w-lg font-body text-[0.97rem] leading-[1.8] text-corpo">
+          <p className="texto-justificado mt-6 max-w-lg font-body text-[0.97rem] leading-[1.8] text-corpo">
             Dois encontros ao vivo para você sair do lugar de quem se doa demais e assumir a postura
             de adulto potente no amor, no dinheiro e na carreira.
           </p>

@@ -10,7 +10,7 @@ export function CausaRaiz() {
           {/* Left column — title */}
           <Reveal>
             <SectionLabel>POR QUE ISSO ACONTECE COM VOCÊ</SectionLabel>
-            <h2 className="mt-6 font-display text-[2rem] font-semibold leading-[1.1] tracking-[-0.02em] text-tinta sm:text-[2.75rem] lg:text-[3rem]">
+            <h2 className="mx-auto mt-6 max-w-[320px] text-balance text-center font-display text-[clamp(1.5rem,5.6vw,2.5rem)] font-semibold leading-[1.18] tracking-[-0.02em] text-tinta md:mx-0 md:max-w-none md:text-left md:text-[2.75rem] md:leading-[1.1] lg:text-[3rem]">
               Não é falta de atitude. É{" "}
               <span className="relative inline-block">
                 carência estrutural
@@ -22,7 +22,7 @@ export function CausaRaiz() {
               .
             </h2>
 
-            <p className="mt-6 max-w-md font-body text-[0.95rem] leading-[1.8] text-corpo">
+            <p className="texto-justificado mt-6 max-w-md font-body text-[0.95rem] leading-[1.8] text-corpo">
               O padrão de dar demais não nasceu agora. Ele foi construído muito antes de você ter
               consciência de si.
             </p>
@@ -31,7 +31,7 @@ export function CausaRaiz() {
           {/* Right column — content */}
           <Reveal delay={90}>
             <div className="space-y-8 font-body text-[0.98rem] leading-[1.85] text-corpo">
-              <p>
+              <p className="texto-justificado">
                 Por que, mesmo sabendo que deveria colocar limites, você simplesmente não consegue? A
                 resposta não está na sua força de vontade, está na sua história. Quando uma criança não
                 recebe o que precisa dos pais — presença, olhar, lugar —, ela aprende a se tornar útil
@@ -39,18 +39,24 @@ export function CausaRaiz() {
                 estratégia de sobrevivência.
               </p>
 
-              <blockquote className="card-nivel-a relative overflow-hidden sm:p-9">
+              <blockquote className="card-nivel-a relative overflow-hidden p-[22px] sm:p-[22px]">
                 <span
                   aria-hidden
                   className="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-ouro via-ouro-luz to-ouro/30"
                 />
-                <p className="relative font-display text-[1.3rem] font-semibold leading-[1.45] text-tinta sm:text-[1.55rem]">
+                <span
+                  aria-hidden="true"
+                  className="mb-1 block h-12 text-center font-display text-[56px] font-medium leading-none text-ouro-tinta/20"
+                >
+                  “
+                </span>
+                <p className="relative mx-auto max-w-[300px] text-center font-display text-[17px] font-medium italic leading-[1.45] text-tinta">
                   Você não é "bom demais"; você está tentando comprar o direito de pertencer através
                   da hipercompensação.
                 </p>
               </blockquote>
 
-              <p>
+              <p className="texto-justificado">
                 Enquanto essa criança continuar conduzindo suas trocas adultas, o padrão se repete em
                 cada novo vínculo: você entrega mais do que recebe, adia o próprio desejo, evita o
                 conflito — e continuará atraindo pessoas que invadem o seu espaço e usam a sua energia.
@@ -61,7 +67,7 @@ export function CausaRaiz() {
 
         <Reveal>
           <div className="mt-16 flex flex-col items-start gap-5 border-t border-borda pt-8 sm:flex-row sm:items-center sm:justify-between">
-            <p className="max-w-[52ch] font-body text-[0.95rem] leading-relaxed text-corpo">
+            <p className="texto-justificado max-w-[52ch] font-body text-[0.95rem] leading-relaxed text-corpo">
               A boa notícia: o que foi aprendido pode ser desaprendido — quando você enxerga a raiz, o
               padrão perde a força.
             </p>

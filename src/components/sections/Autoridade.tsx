@@ -21,7 +21,7 @@ export function Autoridade() {
 
         <Reveal delay={90} className="lg:pt-6">
           <SectionLabel>QUEM CONDUZ</SectionLabel>
-          <h2 className="mt-6 font-display text-[1.9rem] font-semibold leading-[1.14] text-tinta sm:text-[2.4rem]">
+          <h2 className="mx-auto mt-6 max-w-[320px] text-balance text-center font-display text-[clamp(1.5rem,5.6vw,2.5rem)] font-semibold leading-[1.18] tracking-[-0.02em] text-tinta md:mx-0 md:max-w-none md:text-left md:text-[2.4rem] md:leading-[1.14]">
             {autoridade.nome}
           </h2>
           <p className="mt-2 font-body text-[0.8rem] uppercase tracking-[0.12em] text-ouro-tinta">
@@ -30,7 +30,7 @@ export function Autoridade() {
 
           <div className="mt-7 space-y-5 font-body text-[0.95rem] leading-[1.8] text-corpo">
             {autoridade.bio.map((p) => (
-              <p key={p}>{p}</p>
+              <p key={p} className="texto-justificado">{p}</p>
             ))}
           </div>
 

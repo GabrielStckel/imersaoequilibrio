@@ -37,7 +37,7 @@ export function Cronograma() {
                     {d.data} · {IMERSAO.horario}
                   </p>
                 </div>
-                <h3 className="mt-5 font-display text-[1.4rem] font-semibold leading-snug text-tinta">
+                <h3 className="mt-5 text-balance text-left font-display text-[18px] font-semibold leading-[1.3] text-tinta md:text-[1.4rem]">
                   {d.titulo}
                 </h3>
                 <div className="filete-ouro my-6 w-full" aria-hidden="true" />

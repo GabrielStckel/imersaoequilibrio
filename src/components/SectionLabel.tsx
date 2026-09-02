@@ -10,11 +10,16 @@ export function SectionLabel({
   className?: string;
 }) {
   return (
-    <div className={cn("flex items-center gap-3", className)}>
+    <div
+      className={cn(
+        "flex flex-col items-center gap-3 text-center md:flex-row md:text-left",
+        className,
+      )}
+    >
       <span aria-hidden="true" className="filete-ouro w-10" />
       <span
         className={cn(
-          "font-body text-xs uppercase tracking-[0.1em]",
+          "font-body text-xs font-semibold uppercase tracking-[0.1em]",
           tone === "dark" ? "text-ouro-luz" : "text-ouro-tinta",
         )}
       >

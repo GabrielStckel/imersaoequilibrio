@@ -28,7 +28,7 @@ export function Metodo() {
         <Reveal>
           <SectionLabel>O MÉTODO DA IMERSÃO</SectionLabel>
           <div className="mt-6 grid gap-6 lg:grid-cols-[1.1fr_1fr] lg:items-end">
-            <h2 className="font-display text-[2rem] font-semibold leading-[1.1] tracking-[-0.02em] text-tinta sm:text-[2.75rem]">
+            <h2 className="mx-auto max-w-[320px] text-balance text-center font-display text-[clamp(1.5rem,5.6vw,2.5rem)] font-semibold leading-[1.18] tracking-[-0.02em] text-tinta md:mx-0 md:max-w-none md:text-left md:text-[2.75rem] md:leading-[1.1]">
               Dois pilares para{" "}
               <span className="relative inline-block">
                 romper o ciclo
@@ -39,7 +39,7 @@ export function Metodo() {
               </span>
               .
             </h2>
-            <p className="font-body text-[0.98rem] leading-[1.8] text-corpo lg:pb-2">
+            <p className="texto-justificado font-body text-[0.98rem] leading-[1.8] text-corpo lg:pb-2">
               Compreensão e vivência caminham juntas: primeiro você enxerga o padrão com nitidez,
               depois consolida no corpo a nova postura. É essa combinação que transforma insight em
               mudança real.
@@ -60,7 +60,7 @@ export function Metodo() {
                   </span>
                 </div>
 
-                <h3 className="relative mt-5 font-display text-xl font-semibold leading-snug text-tinta sm:text-[1.4rem] lg:max-w-[18ch]">
+                <h3 className="relative mt-5 text-balance text-left font-display text-[18px] font-semibold leading-[1.3] text-tinta md:text-[1.4rem] lg:max-w-[18ch]">
                   {p.titulo}
                 </h3>
 
