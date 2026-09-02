@@ -1,6 +1,5 @@
 import { SectionLabel } from "@/components/SectionLabel";
 import { Reveal } from "@/components/Reveal";
-import { CtaButton } from "@/components/CtaButton";
 
 const pilares = [
   {
@@ -88,11 +87,10 @@ export function Metodo() {
         </div>
 
         <Reveal>
-          <div className="mt-12 flex flex-col items-start gap-4 border-t border-borda pt-8 sm:flex-row sm:items-center sm:justify-between">
+          <div className="mt-12 border-t border-borda pt-8 pb-14">
             <p className="font-body text-[0.9375rem] leading-relaxed text-corpo sm:max-w-[46ch]">
               Dois encontros ao vivo pelo Zoom, conduzidos do começo ao fim.
             </p>
-            <CtaButton to="oferta" origem="metodo" variant="outline" className="w-full sm:w-auto" />
           </div>
         </Reveal>
       </div>

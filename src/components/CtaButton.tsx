@@ -9,7 +9,6 @@ type Props = {
   label?: string;
   className?: string;
   size?: "sm" | "md" | "lg";
-  variant?: "solid" | "outline";
   surface?: "light" | "dark";
   semSeta?: boolean;
   origem: string;
@@ -20,7 +19,6 @@ export function CtaButton({
   label,
   className,
   size = "md",
-  variant = "solid",
   surface = "dark",
   semSeta = false,
   origem,
@@ -39,11 +37,9 @@ export function CtaButton({
   } as const;
 
   const variantClasses =
-    variant === "outline"
-      ? "botao-secundario"
-      : surface === "light"
-        ? "botao-ouro-claro text-espresso"
-        : "botao-ouro-metal text-espresso";
+    surface === "light"
+      ? "botao-ouro-claro text-espresso"
+      : "botao-ouro-metal text-espresso";
 
   return (
     <a
