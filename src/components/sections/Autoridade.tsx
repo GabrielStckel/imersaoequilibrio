@@ -12,8 +12,8 @@ export function Autoridade() {
   ] as const;
 
   return (
-    <section className="bg-areia py-14 lg:py-24">
-      <div className="mx-auto grid max-w-6xl gap-10 px-5 sm:px-8 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
+    <section className="bg-areia py-10 lg:py-20">
+      <div className="mx-auto grid max-w-6xl gap-8 px-5 sm:px-8 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
         {/* Texto — primeiro no mobile, segunda coluna no desktop */}
         <Reveal className="order-1 lg:order-2 lg:pt-4">
           <SectionLabel>QUEM CONDUZ</SectionLabel>
@@ -26,7 +26,7 @@ export function Autoridade() {
             {autoridade.papel}
           </p>
 
-          <div className="mt-6 space-y-4 font-body text-[15px] leading-[1.6] text-corpo">
+          <div className="mt-5 space-y-3 font-body text-[15px] leading-[1.6] text-corpo">
             {autoridade.bio.map((p) => (
               <p key={p} className="texto-justificado">
                 {p}
