@@ -6,43 +6,37 @@ export function Autoridade() {
   const { autoridade } = IMERSAO;
 
   const selos = [
-    { posicao: "left-top", classes: "left-4 top-[12%]" },
-    { posicao: "right-middle", classes: "right-4 top-[42%]" },
-    { posicao: "left-bottom", classes: "left-4 top-[72%]" },
+    { classes: "left-4 top-[12%]" },
+    { classes: "right-4 top-[42%]" },
+    { classes: "left-4 top-[72%]" },
   ] as const;
 
   return (
     <section className="bg-areia py-10 lg:py-20">
-      <div className="mx-auto grid max-w-6xl gap-8 px-5 sm:px-8 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
-        {/* Texto — primeiro no mobile, segunda coluna no desktop */}
-        <Reveal className="order-1 lg:order-2 lg:pt-4">
-          <SectionLabel>QUEM CONDUZ</SectionLabel>
+      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 px-5 sm:px-8 lg:grid-cols-[42%_58%] lg:gap-12 lg:items-center">
+        {/* Cabeçalho — mobile primeiro, desktop coluna da direita (linha 1) */}
+        <Reveal className="order-1 lg:col-start-2 lg:row-start-1">
+          <SectionLabel className="flex-col items-center text-center md:!flex-col lg:!flex-row lg:!items-start lg:!text-left">
+            QUEM CONDUZ
+          </SectionLabel>
 
-          <h2 className="mt-5 text-center font-display text-[28px] font-bold leading-[1.2] text-tinta md:text-left">
+          <h2 className="mt-4 text-center font-display text-[28px] font-bold leading-[1.2] text-tinta lg:mt-5 lg:text-left">
             {autoridade.nome}
           </h2>
 
-          <p className="mt-2 text-center font-body text-[13px] uppercase tracking-[0.08em] text-ouro-tinta md:text-left">
+          <p className="mt-1.5 text-center font-body text-[13px] uppercase tracking-[0.08em] text-ouro-tinta lg:mt-2 lg:text-left">
             {autoridade.papel}
           </p>
-
-          <div className="mt-5 space-y-3 font-body text-[15px] leading-[1.6] text-corpo">
-            {autoridade.bio.map((p) => (
-              <p key={p} className="texto-justificado">
-                {p}
-              </p>
-            ))}
-          </div>
         </Reveal>
 
-        {/* Foto com selos — segunda no mobile, primeira coluna no desktop */}
-        <Reveal delay={90} className="order-2 lg:order-1">
-          <div className="relative w-full">
+        {/* Foto com selos — mobile segundo, desktop coluna da esquerda */}
+        <Reveal delay={90} className="order-2 lg:col-start-1 lg:row-start-1 lg:row-span-2">
+          <div className="relative mx-auto w-full max-w-[420px]">
             <img
               src={autoridade.foto}
               alt={`Retrato de ${autoridade.nome}`}
-              width={640}
-              height={800}
+              width={420}
+              height={525}
               loading="lazy"
               className="aspect-[4/5] w-full rounded-[20px] object-cover shadow-[var(--shadow-soft)]"
             />
@@ -53,7 +47,7 @@ export function Autoridade() {
               return (
                 <div
                   key={n.label}
-                  className={`selo-flutuante absolute z-10 ${posicao.classes}`}
+                  className={`selo-flutuante absolute z-10 lg:px-2.5 lg:py-1.5 lg:text-[11px] ${posicao.classes}`}
                 >
                   <span className="font-display font-bold text-ouro-luz">
                     {n.valor}
@@ -62,6 +56,17 @@ export function Autoridade() {
                 </div>
               );
             })}
+          </div>
+        </Reveal>
+
+        {/* Biografia — mobile terceiro, desktop coluna da direita (linha 2) */}
+        <Reveal delay={160} className="order-3 lg:col-start-2 lg:row-start-2">
+          <div className="space-y-3 font-body text-[15px] leading-[1.6] text-corpo">
+            {autoridade.bio.map((p) => (
+              <p key={p} className="texto-justificado">
+                {p}
+              </p>
+            ))}
           </div>
         </Reveal>
       </div>
