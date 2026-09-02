@@ -37,7 +37,7 @@ function HeroVideo() {
         </p>
       )}
 
-      <p className="mt-5 max-w-[48ch] font-body text-[0.9375rem] leading-[1.65] text-pergaminho/80 sm:mt-[18px]">
+      <p className="mt-5 max-w-[48ch] font-body text-base leading-[1.65] text-pergaminho/80 sm:mt-[18px]">
         Desarme a carência de infância que faz você aceitar migalhas no amor e se submeter à
         escassez financeira — e retome o seu lugar de adulto potente.
       </p>
