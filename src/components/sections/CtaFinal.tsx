@@ -6,12 +6,8 @@ import { Reveal } from "@/components/Reveal";
 
 export function CtaFinal() {
   return (
-    <footer className="relative overflow-hidden bg-areia">
-      <div
-        aria-hidden="true"
-        className="grain-overlay pointer-events-none absolute inset-0 opacity-[0.05] mix-blend-overlay"
-      />
-      <div className="relative mx-auto max-w-6xl px-5 py-24 sm:px-8 lg:py-32">
+    <footer className="bg-areia">
+      <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 lg:py-32">
         <Reveal>
           <h2 className="max-w-[18ch] font-display text-[2rem] font-semibold leading-[1.1] text-tinta sm:text-[2.9rem]">
             O respeito não se pede. Ele nasce de quem sustenta o próprio limite.

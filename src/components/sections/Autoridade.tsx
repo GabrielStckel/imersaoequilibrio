@@ -6,7 +6,7 @@ export function Autoridade() {
   const { autoridade } = IMERSAO;
 
   return (
-    <section className="bg-areia py-24 lg:py-32">
+    <section className="bg-areia py-16 lg:py-32">
       <div className="mx-auto grid max-w-6xl gap-14 px-5 sm:px-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
         <Reveal>
           <img

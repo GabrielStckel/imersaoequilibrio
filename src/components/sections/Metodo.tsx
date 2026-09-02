@@ -23,12 +23,8 @@ const pilares = [
 
 export function Metodo() {
   return (
-    <section className="relative overflow-hidden bg-pergaminho py-24 lg:py-32">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -right-40 top-10 h-[26rem] w-[26rem] rounded-full bg-ouro/10 blur-3xl"
-      />
-      <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
+    <section className="bg-pergaminho py-16 lg:py-32">
+      <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <Reveal>
           <SectionLabel>O MÉTODO DA IMERSÃO</SectionLabel>
           <div className="mt-6 grid gap-6 lg:grid-cols-[1.1fr_1fr] lg:items-end">

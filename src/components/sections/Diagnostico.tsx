@@ -32,18 +32,8 @@ const cards = [
 
 export function Diagnostico() {
   return (
-    <section className="relative overflow-hidden bg-pergaminho py-24 lg:py-32">
-      {/* Warm ambient glow */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -left-40 top-0 h-[28rem] w-[28rem] rounded-full bg-ouro/8 blur-3xl"
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -right-20 bottom-20 h-[24rem] w-[24rem] rounded-full bg-ouro/6 blur-3xl"
-      />
-
-      <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
+    <section className="bg-pergaminho py-16 lg:py-32">
+      <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <Reveal>
           <SectionLabel>O DIAGNÓSTICO</SectionLabel>
 
@@ -67,21 +57,7 @@ export function Diagnostico() {
           </div>
         </Reveal>
 
-        {/* Connection line — desktop only */}
         <div className="relative mt-16 lg:mt-20">
-          <div
-            aria-hidden
-            className="pointer-events-none absolute inset-0 hidden lg:grid lg:grid-cols-2 lg:gap-5"
-          >
-            <div className="relative">
-              <div className="absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-gradient-to-b from-ouro/30 via-ouro/10 to-transparent" />
-              <div className="absolute left-1/2 top-1/2 h-px w-full -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-transparent via-ouro/20 to-transparent" />
-            </div>
-            <div className="relative">
-              <div className="absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-gradient-to-b from-ouro/30 via-ouro/10 to-transparent" />
-            </div>
-          </div>
-
           <div className="grid gap-5 lg:grid-cols-2 lg:gap-6">
             {cards.map((c, i) => (
               <Reveal key={c.titulo} delay={i * 90}>

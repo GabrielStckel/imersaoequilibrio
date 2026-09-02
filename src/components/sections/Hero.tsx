@@ -50,14 +50,10 @@ function HeroVideo() {
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-espresso">
+    <section className="relative overflow-hidden border-b border-ouro/30 bg-espresso">
       <div
         aria-hidden="true"
-        className="grain-overlay pointer-events-none absolute inset-0 opacity-[0.05] mix-blend-overlay"
-      />
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-espresso-alt via-espresso to-espresso"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_120%_80%_at_50%_0%,rgb(201_168_63_/_0.13),transparent_65%)]"
       />
 
       <div className="relative mx-auto grid max-w-6xl gap-x-14 px-5 pb-14 pt-10 sm:px-8 sm:pb-20 sm:pt-16 lg:grid-cols-[1.02fr_0.98fr] lg:items-start lg:pb-28 lg:pt-28">
@@ -70,10 +66,10 @@ export function Hero() {
             {/* Título com quebras fixas → sempre 3 linhas em qualquer dispositivo.
                 A fonte é fluida (clamp) e encolhe no mobile o suficiente para cada
                 linha caber. Se editar o texto, reveja as quebras <br />. */}
-            <h1 className="mt-5 font-display text-[clamp(1.75rem,6.2vw,3rem)] font-semibold leading-[1.12] tracking-[-0.02em] text-pergaminho sm:mt-7">
+            <h1 className="mt-5 font-display text-[clamp(1.75rem,6.2vw,3rem)] font-bold leading-[1.12] tracking-[-0.02em] text-pergaminho sm:mt-7">
               Por que doar-se demais está afastando
               <br />
-              o respeito na sua relação amorosa
+              <span className="ouro-texto">o respeito na sua relação amorosa</span>
               <br />
               e travando o fluxo do seu dinheiro?
             </h1>
@@ -108,6 +104,7 @@ export function Hero() {
           </Reveal>
         </div>
       </div>
+      <div aria-hidden="true" className="filete-ouro absolute inset-x-0 bottom-0" />
     </section>
   );
 }

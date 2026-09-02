@@ -12,7 +12,7 @@ const itens = [
 
 export function ParaQuem() {
   return (
-    <section className="bg-pergaminho py-24 lg:py-32">
+    <section className="bg-pergaminho py-16 lg:py-32">
       <div className="mx-auto grid max-w-6xl gap-12 px-5 sm:px-8 lg:grid-cols-[1fr_1fr] lg:gap-20">
         <Reveal>
           <SectionLabel>05 — Para quem é esta imersão</SectionLabel>

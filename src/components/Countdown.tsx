@@ -25,12 +25,12 @@ export function Countdown({ className }: { className?: string }) {
       {blocos.map((b) => (
         <div
           key={b.label}
-          className="moldura-ouro-escura min-w-[64px] rounded-[10px] bg-espresso-alt/60 px-3 py-2.5 text-center sm:min-w-[76px]"
+          className="min-w-[64px] rounded-[10px] border border-ouro/28 bg-espresso-alt px-3 py-2.5 text-center sm:min-w-[76px]"
         >
-          <div className="font-display text-3xl leading-none text-pergaminho sm:text-4xl">
+          <div className="font-display text-3xl font-bold leading-none text-ouro-luz sm:text-4xl">
             {pad(b.valor)}
           </div>
-          <div className="mt-1.5 font-body text-xs uppercase tracking-[0.12em] text-ouro-luz/80">
+          <div className="mt-1.5 font-body text-[11px] uppercase tracking-[0.1em] text-pergaminho/70">
             {b.label}
           </div>
         </div>
