@@ -10,6 +10,7 @@ type Props = {
   size?: "sm" | "md" | "lg";
   variant?: "solid" | "outline";
   surface?: "light" | "dark";
+  semSeta?: boolean;
   origem: string;
 };
 
