@@ -49,6 +49,7 @@ export function Autoridade() {
 
             {autoridade.numeros.map((n, i) => {
               const posicao = selos[i];
+              if (!posicao) return null;
               return (
                 <div
                   key={n.label}
