@@ -129,7 +129,7 @@ export function Hero() {
             <SectionLabel tone="dark">Imersão Online e Ao Vivo · 06 e 07 de Outubro</SectionLabel>
           </Reveal>
           <Reveal delay={80}>
-            <h1 className="text-balance font-display text-[19px] font-bold leading-[1.18] tracking-[-0.02em] text-pergaminho md:mt-7 md:text-[clamp(1.75rem,6.2vw,3rem)] md:leading-[1.12]">
+            <h1 className="text-balance font-display text-[18px] font-bold leading-[1.18] tracking-[-0.02em] text-pergaminho md:mt-7 md:text-[clamp(1.75rem,6.2vw,3rem)] md:leading-[1.12]">
               Por que doar-se demais está afastando<span className="hidden md:inline"><br /></span>{" "}
               <span className="ouro-texto-escuro">o respeito na sua relação amorosa</span><span className="hidden md:inline"><br /></span>{" "}
               e travando o fluxo do seu dinheiro?
