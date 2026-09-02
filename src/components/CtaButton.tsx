@@ -47,9 +47,9 @@ export function CtaButton({
         className,
       )}
     >
-      {textoCta}
+      <span className="relative z-10">{textoCta}</span>
       <ArrowRight
-        className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+        className="relative z-10 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
         strokeWidth={1.5}
         aria-hidden="true"
       />

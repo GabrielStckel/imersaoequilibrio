@@ -82,7 +82,7 @@ export function Metodo() {
                     >
                       <span
                         aria-hidden
-                        className="mt-[0.5em] h-1.5 w-1.5 shrink-0 rounded-full bg-ouro"
+                        className="mt-[0.5em] h-1.5 w-1.5 shrink-0 rounded-full bg-ouro-tinta"
                       />
                       {ponto}
                     </li>
@@ -101,7 +101,7 @@ export function Metodo() {
             <CtaButton
               origem="metodo"
               variant="outline"
-              className="w-full border-ouro-deep/40 text-ouro-tinta hover:bg-ouro/10 sm:w-auto"
+              className="w-full border-ouro-tinta/40 text-ouro-tinta hover:bg-ouro/10 sm:w-auto"
             />
           </div>
         </Reveal>
