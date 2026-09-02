@@ -97,8 +97,8 @@ export const IMERSAO = {
     ],
     numeros: [
       { valor: "12+", label: "anos de prática clínica" },
-      { valor: "8.000+", label: "pessoas atendidas em processos" },
-      { valor: "300+", label: "vivências sistêmicas conduzidas" },
+      { valor: "8.000+", label: "pessoas atendidas" },
+      { valor: "300+", label: "vivências conduzidas" },
     ],
   },
 } as const;
