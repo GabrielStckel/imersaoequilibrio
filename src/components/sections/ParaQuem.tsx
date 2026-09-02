@@ -33,8 +33,8 @@ export function ParaQuem() {
 
         <div className="lg:pt-4">
           <Reveal>
-            <div className="rounded-[18px] border border-[#E4DBC6] bg-white px-[18px] py-4 shadow-[0_1px_2px_rgba(25,21,16,0.05),0_6px_18px_rgba(25,21,16,0.06)]">
-              <h3 className="mb-2.5 font-display text-[15px] font-semibold text-tinta">
+            <div className="rounded-[18px] border border-[#E4DBC6] bg-white px-[18px] py-3.5 shadow-[0_1px_2px_rgba(25,21,16,0.05),0_6px_18px_rgba(25,21,16,0.06)]">
+              <h3 className="mb-2 font-display text-[15px] font-semibold text-tinta">
                 É para você se:
               </h3>
               <ul>
@@ -52,7 +52,7 @@ export function ParaQuem() {
                       className="mt-0.5 shrink-0"
                       aria-hidden="true"
                     />
-                    <span className="font-body text-[15px] leading-[1.4] text-corpo text-left">
+                    <span className="font-body text-[15px] leading-[1.38] text-corpo text-left">
                       {t}
                     </span>
                   </li>
