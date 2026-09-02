@@ -11,9 +11,9 @@ const itens = [
 ];
 
 const naoItens = [
-  "Para quem procura uma solução rápida, sem atravessar o que precisa ser olhado.",
-  "Para quem quer só teoria, sem se expor às vivências e ao próprio movimento interno.",
-  "Para quem não pretende participar ao vivo. A imersão é construída sobre vivências em tempo real: assistir depois entrega a compreensão, mas não a experiência.",
+  "Quem procura uma solução rápida, sem atravessar o que precisa ser olhado.",
+  "Quem quer só teoria, sem se expor às vivências e ao próprio movimento interno.",
+  "Quem não pretende participar ao vivo. A imersão é construída sobre vivências em tempo real: assistir depois entrega a compreensão, mas não a experiência.",
 ];
 
 export function ParaQuem() {
@@ -32,28 +32,49 @@ export function ParaQuem() {
         </Reveal>
 
         <div className="lg:pt-4">
-          <ul className="space-y-4">
-            {itens.map((t, i) => (
-              <Reveal as="li" key={t} delay={i * 60}>
-                <div className="card-nivel-a flex gap-4">
-                  <span className="icone-card">
-                    <Check strokeWidth={1.5} aria-hidden="true" />
-                  </span>
-                  <span className="font-body text-[0.95rem] leading-[1.7] text-tinta">{t}</span>
-                </div>
-              </Reveal>
-            ))}
-          </ul>
+          <Reveal>
+            <div className="rounded-[18px] border border-[#E4DBC6] bg-white p-5 shadow-[0_1px_2px_rgba(25,21,16,0.05),0_6px_18px_rgba(25,21,16,0.06)]">
+              <h3 className="mb-3.5 font-display text-[15px] font-semibold text-tinta">
+                É para você se:
+              </h3>
+              <ul>
+                {itens.map((t, i) => (
+                  <li
+                    key={t}
+                    className={`grid grid-cols-[18px_1fr] gap-3 py-2.5 ${
+                      i !== itens.length - 1 ? "border-b border-[#E4DBC6]" : ""
+                    }`}
+                  >
+                    <Check
+                      size={16}
+                      strokeWidth={2}
+                      color="#7D5F1C"
+                      className="mt-0.5 shrink-0"
+                      aria-hidden="true"
+                    />
+                    <span className="font-body text-[15px] leading-[1.45] text-corpo text-left">
+                      {t}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </Reveal>
 
-          <Reveal delay={320}>
-            <div className="mt-8 rounded-2xl border border-terracota/25 bg-areia p-5 sm:p-6">
-              <h3 className="text-balance text-left font-display text-[18px] font-semibold leading-[1.3] text-tinta">
+          <Reveal delay={240}>
+            <div className="mt-6 rounded-[18px] border border-terracota/25 bg-areia p-5">
+              <h3 className="font-display text-[15px] font-semibold text-tinta">
                 Esta imersão não é para:
               </h3>
-              <ul className="mt-4 space-y-3">
+              <ul className="mt-3.5 space-y-3">
                 {naoItens.map((item) => (
-                  <li key={item} className="flex gap-3 font-body text-[15px] leading-[1.65] text-corpo">
-                    <X className="mt-0.5 h-5 w-5 shrink-0 text-terracota" strokeWidth={2} aria-hidden="true" />
+                  <li key={item} className="grid grid-cols-[18px_1fr] gap-3 font-body text-[15px] leading-[1.45] text-corpo">
+                    <X
+                      size={16}
+                      strokeWidth={2}
+                      className="mt-0.5 shrink-0 text-terracota"
+                      aria-hidden="true"
+                    />
                     <span>{item}</span>
                   </li>
                 ))}
