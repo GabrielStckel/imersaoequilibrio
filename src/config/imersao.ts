@@ -25,7 +25,7 @@ export const IMERSAO = {
   // ——— Barra de progresso programada por data ———
   progresso: {
     aberturaVendas: "2026-09-05T09:00:00-03:00",
-    percentInicial: 8,
+    percentInicial: 22,
     percentAlvo: 96,
     curva: "easeOut" as "linear" | "easeOut",
   },
