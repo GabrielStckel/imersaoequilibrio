@@ -38,7 +38,7 @@ function Faixa({ ocultar = false }: { ocultar?: boolean }) {
   return (
     <div
       aria-hidden={ocultar || undefined}
-      className="flex shrink-0 items-center gap-8 pr-8 font-body text-xs font-medium uppercase tracking-[0.12em] text-ouro-luz"
+      className="flex shrink-0 items-center gap-8 pr-8 font-body text-[11px] font-medium uppercase leading-none tracking-[0.12em] text-ouro-luz"
     >
       {mensagens.map((m, i) => (
         <span key={i} className="flex items-center gap-8 whitespace-nowrap">
@@ -103,7 +103,7 @@ export function Header() {
         )}
       >
         <div className="min-h-0 overflow-hidden">
-          <div className="eq-marquee-track flex w-max py-2">
+          <div className="eq-marquee-track flex w-max py-[7px] md:py-2">
             <Faixa />
             <Faixa ocultar />
           </div>
@@ -112,23 +112,31 @@ export function Header() {
 
       {/* Barra do header */}
       <div className="border-b border-ouro/15 bg-espresso-alt/95 backdrop-blur">
-        <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-2.5 sm:px-8">
+        <div className="mx-auto flex h-[60px] max-w-6xl items-center justify-between gap-3 px-4 py-2.5 sm:px-8 md:h-auto md:gap-4">
           {/* Logo / marca */}
-          <a href="#" className="flex min-h-11 min-w-0 items-center gap-2.5 py-1">
+          <a href="#" className="flex min-h-11 min-w-0 items-center gap-2.5 md:py-1">
             <span
               aria-hidden="true"
-              className="moldura-ouro-escura flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-ouro/10"
+              className="moldura-ouro-escura flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-ouro/10 md:h-8 md:w-8"
             >
               <Scale className="h-4 w-4 text-ouro-luz" strokeWidth={1.5} />
             </span>
-            <span className="truncate font-display text-[0.82rem] font-semibold tracking-[0.06em] text-pergaminho">
+            <span className="max-w-[126px] font-display text-[15px] font-semibold leading-[1.15] text-pergaminho md:max-w-none md:text-[0.82rem] md:tracking-[0.06em]">
               {IMERSAO.nome}
             </span>
           </a>
 
-          {/* Countdown + CTA */}
-          <div className="flex shrink-0 items-center gap-4">
-            <span className="hidden font-body text-xs uppercase tracking-[0.12em] text-pergaminho/80 sm:block">
+          {/* Contador mobile */}
+          <div className="flex shrink-0 flex-col items-end justify-center text-right md:hidden">
+            <span className="font-body text-[10px] font-medium uppercase leading-none tracking-[0.1em] text-ouro-luz">
+              Começa em
+            </span>
+            <CountdownInline className="mt-1 font-display text-[15px] font-semibold leading-none text-pergaminho" />
+          </div>
+
+          {/* Countdown + CTA no desktop */}
+          <div className="hidden shrink-0 items-center gap-4 md:flex">
+            <span className="font-body text-xs uppercase tracking-[0.12em] text-pergaminho/80">
               Começa em{" "}
               <CountdownInline className="text-xs font-semibold text-ouro-luz" />
             </span>
