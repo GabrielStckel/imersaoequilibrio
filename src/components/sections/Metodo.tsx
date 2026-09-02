@@ -87,7 +87,7 @@ export function Metodo() {
         </div>
 
         <Reveal>
-          <div className="mt-12 border-t border-borda pt-8 pb-14">
+          <div className="mt-12 border-t border-borda pt-8 pb-0">
             <p className="font-body text-[0.9375rem] leading-relaxed text-corpo sm:max-w-[46ch]">
               Dois encontros ao vivo pelo Zoom, conduzidos do começo ao fim.
             </p>
