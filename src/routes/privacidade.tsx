@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { IMERSAO } from "@/config/imersao";
 
-const titulo = "Política de privacidade — Imersão Equilíbrio Sistêmico";
+const titulo = "Política de privacidade - Imersão Equilíbrio Sistêmico";
 const descricao =
   "Como tratamos os dados de quem se inscreve na imersão Equilíbrio Sistêmico, incluindo cookies e rastreio de campanhas.";
 

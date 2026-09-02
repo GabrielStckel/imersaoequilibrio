@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { IMERSAO } from "@/config/imersao";
 
-const titulo = "Termos de uso — Imersão Equilíbrio Sistêmico";
+const titulo = "Termos de uso - Imersão Equilíbrio Sistêmico";
 const descricao =
   "Condições de participação ao vivo e política de garantia da imersão Equilíbrio Sistêmico.";
 

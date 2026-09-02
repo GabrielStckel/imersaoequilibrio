@@ -6,7 +6,7 @@ const pilares = [
   {
     n: "1",
     tag: "Entendimento",
-    titulo: "Aula Expositiva — Clareza Epistemológica",
+    titulo: "Aula Expositiva: Clareza Epistemológica",
     texto:
       "Utilizaremos o pensamento sistêmico e a filosofia profunda para desarmar as defesas do seu ego. Você entenderá a lógica por trás dos seus comportamentos de autossabotagem e como a Terceira Lei de Hellinger governa seus resultados.",
     pontos: ["Pensamento sistêmico aplicado", "Raiz da autossabotagem", "Terceira Lei de Hellinger"],
@@ -14,7 +14,7 @@ const pilares = [
   {
     n: "2",
     tag: "Experiência",
-    titulo: "Vivências Sistêmicas — Consolidação da Postura",
+    titulo: "Vivências Sistêmicas: Consolidação da Postura",
     texto:
       "Ao vivo pelo Zoom, conduziremos movimentos sistêmicos coletivos. Através do campo mórfico, você sentirá no corpo a transição da criança carente para o adulto potente. Não é teoria; é uma atualização do seu sistema operacional emocional para que o 'não' e o limite surjam com naturalidade, sem culpa.",
     pontos: ["Movimentos sistêmicos ao vivo", "Transição para o adulto potente", "Limite sem culpa"],

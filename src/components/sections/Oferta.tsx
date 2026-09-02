@@ -48,7 +48,7 @@ export function Oferta() {
               <div className="filete-ouro w-16" />
               <p className="font-body text-base leading-[1.7] text-pergaminho/80">
                 Tudo o que você precisa para romper com a hipercompensação e assumir sua postura de
-                adulto potente — em um único investimento acessível.
+                adulto potente, em um único investimento acessível.
               </p>
             </div>
           </div>

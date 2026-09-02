@@ -34,7 +34,7 @@ export function CausaRaiz() {
               <p className="texto-justificado">
                 Por que, mesmo sabendo que deveria colocar limites, você simplesmente não consegue? A
                 resposta não está na sua força de vontade, está na sua história. Quando uma criança não
-                recebe o que precisa dos pais — presença, olhar, lugar —, ela aprende a se tornar útil
+                recebe dos pais o que precisa (presença, olhar, lugar), ela aprende a se tornar útil
                 para garantir o próprio pertencimento. Dar demais deixa de ser generosidade e vira
                 estratégia de sobrevivência.
               </p>
@@ -58,8 +58,8 @@ export function CausaRaiz() {
 
               <p className="texto-justificado">
                 Enquanto essa criança continuar conduzindo suas trocas adultas, o padrão se repete em
-                cada novo vínculo: você entrega mais do que recebe, adia o próprio desejo, evita o
-                conflito — e continuará atraindo pessoas que invadem o seu espaço e usam a sua energia.
+                cada novo vínculo: você entrega mais do que recebe, adia o próprio desejo e evita o
+                conflito. E continuará atraindo pessoas que invadem o seu espaço e usam a sua energia.
               </p>
             </div>
           </Reveal>
@@ -68,7 +68,7 @@ export function CausaRaiz() {
         <Reveal>
           <div className="mt-16 flex flex-col items-start gap-5 border-t border-borda pt-8 sm:flex-row sm:items-center sm:justify-between">
             <p className="texto-justificado max-w-[52ch] font-body text-[0.95rem] leading-relaxed text-corpo">
-              A boa notícia: o que foi aprendido pode ser desaprendido — quando você enxerga a raiz, o
+              A boa notícia: o que foi aprendido pode ser desaprendido. Quando você enxerga a raiz, o
               padrão perde a força.
             </p>
             <CtaButton origem="causa-raiz" variant="outline" className="w-full shrink-0 sm:w-auto" />

@@ -84,7 +84,7 @@ export function Diagnostico() {
           <div className="mt-14 flex flex-col items-start gap-5 border-t border-borda pt-8 sm:flex-row sm:items-center sm:justify-between">
             <p className="texto-justificado max-w-[52ch] font-body text-[0.95rem] leading-relaxed text-corpo">
               O desequilíbrio não escolhe área. Ele se mostra no amor, no dinheiro, no trabalho e na
-              família — até que você restaure a ordem dentro de si.
+              família. E continua assim até você restaurar a ordem dentro de si.
             </p>
             <CtaButton origem="diagnostico" variant="outline" className="w-full shrink-0 sm:w-auto" />
           </div>
