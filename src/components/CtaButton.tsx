@@ -23,9 +23,9 @@ export function CtaButton({
   const textoCta = label ?? `${IMERSAO.cta} ${lote.nome}`;
 
   const sizes = {
-    sm: "px-4 py-2 text-[0.78rem]",
-    md: "px-6 py-3.5 text-sm",
-    lg: "px-8 py-4.5 text-base",
+    sm: "px-4 py-2.5",
+    md: "px-6 py-3.5",
+    lg: "px-8 py-4",
   } as const;
 
   return (
@@ -38,10 +38,10 @@ export function CtaButton({
         trackInitiateCheckout({ origem, lote: lote.nome, value: lote.preco, currency: "BRL" })
       }
       className={cn(
-        "group inline-flex items-center justify-center gap-2 rounded-[10px] font-display font-semibold tracking-[0.01em] transition-all duration-300",
+        "group min-h-12 inline-flex items-center justify-center gap-2 rounded-xl font-display text-base font-semibold tracking-[0.01em] transition-[filter,transform,box-shadow] duration-300",
         "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ouro focus-visible:ring-offset-2 focus-visible:ring-offset-transparent",
         variant === "solid"
-          ? "bg-ouro text-espresso shadow-[0_10px_30px_-14px_rgba(201,168,63,0.9)] hover:bg-ouro-luz"
+          ? "botao-ouro-metal text-espresso"
           : "border border-ouro-tinta/50 text-ouro-tinta hover:border-ouro-tinta hover:bg-ouro/10",
         sizes[size],
         className,

@@ -73,7 +73,7 @@ export function Header() {
           <a href="#" className="flex min-w-0 items-center gap-2.5">
             <span
               aria-hidden="true"
-              className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-ouro/40 bg-ouro/10"
+              className="moldura-ouro-escura flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-ouro/10"
             >
               <Scale className="h-4 w-4 text-ouro-luz" strokeWidth={1.5} />
             </span>
@@ -96,7 +96,7 @@ export function Header() {
       {/* Barra de progresso (fina) */}
       <div className="h-[2px] w-full bg-ouro/10">
         <div
-          className="h-full bg-ouro transition-[width] duration-1000 ease-out"
+          className="ouro-metal h-full transition-[width] duration-1000 ease-out"
           style={{ width: `${pct}%` }}
           role="progressbar"
           aria-valuenow={pct}

@@ -55,13 +55,13 @@ export function Oferta() {
                 ainda hoje
                 <span
                   aria-hidden="true"
-                  className="absolute inset-x-[-0.12em] -bottom-[0.06em] h-[0.12em] rounded-full bg-gradient-to-r from-ouro/40 via-ouro to-ouro/40"
+                  className="filete-ouro absolute inset-x-[-0.12em] -bottom-[0.06em]"
                 />
               </span>{" "}
               na Imersão Equilíbrio?
             </h2>
             <div className="mt-5 flex max-w-2xl flex-col items-center gap-4">
-              <div className="h-px w-16 bg-ouro/30" />
+              <div className="filete-ouro w-16" />
               <p className="font-body text-[1rem] leading-[1.7] text-pergaminho/80">
                 Tudo o que você precisa para romper com a hipercompensação e assumir sua postura de
                 adulto potente — em um único investimento acessível.
@@ -118,10 +118,7 @@ export function Oferta() {
             {/* ——— Direita: painel de preço ——— */}
             <div className="relative flex flex-col items-center bg-espresso px-8 py-12 text-center sm:px-12 lg:border-l lg:border-ouro/15 lg:px-10 lg:py-16 xl:px-12 xl:py-20">
               {/* Top gold accent line */}
-              <div
-                aria-hidden="true"
-                className="pointer-events-none absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-ouro/50 to-transparent"
-              />
+              <div aria-hidden="true" className="filete-ouro pointer-events-none absolute left-0 right-0 top-0" />
 
               {/* Radial glow behind price */}
               <div
@@ -158,11 +155,11 @@ export function Oferta() {
                   const l = IMERSAO.lotes[indice] ?? IMERSAO.lotes[0];
                   const { cifra, numero } = precoPartes(l.preco);
                   return (
-                    <div className="flex w-full flex-col items-center justify-center rounded-2xl border-[1.5px] border-ouro bg-gradient-to-b from-ouro/18 to-ouro/[0.03] px-3 py-6 shadow-[0_0_55px_-10px_rgba(194,162,76,0.45)] transition-all duration-300 lg:py-8">
+                    <div className="moldura-ouro-escura flex w-full flex-col items-center justify-center rounded-2xl bg-gradient-to-b from-ouro/18 to-ouro/[0.03] px-3 py-6 shadow-[0_0_55px_-10px_rgba(138,106,32,0.38)] transition-all duration-300 lg:py-8">
                       <span className="font-body text-xs font-semibold uppercase tracking-[0.12em] text-ouro-luz">
                         Lote especial
                       </span>
-                      <span className="mt-2 font-display font-semibold leading-none text-ouro-luz">
+                      <span className="ouro-texto mt-2 font-display font-semibold leading-none">
                         <span className="align-top text-[1.35rem] lg:text-[1.65rem]">{cifra}</span>{" "}
                         <span className="text-[3rem] lg:text-[3.75rem]">{numero}</span>
                       </span>
@@ -205,7 +202,8 @@ export function Oferta() {
 
               <ProgressoLote tone="dark" className="relative mt-5 max-w-none" />
 
-              <div className="relative mt-6 flex w-full items-center justify-center gap-2.5 border-t border-ouro/12 pt-5 font-body text-[0.9375rem] text-pergaminho/80 lg:text-[0.9375rem]">
+              <div className="relative mt-6 flex w-full items-center justify-center gap-2.5 pt-5 font-body text-[0.9375rem] text-pergaminho/80 lg:text-[0.9375rem]">
+                <span aria-hidden="true" className="filete-ouro absolute inset-x-0 top-0" />
                 <Lock className="h-4 w-4 text-ouro-luz" strokeWidth={1.6} aria-hidden="true" />
                 Pagamento Seguro · Hotmart · Garantia de 7 dias
               </div>
