@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useLoteAtivo } from "@/hooks/useLoteAtivo";
+import { useCheckoutUrl } from "@/hooks/useCheckoutUrl";
 import { IMERSAO } from "@/config/imersao";
 import { trackInitiateCheckout } from "@/lib/tracking";
 
@@ -12,6 +13,7 @@ type Props = {
   surface?: "light" | "dark";
   semSeta?: boolean;
   origem: string;
+  to?: "checkout" | "oferta";
 };
 
 export function CtaButton({
@@ -22,9 +24,13 @@ export function CtaButton({
   surface = "dark",
   semSeta = false,
   origem,
+  to = "oferta",
 }: Props) {
   const { lote } = useLoteAtivo();
+  const checkoutUrl = useCheckoutUrl();
   const textoCta = label ?? `${IMERSAO.cta} ${lote.nome}`;
+
+  const href = to === "checkout" ? checkoutUrl : "#oferta";
 
   const sizes = {
     sm: "min-h-11 px-4 py-2.5",
@@ -41,9 +47,9 @@ export function CtaButton({
 
   return (
     <a
-      href={lote.checkout}
-      target="_blank"
-      rel="noopener noreferrer"
+      href={href}
+      target={to === "checkout" ? "_blank" : undefined}
+      rel={to === "checkout" ? "noopener noreferrer" : undefined}
       aria-label={textoCta}
       onClick={() =>
         trackInitiateCheckout({ origem, lote: lote.nome, value: lote.preco, currency: "BRL" })

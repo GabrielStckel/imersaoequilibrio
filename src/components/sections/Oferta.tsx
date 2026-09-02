@@ -187,7 +187,7 @@ export function Oferta() {
               Preço exclusivo enquanto durar o lote
             </p>
 
-            <CtaButton origem="oferta" size="lg" className="mt-4 w-full sm:mt-5" />
+            <CtaButton to="checkout" origem="oferta" size="lg" className="mt-4 w-full sm:mt-5" />
             <ProgressoLote tone="dark" className="mx-auto mt-5 max-w-none" />
 
             <div className="relative mt-5 flex flex-col items-center gap-1 pt-5 text-center">

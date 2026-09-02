@@ -92,7 +92,7 @@ export function Metodo() {
             <p className="font-body text-[0.9375rem] leading-relaxed text-corpo sm:max-w-[46ch]">
               Dois encontros ao vivo pelo Zoom, conduzidos do começo ao fim.
             </p>
-            <CtaButton origem="metodo" variant="outline" className="w-full sm:w-auto" />
+            <CtaButton to="oferta" origem="metodo" variant="outline" className="w-full sm:w-auto" />
           </div>
         </Reveal>
       </div>

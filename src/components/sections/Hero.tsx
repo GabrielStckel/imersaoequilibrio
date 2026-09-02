@@ -67,7 +67,7 @@ function MobilePurchase() {
           </span>
         </div>
 
-        <CtaButton origem="hero" size="lg" className="mt-5 h-[52px] w-full" />
+        <CtaButton to="oferta" origem="hero" size="lg" className="mt-5 h-[52px] w-full" />
 
         <p className="mt-3 font-body text-xs leading-relaxed text-pergaminho/80">
           Pagamento seguro via Hotmart · Garantia incondicional de 7 dias
@@ -104,7 +104,7 @@ function DesktopPurchase() {
         <div className="relative mt-7 pt-7">
           <span aria-hidden="true" className="filete-ouro absolute inset-x-0 top-0" />
           <PrecoLote />
-          <CtaButton origem="hero" size="lg" className="mt-6 w-auto" />
+          <CtaButton to="oferta" origem="hero" size="lg" className="mt-6 w-auto" />
           <p className="mt-4 text-left font-body text-[0.75rem] leading-relaxed text-pergaminho/80">
             Pagamento seguro via Hotmart · Garantia incondicional de 7 dias
           </p>

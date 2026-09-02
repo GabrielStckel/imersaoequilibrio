@@ -17,7 +17,7 @@ export const IMERSAO = {
   // ——— Vídeo do hero (VSL) ———
   video: {
     // Cole a URL de EMBED do seu player (YouTube, Vimeo, Panda, etc).
-    // Ex.: "https://www.youtube.com/embed/XXXXXXXX". Vazio = mostra o player-placeholder.
+    // Ex.: "https://www.youtube.com/embed/abc123". Vazio = mostra o player-placeholder.
     embedUrl: "",
     legenda: "Assista antes de garantir sua vaga",
   },
@@ -45,14 +45,14 @@ export const IMERSAO = {
       preco: "R$ 97",
       parcela: "ou 5x de R$ 19,97",
       ateData: "2026-09-30T23:59:00-03:00",
-      checkout: "https://pay.hotmart.com/XXXXX?off=lote2",
+      checkout: "",
     },
     {
       nome: "3º Lote",
       preco: "R$ 147",
       parcela: "ou 5x de R$ 30,26",
       ateData: "2026-10-06T19:00:00-03:00",
-      checkout: "https://pay.hotmart.com/XXXXX?off=lote3",
+      checkout: "",
     },
   ],
 
@@ -63,7 +63,7 @@ export const IMERSAO = {
   // Texto base do botão. O nome do lote ativo é adicionado automaticamente:
   // "Garantir Vaga" → "Garantir Vaga 1º Lote"
   cta: "Garantir Vaga",
-  suporte: "https://wa.me/55XXXXXXXXXXX",
+  suporte: "https://wa.me/55",
 
   // ——— Checklist de entregáveis da oferta ———
   stackValor: [

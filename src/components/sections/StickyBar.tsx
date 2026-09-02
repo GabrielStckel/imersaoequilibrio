@@ -70,6 +70,7 @@ export function StickyBar() {
         </div>
 
         <CtaButton
+          to="oferta"
           label="Garantir vaga"
           size="sm"
           origem="sticky-mobile"
