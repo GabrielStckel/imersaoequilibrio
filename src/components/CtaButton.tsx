@@ -9,6 +9,7 @@ type Props = {
   className?: string;
   size?: "sm" | "md" | "lg";
   variant?: "solid" | "outline";
+  surface?: "light" | "dark";
   origem: string;
 };
 
@@ -17,6 +18,7 @@ export function CtaButton({
   className,
   size = "md",
   variant = "solid",
+  surface = "dark",
   origem,
 }: Props) {
   const { lote } = useLoteAtivo();
@@ -27,6 +29,13 @@ export function CtaButton({
     md: "min-h-12 px-6 py-3.5",
     lg: "min-h-12 px-8 py-4",
   } as const;
+
+  const variantClasses =
+    variant === "outline"
+      ? "botao-secundario"
+      : surface === "light"
+        ? "botao-ouro-claro text-espresso"
+        : "botao-ouro-metal text-espresso";
 
   return (
     <a
@@ -40,9 +49,7 @@ export function CtaButton({
       className={cn(
         "group inline-flex items-center justify-center gap-2 rounded-xl font-display text-base font-semibold tracking-[0.01em] transition-[filter,transform,box-shadow] duration-300",
         "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ouro focus-visible:ring-offset-2 focus-visible:ring-offset-transparent",
-        variant === "solid"
-          ? "botao-ouro-metal text-espresso"
-          : "border border-ouro-tinta/50 text-ouro-tinta hover:border-ouro-tinta hover:bg-ouro/10",
+        variantClasses,
         sizes[size],
         className,
       )}
