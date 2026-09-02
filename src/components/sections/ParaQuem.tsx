@@ -1,4 +1,4 @@
-import { Check } from "lucide-react";
+import { Check, X } from "lucide-react";
 import { SectionLabel } from "@/components/SectionLabel";
 import { Reveal } from "@/components/Reveal";
 
@@ -8,6 +8,12 @@ const itens = [
   "Vive um relacionamento onde você dá tudo e recebe migalhas de atenção.",
   "Sente culpa ou medo de ser rejeitado ao dizer 'não' para amigos ou familiares.",
   "Busca um autoconhecimento profundo, científico e sem clichês de autoajuda.",
+];
+
+const naoItens = [
+  "Para quem procura uma solução rápida, sem atravessar o que precisa ser olhado.",
+  "Para quem quer só teoria, sem se expor às vivências e ao próprio movimento interno.",
+  "Para quem não pretende participar ao vivo. A imersão é construída sobre vivências em tempo real: assistir depois entrega a compreensão, mas não a experiência.",
 ];
 
 export function ParaQuem() {
@@ -25,18 +31,36 @@ export function ParaQuem() {
           </p>
         </Reveal>
 
-        <ul className="space-y-4 lg:pt-4">
-          {itens.map((t, i) => (
-            <Reveal as="li" key={t} delay={i * 60}>
-              <div className="card-nivel-a flex gap-4">
-                <span className="icone-card">
-                  <Check strokeWidth={1.5} aria-hidden="true" />
-                </span>
-                <span className="font-body text-[0.95rem] leading-[1.7] text-tinta">{t}</span>
-              </div>
-            </Reveal>
-          ))}
-        </ul>
+        <div className="lg:pt-4">
+          <ul className="space-y-4">
+            {itens.map((t, i) => (
+              <Reveal as="li" key={t} delay={i * 60}>
+                <div className="card-nivel-a flex gap-4">
+                  <span className="icone-card">
+                    <Check strokeWidth={1.5} aria-hidden="true" />
+                  </span>
+                  <span className="font-body text-[0.95rem] leading-[1.7] text-tinta">{t}</span>
+                </div>
+              </Reveal>
+            ))}
+          </ul>
+
+          <Reveal delay={320}>
+            <div className="mt-8 rounded-2xl border border-terracota/25 bg-areia p-5 sm:p-6">
+              <h3 className="font-display text-base font-semibold tracking-[-0.01em] text-tinta">
+                Esta imersão não é para:
+              </h3>
+              <ul className="mt-4 space-y-3">
+                {naoItens.map((item) => (
+                  <li key={item} className="flex gap-3 font-body text-[15px] leading-[1.65] text-corpo">
+                    <X className="mt-0.5 h-5 w-5 shrink-0 text-terracota" strokeWidth={2} aria-hidden="true" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </Reveal>
+        </div>
       </div>
     </section>
   );
