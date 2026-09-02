@@ -58,7 +58,7 @@ export function Autoridade() {
                   <span className="font-display font-bold text-ouro-luz">
                     {n.valor}
                   </span>
-                  <span>{n.label}</span>
+                  <span className="font-body font-normal">{n.label}</span>
                 </div>
               );
             })}
@@ -73,6 +73,9 @@ export function Autoridade() {
                 {p}
               </p>
             ))}
+            <p className="mt-3 text-right font-body text-[13px] font-medium italic text-ouro-tinta">
+              – Jonas Peres
+            </p>
           </div>
         </Reveal>
       </div>

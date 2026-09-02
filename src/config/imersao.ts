@@ -95,13 +95,13 @@ export const IMERSAO = {
     papel: "Terapeuta sistêmico · Antiparadigma",
     foto: "/jonas.png", // Substitua o arquivo em public/jonas.png pelo retrato oficial.
     bio: [
-      "Jonas Peres conduz processos de terapia sistêmica há mais de uma década, unindo o pensamento de Hellinger à filosofia e à epistemologia para desarmar padrões de hipercompensação.",
-      "Seu trabalho é direto e sem clichês de autoajuda: o objetivo é que a pessoa saia do lugar de criança carente e assuma a postura de adulto potente nas relações, no dinheiro e na carreira.",
+      "Os mais de 10 anos como constelador e terapeuta são o coração de uma vida inteira destinada ao servir consciente à vida, com o suporte de uma espiritualidade laica e filosófica, que traz clareza, sabedoria e verdade ao meu processo e ao de quem posso auxiliar.",
+      "Mais de 3.000 horas conduzindo constelações e vivências terapêuticas, presenciais e online. Mais de 5.000 clientes e alunos que viveram o poder transformador do autoconhecimento, resolvendo questões urgentes e aprendendo a conduzir melhor suas vidas, seguindo o meu método.",
     ],
     numeros: [
-      { valor: "12+", label: "anos de prática clínica" },
-      { valor: "8.000+", label: "pessoas atendidas" },
-      { valor: "300+", label: "vivências conduzidas" },
+      { valor: "+10", label: "anos como constelador" },
+      { valor: "+5.000", label: "clientes e alunos" },
+      { valor: "+3.000", label: "horas de constelações" },
     ],
   },
 } as const;
