@@ -30,7 +30,7 @@ export function Oferta() {
   const loteAtivo = IMERSAO.lotes[indice] ?? IMERSAO.lotes[0];
 
   return (
-    <section id="oferta" className="relative overflow-hidden bg-espresso py-12 lg:py-32">
+    <section id="oferta" className="relative overflow-hidden bg-espresso py-8 sm:py-12 lg:py-32">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_110%_70%_at_50%_100%,rgb(201_168_63_/_0.11),transparent_65%)]"
@@ -40,13 +40,13 @@ export function Oferta() {
         <Reveal>
           <div className="flex flex-col items-center text-center">
             <SectionLabel tone="dark">GARANTA SUA VAGA</SectionLabel>
-            <h2 className="mt-5 max-w-3xl font-display text-[30px] font-bold leading-[1.1] tracking-[-0.02em] text-pergaminho sm:mt-6 sm:text-[2.75rem] lg:text-[3.25rem]">
+            <h2 className="mt-4 max-w-3xl font-display text-[28px] font-bold leading-[1.08] tracking-[-0.02em] text-pergaminho sm:mt-6 sm:text-[2.75rem] sm:leading-[1.1] lg:text-[3.25rem]">
               O que você garante ao entrar <span className="ouro-texto">ainda hoje</span> na Imersão
               Equilíbrio?
             </h2>
-            <div className="mt-4 flex max-w-2xl flex-col items-center gap-3 sm:mt-5 sm:gap-4">
+            <div className="mt-3 flex max-w-2xl flex-col items-center gap-2.5 sm:mt-5 sm:gap-4">
               <div className="filete-ouro w-16" />
-              <p className="font-body text-base leading-[1.7] text-pergaminho/80">
+              <p className="font-body text-base leading-[1.55] text-pergaminho/80 sm:leading-[1.7]">
                 Tudo o que você precisa para romper com a hipercompensação e assumir sua postura de
                 adulto potente, em um único investimento acessível.
               </p>
@@ -55,12 +55,12 @@ export function Oferta() {
         </Reveal>
 
         <Reveal delay={90}>
-          <ul className="mx-auto mt-8 max-w-[620px] rounded-[20px] border border-borda bg-pergaminho px-[18px] py-[22px] shadow-[0_4px_12px_rgb(0_0_0_/_0.28),0_20px_48px_rgb(0_0_0_/_0.35)] sm:mt-10">
+          <ul className="mx-auto mt-6 max-w-[620px] rounded-[20px] border border-borda bg-pergaminho px-[18px] py-[22px] shadow-[0_4px_12px_rgb(0_0_0_/_0.28),0_20px_48px_rgb(0_0_0_/_0.35)] sm:mt-10">
             {IMERSAO.stackValor.map((item, index) => (
               <li
                 key={item.texto}
                 className={cn(
-                  "flex items-start gap-3 py-3",
+                  "flex items-start gap-3 py-2.5 sm:py-3",
                   index < IMERSAO.stackValor.length - 1 &&
                     "border-b border-borda",
                 )}
@@ -68,7 +68,7 @@ export function Oferta() {
                 <span className="mt-[1px] grid h-[22px] w-[22px] shrink-0 place-items-center rounded-[6px] border border-ouro-tinta">
                   <Check className="h-3.5 w-3.5 text-ouro-tinta" strokeWidth={2.4} aria-hidden="true" />
                 </span>
-                <span className="min-w-0 text-left font-body text-[15px] font-normal leading-[1.45] text-corpo">
+                <span className="min-w-0 text-left font-body text-[15px] font-normal leading-[1.38] text-corpo sm:leading-[1.45]">
                   {item.bonus && (
                     <span className="mr-2 inline-block rounded-[4px] bg-terracota px-[7px] py-[2px] align-[2px] font-body text-[10px] font-semibold uppercase tracking-[0.08em] text-white">
                       Bônus
@@ -91,19 +91,19 @@ export function Oferta() {
                 </span>
                 {loteAtivo.nome} · Valor promocional
               </span>
-              <p className="mx-auto mt-4 max-w-[38ch] font-body text-[15px] leading-[1.55] text-pergaminho/80">
+              <p className="mx-auto mt-3 max-w-[38ch] font-body text-[15px] leading-[1.45] text-pergaminho/80 sm:mt-4 sm:leading-[1.55]">
                 Para que mais pessoas possam viver essa experiência,{" "}
                 <b className="font-medium italic text-ouro-luz">
                   o primeiro lote tem valor especial.
                 </b>
               </p>
-              <p className="mt-4 font-body text-base text-pergaminho/85">
+              <p className="mt-3 font-body text-base text-pergaminho/85 sm:mt-4">
                 Hoje você garante tudo isso por:
               </p>
             </div>
 
-            <div className="mt-5">
-              <div className="space-y-4">
+            <div className="mt-4 sm:mt-5">
+              <div className="space-y-3 sm:space-y-4">
                 {IMERSAO.composicaoValor.map((item) => (
                   <div
                     key={item.label}
@@ -115,7 +115,7 @@ export function Oferta() {
                 ))}
               </div>
 
-              <div className="filete-ouro my-6 w-full" aria-hidden="true" />
+              <div className="filete-ouro my-4 w-full sm:my-6" aria-hidden="true" />
 
               <div className="space-y-3">
                 <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3 font-body text-[15px] text-pergaminho/55">
@@ -133,14 +133,14 @@ export function Oferta() {
               </div>
             </div>
 
-            <div className="mt-5 grid grid-cols-3 items-stretch gap-2 sm:gap-3">
+            <div className="mt-4 grid grid-cols-3 items-stretch gap-2 sm:mt-5 sm:gap-3">
               {IMERSAO.lotes.map((lote, loteIndex) => {
                 const ativo = loteIndex === indice;
                 return (
                   <div
                     key={lote.nome}
                     className={cn(
-                      "relative flex min-w-0 flex-col items-center justify-center rounded-[14px] px-2 pb-4 pt-5 text-center sm:px-3 sm:pb-5 sm:pt-6",
+                      "relative flex min-w-0 flex-col items-center justify-center rounded-[14px] px-2 pb-3 pt-4 text-center sm:px-3 sm:pb-5 sm:pt-6",
                       ativo
                         ? "border-[1.5px] border-ouro bg-[rgb(34_28_18_/_0.7)]"
                         : "border border-[rgb(201_168_63_/_0.18)] bg-transparent",
@@ -183,11 +183,11 @@ export function Oferta() {
               })}
             </div>
 
-            <p className="mt-5 text-center font-body text-xs uppercase tracking-[0.1em] text-pergaminho/80">
+            <p className="mt-4 text-center font-body text-xs uppercase tracking-[0.1em] text-pergaminho/80 sm:mt-5">
               Preço exclusivo enquanto durar o lote
             </p>
 
-            <CtaButton origem="oferta" size="lg" className="mt-5 w-full" />
+            <CtaButton origem="oferta" size="lg" className="mt-4 w-full sm:mt-5" />
             <ProgressoLote tone="dark" className="mx-auto mt-5 max-w-none" />
 
             <div className="relative mt-5 flex flex-col items-center gap-1 pt-5 text-center">
