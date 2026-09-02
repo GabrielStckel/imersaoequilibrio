@@ -18,7 +18,7 @@ const perguntas = [
   },
   {
     q: "E se eu não puder assistir ao vivo?",
-    a: "A imersão é ao vivo nos dias 06 e 07/10, e as vivências acontecem em tempo real — é ali que o trabalho de fato acontece. O ingresso dá acesso aos dois encontros ao vivo. Se você precisar assistir depois, o acesso à gravação pode ser adicionado no momento da compra, como item opcional.",
+    a: "A imersão é ao vivo nos dias 06 e 07/10, e as vivências acontecem em tempo real (é ali que o trabalho de fato acontece). O ingresso dá acesso aos dois encontros ao vivo. Se você precisar assistir depois, o acesso à gravação pode ser adicionado no momento da compra, como item opcional.",
   },
   {
     q: "Preciso ter experiência com terapia sistêmica?",

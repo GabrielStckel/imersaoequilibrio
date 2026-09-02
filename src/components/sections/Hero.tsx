@@ -40,7 +40,7 @@ function HeroVideo() {
 
       <p className="mt-5 hidden max-w-[48ch] font-body text-base leading-[1.65] text-pergaminho/80 md:block">
         Desarme a carência de infância que faz você aceitar migalhas no amor e se submeter à
-        escassez financeira — e retome o seu lugar de adulto potente.
+        escassez financeira. E retome o seu lugar de adulto potente.
       </p>
       <p className="mt-3 hidden font-body text-xs uppercase leading-relaxed tracking-[0.12em] text-ouro-luz md:block">
         {IMERSAO.autoridade.nome} · Ao vivo pelo Zoom · {IMERSAO.horario}
@@ -138,7 +138,7 @@ export function Hero() {
           <Reveal delay={120}>
             <p className="mx-auto mt-[14px] max-w-[320px] font-body text-[15px] leading-[1.5] text-pergaminho/85 md:hidden">
               Desarme a carência de infância que faz você aceitar migalhas no amor e se submeter à
-              escassez financeira — e retome o seu lugar de adulto potente.
+              escassez financeira. E retome o seu lugar de adulto potente.
             </p>
           </Reveal>
         </div>

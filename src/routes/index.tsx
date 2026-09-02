@@ -14,7 +14,7 @@ import { Faq } from "@/components/sections/Faq";
 import { CtaFinal } from "@/components/sections/CtaFinal";
 import { StickyBar } from "@/components/sections/StickyBar";
 
-const titulo = "Imersão Equilíbrio Sistêmico — 06 e 07 de outubro, ao vivo";
+const titulo = "Imersão Equilíbrio Sistêmico - 06 e 07 de outubro, ao vivo";
 const descricao =
   "Dois dias ao vivo de terapia sistêmica para desarmar a carência que faz você aceitar migalhas no amor e na vida financeira. Vagas por lote, a partir de R$ 47.";
 

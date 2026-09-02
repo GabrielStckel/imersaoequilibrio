@@ -5,13 +5,13 @@ import { Reveal } from "@/components/Reveal";
 export function Cronograma() {
   const dias = [
     {
-      titulo: "Dia 1 — O Diagnóstico e o Desarme da Carência",
+      titulo: "Dia 1: O Diagnóstico e o Desarme da Carência",
       data: IMERSAO.dataDia1,
       texto:
         "Mergulharemos nas causas das trocas desequilibradas. Identificaremos as projeções infantis que você faz nas suas relações atuais e realizaremos a primeira grande vivência de resgate do amor-próprio e pacificação da necessidade de aprovação.",
     },
     {
-      titulo: "Dia 2 — A Postura do Adulto e a Lei da Troca",
+      titulo: "Dia 2: A Postura do Adulto e a Lei da Troca",
       data: IMERSAO.dataDia2,
       texto:
         "Aplicação prática da Lei do Equilíbrio na relação amorosa, na carreira e no dinheiro. Vivências para consolidar a postura de quem sabe dar e receber na medida certa, estabelecendo limites que geram respeito e atraem prosperidade.",
