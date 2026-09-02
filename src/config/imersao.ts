@@ -31,7 +31,7 @@ export const IMERSAO = {
   },
 
   // ——— Lotes ———
-  valorCheio: "R$ 497",
+  valorCheio: "R$ 797",
   lotes: [
     {
       nome: "1º Lote",
