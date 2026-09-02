@@ -129,7 +129,7 @@ export function Oferta() {
                 className="pointer-events-none absolute left-1/2 top-1/3 h-[22rem] w-[22rem] -translate-x-1/2 rounded-full bg-ouro/8 blur-[90px]"
               />
 
-              <span className="relative inline-flex items-center gap-2 rounded-full border border-ouro/40 bg-ouro/10 px-4 py-2 font-body text-xs font-semibold uppercase tracking-[0.12em] text-ouro-luz lg:px-5 lg:py-2.5 lg:text-[0.7rem]">
+              <span className="relative inline-flex items-center gap-2 rounded-full border border-ouro/40 bg-ouro/10 px-4 py-2 font-body text-xs font-semibold uppercase tracking-[0.12em] text-ouro-luz lg:px-5 lg:py-2.5">
                 <span className="relative flex h-1.5 w-1.5">
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-ouro opacity-75" />
                   <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-ouro" />
