@@ -24,24 +24,10 @@ export function Oferta() {
   const { indice } = useLoteAtivo();
 
   return (
-    <section id="oferta" className="relative overflow-hidden bg-espresso py-24 lg:py-32">
-      {/* Fine grain texture */}
+    <section id="oferta" className="relative overflow-hidden bg-espresso py-16 lg:py-32">
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 opacity-[0.03]"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
-        }}
-      />
-
-      {/* Ambient glows */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -left-32 top-0 h-[36rem] w-[36rem] rounded-full bg-ouro/6 blur-[140px]"
-      />
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -right-40 bottom-0 h-[32rem] w-[32rem] rounded-full bg-ouro/5 blur-[120px]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_110%_70%_at_50%_100%,rgb(201_168_63_/_0.11),transparent_65%)]"
       />
 
       <div className="relative mx-auto max-w-6xl px-5 sm:px-8 lg:max-w-[88rem]">
@@ -72,14 +58,14 @@ export function Oferta() {
 
         {/* Main offer grid */}
         <Reveal delay={120}>
-          <div className="mt-14 grid overflow-hidden rounded-[28px] border border-ouro/12 bg-pergaminho shadow-[0_60px_140px_-50px_rgba(12,10,8,0.75)] lg:grid-cols-[1.1fr_1fr]">
+          <div className="mt-14 grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:gap-12">
             {/* ——— Esquerda: stack de valor ——— */}
-            <div className="p-8 sm:p-12 lg:p-8 xl:p-10">
+            <div>
               <div className="mb-8 flex items-center gap-3">
-                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-ouro/10 text-ouro-tinta">
+                <span className="flex h-9 w-9 items-center justify-center rounded-full border border-ouro/28 bg-espresso-alt text-ouro-luz">
                   <Check className="h-5 w-5" strokeWidth={2.5} />
                 </span>
-                <span className="font-body text-[0.9375rem] font-semibold uppercase tracking-[0.12em] text-corpo">
+                <span className="font-body text-[0.9375rem] font-semibold uppercase tracking-[0.1em] text-pergaminho">
                   Tudo incluso no seu acesso
                 </span>
               </div>
@@ -119,20 +105,14 @@ export function Oferta() {
             </div>
 
             {/* ——— Direita: painel de preço ——— */}
-            <div className="relative flex flex-col items-center bg-espresso px-8 py-12 text-center sm:px-12 lg:border-l lg:border-ouro/15 lg:px-10 lg:py-16 xl:px-12 xl:py-20">
+            <div className="relative flex flex-col items-center border-t border-ouro/20 pt-10 text-center lg:border-l lg:border-t-0 lg:pl-12 lg:pt-0">
               {/* Top gold accent line */}
               <div aria-hidden="true" className="filete-ouro pointer-events-none absolute left-0 right-0 top-0" />
 
-              {/* Radial glow behind price */}
-              <div
-                aria-hidden="true"
-                className="pointer-events-none absolute left-1/2 top-1/3 h-[22rem] w-[22rem] -translate-x-1/2 rounded-full bg-ouro/8 blur-[90px]"
-              />
-
-              <span className="relative inline-flex items-center gap-2 rounded-full border border-ouro/40 bg-ouro/10 px-4 py-2 font-body text-xs font-semibold uppercase tracking-[0.12em] text-ouro-luz lg:px-5 lg:py-2.5">
+              <span className="relative inline-flex items-center gap-2 rounded-full bg-terracota-luz px-4 py-2 font-body text-xs font-semibold uppercase tracking-[0.1em] text-espresso lg:px-5 lg:py-2.5">
                 <span className="relative flex h-1.5 w-1.5">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-ouro opacity-75" />
-                  <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-ouro" />
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-espresso opacity-60" />
+                  <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-espresso" />
                 </span>
                 {IMERSAO.lotes[indice]?.nome} · Valor promocional
               </span>
@@ -165,9 +145,9 @@ export function Oferta() {
                       <span className="font-body text-xs font-semibold uppercase tracking-[0.12em] text-ouro-tinta">
                         Lote especial
                       </span>
-                      <span className="ouro-texto mt-2 font-display font-semibold leading-none">
-                        <span className="align-top text-[1.35rem] lg:text-[1.65rem]">{cifra}</span>{" "}
-                        <span className="text-[3rem] lg:text-[3.75rem]">{numero}</span>
+                      <span className="ouro-texto mt-2 font-display text-[52px] font-bold leading-none tabular-nums">
+                        <span className="align-top text-[1.35rem]">{cifra}</span>{" "}
+                        <span>{numero}</span>
                       </span>
                     </div>
                   );

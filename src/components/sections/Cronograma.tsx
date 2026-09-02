@@ -19,12 +19,8 @@ export function Cronograma() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-areia py-24 lg:py-32">
-      <div
-        aria-hidden="true"
-        className="grain-overlay pointer-events-none absolute inset-0 opacity-[0.05] mix-blend-overlay"
-      />
-      <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
+    <section className="bg-areia py-16 lg:py-32">
+      <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <Reveal>
           <SectionLabel>SUA JORNADA EM 2 ENCONTROS</SectionLabel>
         </Reveal>

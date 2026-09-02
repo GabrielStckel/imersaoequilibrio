@@ -4,18 +4,8 @@ import { CtaButton } from "@/components/CtaButton";
 
 export function CausaRaiz() {
   return (
-    <section className="relative overflow-hidden bg-areia py-24 lg:py-32">
-      {/* Warm ambient glows */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -left-32 top-20 h-[26rem] w-[26rem] rounded-full bg-ouro/10 blur-3xl"
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -right-24 bottom-10 h-[22rem] w-[22rem] rounded-full bg-ouro/8 blur-3xl"
-      />
-
-      <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
+    <section className="bg-areia py-16 lg:py-32">
+      <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20">
           {/* Left column — title */}
           <Reveal>
