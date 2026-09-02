@@ -99,7 +99,7 @@ export function Oferta() {
                         0{i + 1}
                       </span>
                       <div>
-                         <span className="relative flex h-11 w-11 items-center justify-center rounded-xl border border-ouro/25 bg-pergaminho/80 text-ouro-tinta shadow-sm transition-colors duration-300 group-hover:border-ouro/50 group-hover:bg-pergaminho group-hover:text-ouro-luz">
+                          <span className="relative flex h-11 w-11 items-center justify-center rounded-xl border border-ouro/25 bg-pergaminho/80 text-ouro-tinta shadow-sm transition-colors duration-300 group-hover:border-ouro/50 group-hover:bg-pergaminho group-hover:text-ouro-tinta">
                            <Icon className="h-[1.125rem] w-[1.125rem]" strokeWidth={1.5} aria-hidden="true" />
                         </span>
                          <h3 className="relative mt-4 font-display text-[0.95rem] font-semibold leading-snug text-tinta sm:text-[1.05rem] lg:text-[1rem] lg:leading-snug xl:text-[1.08rem]">
@@ -179,7 +179,7 @@ export function Oferta() {
                     return (
                       <div
                         key={l.nome}
-                        className="flex flex-col items-center justify-center rounded-2xl border border-ouro-soft/15 bg-white/[0.02] px-3 py-5 transition-all duration-300 lg:py-6"
+                        className="flex flex-col items-center justify-center rounded-2xl border border-ouro-luz/15 bg-white/[0.02] px-3 py-5 transition-all duration-300 lg:py-6"
                       >
                         <span className="font-body text-xs font-semibold uppercase tracking-[0.12em] text-ouro-luz">
                           {l.nome}
