@@ -58,7 +58,7 @@ export function Autoridade() {
                   <span className="font-display font-bold text-ouro-luz">
                     {n.valor}
                   </span>
-                  <span>{n.label}</span>
+                  <span className="font-body font-normal">{n.label}</span>
                 </div>
               );
             })}
