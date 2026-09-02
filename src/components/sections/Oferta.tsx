@@ -30,7 +30,7 @@ export function Oferta() {
   const loteAtivo = IMERSAO.lotes[indice] ?? IMERSAO.lotes[0];
 
   return (
-    <section id="oferta" className="relative overflow-hidden bg-espresso py-16 lg:py-32">
+    <section id="oferta" className="relative overflow-hidden bg-espresso py-12 lg:py-32">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_110%_70%_at_50%_100%,rgb(201_168_63_/_0.11),transparent_65%)]"
@@ -40,11 +40,11 @@ export function Oferta() {
         <Reveal>
           <div className="flex flex-col items-center text-center">
             <SectionLabel tone="dark">GARANTA SUA VAGA</SectionLabel>
-            <h2 className="mt-6 max-w-3xl font-display text-[30px] font-bold leading-[1.1] tracking-[-0.02em] text-pergaminho sm:text-[2.75rem] lg:text-[3.25rem]">
+            <h2 className="mt-5 max-w-3xl font-display text-[30px] font-bold leading-[1.1] tracking-[-0.02em] text-pergaminho sm:text-[2.75rem] lg:text-[3.25rem]">
               O que você garante ao entrar <span className="ouro-texto">ainda hoje</span> na Imersão
               Equilíbrio?
             </h2>
-            <div className="mt-5 flex max-w-2xl flex-col items-center gap-4">
+            <div className="mt-4 flex max-w-2xl flex-col items-center gap-4">
               <div className="filete-ouro w-16" />
               <p className="font-body text-base leading-[1.7] text-pergaminho/80">
                 Tudo o que você precisa para romper com a hipercompensação e assumir sua postura de
@@ -55,12 +55,12 @@ export function Oferta() {
         </Reveal>
 
         <Reveal delay={90}>
-          <ul className="mx-auto mt-10 max-w-[620px]">
+          <ul className="mx-auto mt-8 max-w-[620px]">
             {IMERSAO.stackValor.map((item, index) => (
               <li
                 key={item.texto}
                 className={cn(
-                  "flex items-start gap-3 py-[13px]",
+                  "flex items-start gap-3 py-[11px]",
                   index < IMERSAO.stackValor.length - 1 &&
                     "border-b border-[rgb(201_168_63_/_0.18)]",
                 )}
