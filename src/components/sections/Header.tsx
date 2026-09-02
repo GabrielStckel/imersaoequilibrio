@@ -1,5 +1,4 @@
 import type { ReactNode } from "react";
-import { Scale } from "lucide-react";
 import { IMERSAO } from "@/config/imersao";
 import { CtaButton } from "@/components/CtaButton";
 import { CountdownInline } from "@/components/Countdown";
