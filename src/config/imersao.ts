@@ -28,7 +28,7 @@ export const IMERSAO = {
     percentInicial: 22,
     percentAlvo: 96,
     curva: "easeOut" as "linear" | "easeOut",
-  }
+  },
 
   // ——— Lotes ———
   valorCheio: "R$ 797",
