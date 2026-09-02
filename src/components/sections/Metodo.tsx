@@ -23,27 +23,27 @@ const pilares = [
 
 export function Metodo() {
   return (
-    <section className="relative overflow-hidden bg-bone py-24 lg:py-32">
+    <section className="relative overflow-hidden bg-pergaminho py-24 lg:py-32">
       <div
         aria-hidden
-        className="pointer-events-none absolute -right-40 top-10 h-[26rem] w-[26rem] rounded-full bg-gold/10 blur-3xl"
+        className="pointer-events-none absolute -right-40 top-10 h-[26rem] w-[26rem] rounded-full bg-ouro/10 blur-3xl"
       />
       <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
         <Reveal>
           <SectionLabel>O MÉTODO DA IMERSÃO</SectionLabel>
           <div className="mt-6 grid gap-6 lg:grid-cols-[1.1fr_1fr] lg:items-end">
-            <h2 className="font-display text-[2rem] font-semibold leading-[1.1] tracking-[-0.02em] text-ink sm:text-[2.75rem]">
+            <h2 className="font-display text-[2rem] font-semibold leading-[1.1] tracking-[-0.02em] text-tinta sm:text-[2.75rem]">
               Dois pilares para{" "}
               <span className="relative inline-block">
                 romper o ciclo
                 <span
                   aria-hidden
-                  className="absolute inset-x-0 -bottom-1 h-[0.35em] -z-10 rounded-full bg-gold/25"
+                  className="absolute inset-x-0 -bottom-1 h-[0.35em] -z-10 rounded-full bg-ouro/25"
                 />
               </span>
               .
             </h2>
-            <p className="font-body text-[0.98rem] leading-[1.8] text-graphite lg:pb-2">
+            <p className="font-body text-[0.98rem] leading-[1.8] text-corpo lg:pb-2">
               Compreensão e vivência caminham juntas: primeiro você enxerga o padrão com nitidez,
               depois consolida no corpo a nova postura. É essa combinação que transforma insight em
               mudança real.
@@ -54,35 +54,35 @@ export function Metodo() {
         <div className="mt-14 grid gap-5 lg:grid-cols-2 lg:gap-6">
           {pilares.map((p, i) => (
             <Reveal key={p.n} delay={i * 90}>
-              <article className="group relative flex h-full flex-col overflow-hidden rounded-[var(--radius-card)] border border-line bg-cream/40 p-7 transition-all duration-300 hover:-translate-y-1 hover:border-gold/50 hover:bg-cream/70 hover:shadow-[var(--shadow-soft)] sm:p-9">
+              <article className="group relative flex h-full flex-col overflow-hidden rounded-[var(--radius-card)] border border-borda bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-ouro/50 hover:bg-white hover:shadow-[var(--shadow-soft)] sm:p-9">
                 <span
                   aria-hidden
-                  className="absolute right-5 top-3 font-display text-[5.5rem] font-semibold leading-none text-gold/10 transition-colors duration-300 group-hover:text-gold/20"
+                  className="absolute right-5 top-3 font-display text-[5.5rem] font-semibold leading-none text-ouro-tinta/10 transition-colors duration-300 group-hover:text-ouro-tinta/20"
                 >
                   0{p.n}
                 </span>
 
-                <span className="inline-flex w-fit items-center gap-2 rounded-full border border-gold/35 bg-bone/70 px-3 py-1 font-body text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-gold-deep">
+                <span className="inline-flex w-fit items-center gap-2 rounded-full border border-ouro/35 bg-white px-3 py-1 font-body text-xs font-semibold uppercase tracking-[0.12em] text-ouro-tinta">
                   Pilar 0{p.n} · {p.tag}
                 </span>
 
-                <h3 className="relative mt-5 font-display text-xl font-semibold leading-snug text-ink sm:text-[1.4rem] lg:max-w-[18ch]">
+                <h3 className="relative mt-5 font-display text-xl font-semibold leading-snug text-tinta sm:text-[1.4rem] lg:max-w-[18ch]">
                   {p.titulo}
                 </h3>
 
-                <p className="relative mt-4 font-body text-[0.95rem] leading-[1.8] text-graphite">
+                <p className="relative mt-4 font-body text-[0.95rem] leading-[1.8] text-corpo">
                   {p.texto}
                 </p>
 
-                <ul className="relative mt-6 space-y-2 border-t border-line pt-5">
+                <ul className="relative mt-6 space-y-2 border-t border-borda pt-5">
                   {p.pontos.map((ponto) => (
                     <li
                       key={ponto}
-                      className="flex items-start gap-3 font-body text-[0.9rem] leading-relaxed text-ink/80"
+                      className="flex items-start gap-3 font-body text-[0.9375rem] leading-relaxed text-tinta/80"
                     >
                       <span
                         aria-hidden
-                        className="mt-[0.5em] h-1.5 w-1.5 shrink-0 rounded-full bg-gold"
+                        className="mt-[0.5em] h-1.5 w-1.5 shrink-0 rounded-full bg-ouro"
                       />
                       {ponto}
                     </li>
@@ -94,14 +94,14 @@ export function Metodo() {
         </div>
 
         <Reveal>
-          <div className="mt-12 flex flex-col items-start gap-4 border-t border-line pt-8 sm:flex-row sm:items-center sm:justify-between">
-            <p className="font-body text-[0.9rem] leading-relaxed text-graphite sm:max-w-[46ch]">
+          <div className="mt-12 flex flex-col items-start gap-4 border-t border-borda pt-8 sm:flex-row sm:items-center sm:justify-between">
+            <p className="font-body text-[0.9375rem] leading-relaxed text-corpo sm:max-w-[46ch]">
               Dois encontros ao vivo pelo Zoom, conduzidos do começo ao fim.
             </p>
             <CtaButton
               origem="metodo"
               variant="outline"
-              className="w-full border-gold-deep/40 text-gold-deep hover:bg-gold/10 sm:w-auto"
+              className="w-full border-ouro-deep/40 text-ouro-tinta hover:bg-ouro/10 sm:w-auto"
             />
           </div>
         </Reveal>

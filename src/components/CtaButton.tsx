@@ -39,10 +39,10 @@ export function CtaButton({
       }
       className={cn(
         "group inline-flex items-center justify-center gap-2 rounded-[10px] font-medium tracking-[0.01em] transition-all duration-300",
-        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-transparent",
+        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ouro focus-visible:ring-offset-2 focus-visible:ring-offset-transparent",
         variant === "solid"
-          ? "bg-gold text-espresso shadow-[0_10px_30px_-14px_rgba(194,162,76,0.9)] hover:bg-gold-soft"
-          : "border border-gold/50 text-gold hover:border-gold hover:bg-gold/10",
+          ? "bg-ouro text-espresso shadow-[0_10px_30px_-14px_rgba(201,168,63,0.9)] hover:bg-ouro-luz"
+          : "border border-ouro-tinta/50 text-ouro-tinta hover:border-ouro-tinta hover:bg-ouro/10",
         sizes[size],
         className,
       )}

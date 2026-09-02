@@ -22,17 +22,17 @@ export function ProgressoLote({
         aria-label="Ingressos garantidos neste lote"
       >
         <div
-          className="h-full rounded-full bg-gold transition-[width] duration-1000 ease-out"
+          className="h-full rounded-full bg-ouro transition-[width] duration-1000 ease-out"
           style={{ width: `${pct}%` }}
         />
       </div>
       <p
         className={cn(
-          "mt-2.5 font-body text-[0.78rem]",
-          tone === "dark" ? "text-bone/60" : "text-graphite",
+          "mt-2.5 font-body text-[0.9375rem]",
+          tone === "dark" ? "text-pergaminho/80" : "text-corpo",
         )}
       >
-        <span className={tone === "dark" ? "text-gold" : "text-gold-deep"}>{pct}%</span> dos
+        <span className={tone === "dark" ? "text-ouro-luz" : "text-ouro-tinta"}>{pct}%</span> dos
         ingressos deste lote já garantidos
       </p>
     </div>

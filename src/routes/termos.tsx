@@ -20,11 +20,11 @@ export const Route = createFileRoute("/termos")({
 function Termos() {
   return (
     <main className="mx-auto max-w-3xl px-5 py-24 sm:px-8">
-      <Link to="/" className="font-body text-[0.75rem] uppercase tracking-[0.24em] text-gold-deep">
+      <Link to="/" className="font-body text-xs uppercase tracking-[0.12em] text-ouro-tinta">
         ← Voltar
       </Link>
-      <h1 className="mt-8 font-display text-4xl font-semibold text-ink">Termos de uso</h1>
-      <div className="mt-8 space-y-5 font-body text-[0.95rem] leading-[1.8] text-graphite">
+      <h1 className="mt-8 font-display text-4xl font-semibold text-tinta">Termos de uso</h1>
+      <div className="mt-8 space-y-5 font-body text-[0.95rem] leading-[1.8] text-corpo">
         <p>
           A imersão {IMERSAO.nome} é um evento online e ao vivo, realizado pelo Zoom nos dias{" "}
           {IMERSAO.dataDia1} e {IMERSAO.dataDia2}, das {IMERSAO.horario}. A inscrição é individual e
@@ -44,7 +44,7 @@ function Termos() {
         </p>
         <p>
           Dúvidas:{" "}
-          <a href={IMERSAO.suporte} className="text-gold-deep underline" target="_blank" rel="noopener noreferrer">
+          <a href={IMERSAO.suporte} className="text-ouro-tinta underline" target="_blank" rel="noopener noreferrer">
             suporte no WhatsApp
           </a>
           .

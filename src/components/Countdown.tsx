@@ -9,7 +9,7 @@ export function Countdown({ className }: { className?: string }) {
 
   if (c.aoVivo) {
     return (
-      <p className={cn("font-display text-2xl text-gold", className)}>Estamos ao vivo agora</p>
+      <p className={cn("font-display text-2xl text-ouro-luz", className)}>Estamos ao vivo agora</p>
     );
   }
 
@@ -25,12 +25,12 @@ export function Countdown({ className }: { className?: string }) {
       {blocos.map((b) => (
         <div
           key={b.label}
-          className="min-w-[64px] rounded-[10px] border border-gold-soft/20 bg-ink/60 px-3 py-2.5 text-center sm:min-w-[76px]"
+          className="min-w-[64px] rounded-[10px] border border-ouro/20 bg-espresso-alt/60 px-3 py-2.5 text-center sm:min-w-[76px]"
         >
-          <div className="font-display text-3xl leading-none text-bone sm:text-4xl">
+          <div className="font-display text-3xl leading-none text-pergaminho sm:text-4xl">
             {pad(b.valor)}
           </div>
-          <div className="mt-1.5 font-body text-[0.6rem] uppercase tracking-[0.22em] text-gold-soft/70">
+          <div className="mt-1.5 font-body text-xs uppercase tracking-[0.12em] text-ouro-luz-soft/70">
             {b.label}
           </div>
         </div>
