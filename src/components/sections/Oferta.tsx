@@ -159,7 +159,7 @@ export function Oferta() {
                   const { cifra, numero } = precoPartes(l.preco);
                   return (
                     <div className="flex w-full flex-col items-center justify-center rounded-2xl border-[1.5px] border-ouro bg-gradient-to-b from-ouro/18 to-ouro/[0.03] px-3 py-6 shadow-[0_0_55px_-10px_rgba(194,162,76,0.45)] transition-all duration-300 lg:py-8">
-                      <span className="font-body text-xs font-semibold uppercase tracking-[0.12em] text-ouro-luz lg:text-[0.72rem]">
+                      <span className="font-body text-xs font-semibold uppercase tracking-[0.12em] text-ouro-luz">
                         Lote especial
                       </span>
                       <span className="mt-2 font-display font-semibold leading-none text-ouro-luz">
@@ -181,14 +181,14 @@ export function Oferta() {
                         key={l.nome}
                         className="flex flex-col items-center justify-center rounded-2xl border border-ouro-soft/15 bg-white/[0.02] px-3 py-5 transition-all duration-300 lg:py-6"
                       >
-                        <span className="font-body text-xs font-semibold uppercase tracking-[0.12em] text-ouro-luz lg:text-[0.68rem]">
+                        <span className="font-body text-xs font-semibold uppercase tracking-[0.12em] text-ouro-luz">
                           {l.nome}
                         </span>
                         <span className="mt-2 font-display font-semibold leading-none text-pergaminho/80">
                           <span className="align-top text-[0.9375rem] lg:text-[1rem]">{cifra}</span>{" "}
                           <span className={cn("text-[1.6rem] lg:text-[2rem]", passado && "line-through")}>{numero}</span>
                         </span>
-                        <span className="mt-1.5 font-body text-xs font-medium uppercase tracking-[0.12em] text-pergaminho/80 lg:text-[0.72rem]">
+                        <span className="mt-1.5 font-body text-xs font-medium uppercase tracking-[0.12em] text-pergaminho/80">
                           Em breve
                         </span>
                       </div>
@@ -197,7 +197,7 @@ export function Oferta() {
                 </div>
               </div>
 
-              <div className="relative mt-6 font-body text-xs uppercase tracking-[0.12em] text-pergaminho/80 lg:text-[0.72rem]">
+              <div className="relative mt-6 font-body text-xs uppercase tracking-[0.12em] text-pergaminho/80">
                 Preço exclusivo enquanto durar o lote
               </div>
 

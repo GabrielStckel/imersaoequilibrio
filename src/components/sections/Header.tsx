@@ -86,7 +86,7 @@ export function Header() {
           <div className="flex shrink-0 items-center gap-4">
             <span className="hidden font-body text-xs uppercase tracking-[0.12em] text-pergaminho/80 sm:block">
               Começa em{" "}
-              <CountdownInline className="text-[0.74rem] font-semibold text-ouro-luz" />
+              <CountdownInline className="text-xs font-semibold text-ouro-luz" />
             </span>
             <CtaButton size="sm" origem="header" />
           </div>
