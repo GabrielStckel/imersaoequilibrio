@@ -29,18 +29,18 @@ export function CtaFinal() {
           <p>
             © 2026 {IMERSAO.marca} · {IMERSAO.nome}
           </p>
-          <nav className="flex flex-wrap gap-x-6 gap-y-2">
-            <Link to="/termos" className="transition-colors hover:text-ouro-tinta">
+          <nav className="flex flex-wrap gap-x-6 gap-y-0">
+            <Link to="/termos" className="inline-flex min-h-11 items-center py-2.5 transition-colors hover:text-ouro-tinta">
               Termos de uso
             </Link>
-            <Link to="/privacidade" className="transition-colors hover:text-ouro-tinta">
+            <Link to="/privacidade" className="inline-flex min-h-11 items-center py-2.5 transition-colors hover:text-ouro-tinta">
               Política de privacidade
             </Link>
             <a
               href={IMERSAO.suporte}
               target="_blank"
               rel="noopener noreferrer"
-              className="transition-colors hover:text-ouro-tinta"
+              className="inline-flex min-h-11 items-center py-2.5 transition-colors hover:text-ouro-tinta"
             >
               Suporte no WhatsApp
             </a>

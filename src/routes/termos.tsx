@@ -3,7 +3,7 @@ import { IMERSAO } from "@/config/imersao";
 
 const titulo = "Termos de uso — Imersão Equilíbrio Sistêmico";
 const descricao =
-  "Condições de participação, acesso às gravações e política de garantia da imersão Equilíbrio Sistêmico.";
+  "Condições de participação ao vivo e política de garantia da imersão Equilíbrio Sistêmico.";
 
 export const Route = createFileRoute("/termos")({
   head: () => ({
@@ -20,7 +20,7 @@ export const Route = createFileRoute("/termos")({
 function Termos() {
   return (
     <main className="mx-auto max-w-3xl px-5 py-24 sm:px-8">
-      <Link to="/" className="font-body text-xs uppercase tracking-[0.12em] text-ouro-tinta">
+      <Link to="/" className="inline-flex min-h-11 items-center font-body text-xs uppercase tracking-[0.12em] text-ouro-tinta">
         ← Voltar
       </Link>
       <h1 className="mt-8 font-display text-4xl font-semibold text-tinta">Termos de uso</h1>
@@ -31,7 +31,8 @@ function Termos() {
           intransferível.
         </p>
         <p>
-          O acesso às gravações é liberado por 6 meses a partir do término do evento. É proibida a
+          O ingresso dá acesso aos dois encontros ao vivo. A gravação não está incluída no ingresso
+          e pode ser oferecida apenas como item opcional no momento da compra. É proibida a
           reprodução, gravação ou distribuição do conteúdo sem autorização por escrito.
         </p>
         <p>
@@ -44,7 +45,7 @@ function Termos() {
         </p>
         <p>
           Dúvidas:{" "}
-          <a href={IMERSAO.suporte} className="text-ouro-tinta underline" target="_blank" rel="noopener noreferrer">
+          <a href={IMERSAO.suporte} className="inline-flex min-h-11 items-center text-ouro-tinta underline" target="_blank" rel="noopener noreferrer">
             suporte no WhatsApp
           </a>
           .

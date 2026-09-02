@@ -12,6 +12,7 @@ import { Autoridade } from "@/components/sections/Autoridade";
 import { Oferta } from "@/components/sections/Oferta";
 import { Faq } from "@/components/sections/Faq";
 import { CtaFinal } from "@/components/sections/CtaFinal";
+import { StickyBar } from "@/components/sections/StickyBar";
 
 const titulo = "Imersão Equilíbrio Sistêmico — 06 e 07 de outubro, ao vivo";
 const descricao =
@@ -31,7 +32,7 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <main className="bg-pergaminho">
+    <main className="bg-pergaminho pb-[76px] md:pb-0">
       <Tracking />
       <Header />
       <Hero />
@@ -44,6 +45,7 @@ function Index() {
       <Oferta />
       <Faq />
       <CtaFinal />
+      <StickyBar />
     </main>
   );
 }
