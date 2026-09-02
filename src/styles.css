@@ -6,21 +6,26 @@
 
 /* ——— Imersão Equilíbrio Sistêmico: paleta editorial (off-white quente + dourado) ——— */
 @theme {
-  --color-bone: #faf7ef;
-  --color-cream: #f3ecdd;
-  --color-ink: #1a160f;
-  --color-espresso: #12100b;
-  --color-graphite: #4a443a;
-  --color-gold: #c2a24c;
-  --color-gold-deep: #9a7b2e;
-  --color-gold-soft: #e4d3a3;
-  --color-line: #e7dfcf;
+  --color-pergaminho: #fcfbf8;
+  --color-areia: #f6f2e8;
+  --color-espresso: #16130d;
+  --color-espresso-alt: #221c12;
+  --color-tinta: #191510;
+  --color-corpo: #4a4137;
+  --color-ouro-tinta: #7d5f1c;
+  --color-ouro: #c9a83f;
+  --color-ouro-luz: #ebd48f;
+  --color-terracota: #aa4e2a;
+  --color-terracota-luz: #e07a45;
+  --color-borda: #e4dbc6;
+  --color-borda-forte: #9c8a5e;
 
-  --font-display: "Inter", system-ui, sans-serif;
+  --font-display: "Poppins", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
   --font-body: "Inter", system-ui, sans-serif;
 
   --radius-card: 14px;
-  --shadow-soft: 0 10px 40px -12px rgba(26, 22, 15, 0.18);
+  --shadow-soft: 0 10px 40px -12px rgba(25, 21, 16, 0.18);
 }
 
 @utility grain {
@@ -165,8 +170,8 @@
   }
 
   body {
-    background-color: var(--color-bone);
-    color: var(--color-ink);
+    background-color: var(--color-pergaminho);
+    color: var(--color-tinta);
     font-family: var(--font-body);
     -webkit-font-smoothing: antialiased;
   }
@@ -176,10 +181,11 @@
   h3 {
     font-family: var(--font-display);
     font-optical-sizing: auto;
+    letter-spacing: -0.02em;
   }
 
   ::selection {
-    background: var(--color-gold-soft);
-    color: var(--color-ink);
+    background: var(--color-ouro-luz);
+    color: var(--color-tinta);
   }
 }

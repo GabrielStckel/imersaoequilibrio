@@ -24,11 +24,11 @@ const perguntas = [
 
 export function Faq() {
   return (
-    <section className="bg-bone py-24 lg:py-32">
+    <section className="bg-pergaminho py-24 lg:py-32">
       <div className="mx-auto grid max-w-6xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.7fr_1.3fr] lg:gap-20">
         <Reveal>
           <SectionLabel>PERGUNTAS FREQUENTES</SectionLabel>
-          <h2 className="mt-6 font-display text-[1.9rem] font-semibold leading-[1.14] text-ink sm:text-[2.3rem]">
+          <h2 className="mt-6 font-display text-[1.9rem] font-semibold leading-[1.14] text-tinta sm:text-[2.3rem]">
             Ainda com dúvidas?
           </h2>
         </Reveal>
@@ -36,11 +36,11 @@ export function Faq() {
         <Reveal delay={90}>
           <Accordion type="single" collapsible className="w-full">
             {perguntas.map((p, i) => (
-              <AccordionItem key={p.q} value={`item-${i}`} className="border-line">
-                <AccordionTrigger className="py-6 text-left font-display text-lg font-semibold text-ink hover:no-underline">
+              <AccordionItem key={p.q} value={`item-${i}`} className="border-borda">
+                <AccordionTrigger className="py-6 text-left font-display text-lg font-semibold text-tinta hover:no-underline">
                   {p.q}
                 </AccordionTrigger>
-                <AccordionContent className="pb-6 font-body text-[0.95rem] leading-[1.8] text-graphite">
+                <AccordionContent className="pb-6 font-body text-[0.95rem] leading-[1.8] text-corpo">
                   {p.a}
                 </AccordionContent>
               </AccordionItem>

@@ -6,17 +6,17 @@ import { Reveal } from "@/components/Reveal";
 
 export function CtaFinal() {
   return (
-    <footer className="relative overflow-hidden bg-espresso">
+    <footer className="relative overflow-hidden bg-areia">
       <div
         aria-hidden="true"
         className="grain-overlay pointer-events-none absolute inset-0 opacity-[0.05] mix-blend-overlay"
       />
       <div className="relative mx-auto max-w-6xl px-5 py-24 sm:px-8 lg:py-32">
         <Reveal>
-          <h2 className="max-w-[18ch] font-display text-[2rem] font-semibold leading-[1.1] text-bone sm:text-[2.9rem]">
+          <h2 className="max-w-[18ch] font-display text-[2rem] font-semibold leading-[1.1] text-tinta sm:text-[2.9rem]">
             O respeito não se pede. Ele nasce de quem sustenta o próprio limite.
           </h2>
-          <p className="mt-6 max-w-lg font-body text-[0.97rem] leading-[1.8] text-bone/60">
+          <p className="mt-6 max-w-lg font-body text-[0.97rem] leading-[1.8] text-corpo">
             Dois encontros ao vivo para você sair do lugar de quem se doa demais e assumir a postura
             de adulto potente no amor, no dinheiro e na carreira.
           </p>
@@ -24,27 +24,27 @@ export function CtaFinal() {
 
         <Reveal delay={90}>
           <div className="mt-12 flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
-            <Countdown />
+            <Countdown className="[&>div]:border-borda [&>div]:bg-white [&>div>div:first-child]:text-tinta [&>div>div:last-child]:text-ouro-tinta" />
             <CtaButton origem="cta-final" size="lg" />
           </div>
         </Reveal>
 
-        <div className="mt-20 flex flex-col gap-4 border-t border-gold/12 pt-8 font-body text-[0.78rem] text-bone/40 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-20 flex flex-col gap-4 border-t border-borda pt-8 font-body text-[0.9375rem] text-corpo sm:flex-row sm:items-center sm:justify-between">
           <p>
             © 2026 {IMERSAO.marca} · {IMERSAO.nome}
           </p>
           <nav className="flex flex-wrap gap-x-6 gap-y-2">
-            <Link to="/termos" className="transition-colors hover:text-gold">
+            <Link to="/termos" className="transition-colors hover:text-ouro-tinta">
               Termos de uso
             </Link>
-            <Link to="/privacidade" className="transition-colors hover:text-gold">
+            <Link to="/privacidade" className="transition-colors hover:text-ouro-tinta">
               Política de privacidade
             </Link>
             <a
               href={IMERSAO.suporte}
               target="_blank"
               rel="noopener noreferrer"
-              className="transition-colors hover:text-gold"
+              className="transition-colors hover:text-ouro-tinta"
             >
               Suporte no WhatsApp
             </a>

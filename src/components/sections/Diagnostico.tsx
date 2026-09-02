@@ -32,15 +32,15 @@ const cards = [
 
 export function Diagnostico() {
   return (
-    <section className="relative overflow-hidden bg-bone py-24 lg:py-32">
+    <section className="relative overflow-hidden bg-pergaminho py-24 lg:py-32">
       {/* Warm ambient glow */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -left-40 top-0 h-[28rem] w-[28rem] rounded-full bg-gold/8 blur-3xl"
+        className="pointer-events-none absolute -left-40 top-0 h-[28rem] w-[28rem] rounded-full bg-ouro/8 blur-3xl"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute -right-20 bottom-20 h-[24rem] w-[24rem] rounded-full bg-gold/6 blur-3xl"
+        className="pointer-events-none absolute -right-20 bottom-20 h-[24rem] w-[24rem] rounded-full bg-ouro/6 blur-3xl"
       />
 
       <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
@@ -48,19 +48,19 @@ export function Diagnostico() {
           <SectionLabel>O DIAGNÓSTICO</SectionLabel>
 
           <div className="mt-8 grid gap-8 lg:grid-cols-[1.15fr_1fr] lg:items-end lg:gap-12">
-            <h2 className="font-display text-[2.25rem] font-semibold leading-[1.08] tracking-[-0.03em] text-ink sm:text-[3.25rem] lg:text-[3.75rem]">
+            <h2 className="font-display text-[2.25rem] font-semibold leading-[1.08] tracking-[-0.02em] text-tinta sm:text-[3.25rem] lg:text-[3.75rem]">
               A vida não funciona{" "}
               <span className="relative inline-block">
                 em gavetas
                 <span
                   aria-hidden
-                  className="absolute inset-x-[-0.15em] -bottom-[0.12em] h-[0.12em] rounded-full bg-gold/60"
+                  className="absolute inset-x-[-0.15em] -bottom-[0.12em] h-[0.12em] rounded-full bg-ouro/60"
                 />
               </span>
               .
             </h2>
 
-            <p className="max-w-xl font-body text-[1rem] leading-[1.85] text-graphite lg:pb-2">
+            <p className="max-w-xl font-body text-[1rem] leading-[1.85] text-corpo lg:pb-2">
               Quando a Lei do Equilíbrio é violada, o sintoma se espalha por todos os pilares da sua
               existência. Identifique onde o desequilíbrio está drenando sua energia hoje:
             </p>
@@ -74,36 +74,36 @@ export function Diagnostico() {
             className="pointer-events-none absolute inset-0 hidden lg:grid lg:grid-cols-2 lg:gap-5"
           >
             <div className="relative">
-              <div className="absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-gradient-to-b from-gold/30 via-gold/10 to-transparent" />
-              <div className="absolute left-1/2 top-1/2 h-px w-full -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
+              <div className="absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-gradient-to-b from-ouro/30 via-ouro/10 to-transparent" />
+              <div className="absolute left-1/2 top-1/2 h-px w-full -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-transparent via-ouro/20 to-transparent" />
             </div>
             <div className="relative">
-              <div className="absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-gradient-to-b from-gold/30 via-gold/10 to-transparent" />
+              <div className="absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-gradient-to-b from-ouro/30 via-ouro/10 to-transparent" />
             </div>
           </div>
 
           <div className="grid gap-5 lg:grid-cols-2 lg:gap-6">
             {cards.map((c, i) => (
               <Reveal key={c.titulo} delay={i * 90}>
-                <article className="group relative flex h-full flex-col overflow-hidden rounded-[var(--radius-card)] border border-line bg-cream/40 p-7 transition-all duration-300 hover:-translate-y-1 hover:border-gold/50 hover:bg-cream/70 hover:shadow-[var(--shadow-soft)] sm:p-9">
+                <article className="group relative flex h-full flex-col overflow-hidden rounded-[var(--radius-card)] border border-borda bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-ouro/50 hover:bg-white hover:shadow-[var(--shadow-soft)] sm:p-9">
                   {/* Large translucent index */}
                   <span
                     aria-hidden
-                    className="absolute right-4 top-2 font-display text-[5.5rem] font-semibold leading-none text-gold/10 transition-colors duration-300 group-hover:text-gold/20"
+                    className="absolute right-4 top-2 font-display text-[5.5rem] font-semibold leading-none text-ouro-tinta/10 transition-colors duration-300 group-hover:text-ouro-tinta/20"
                   >
                     0{i + 1}
                   </span>
 
                   {/* Icon badge */}
-                  <span className="relative flex h-11 w-11 items-center justify-center rounded-xl border border-gold/25 bg-bone/80 text-gold-deep shadow-sm transition-colors duration-300 group-hover:border-gold/50 group-hover:bg-bone">
+                  <span className="relative flex h-11 w-11 items-center justify-center rounded-xl border border-ouro/25 bg-white text-ouro-tinta shadow-sm transition-colors duration-300 group-hover:border-ouro/50 group-hover:bg-pergaminho">
                     <c.icone className="h-5 w-5" strokeWidth={1.5} aria-hidden="true" />
                   </span>
 
-                  <h3 className="relative mt-6 font-display text-xl font-semibold leading-snug text-ink sm:text-[1.35rem]">
+                  <h3 className="relative mt-6 font-display text-xl font-semibold leading-snug text-tinta sm:text-[1.35rem]">
                     {c.titulo}
                   </h3>
 
-                  <p className="relative mt-4 font-body text-[0.95rem] leading-[1.8] text-graphite">
+                  <p className="relative mt-4 font-body text-[0.95rem] leading-[1.8] text-corpo">
                     {c.texto}
                   </p>
                 </article>
@@ -113,15 +113,15 @@ export function Diagnostico() {
         </div>
 
         <Reveal>
-          <div className="mt-14 flex flex-col items-start gap-5 border-t border-line pt-8 sm:flex-row sm:items-center sm:justify-between">
-            <p className="max-w-[52ch] font-body text-[0.95rem] leading-relaxed text-graphite">
+          <div className="mt-14 flex flex-col items-start gap-5 border-t border-borda pt-8 sm:flex-row sm:items-center sm:justify-between">
+            <p className="max-w-[52ch] font-body text-[0.95rem] leading-relaxed text-corpo">
               O desequilíbrio não escolhe área. Ele se mostra no amor, no dinheiro, no trabalho e na
               família — até que você restaure a ordem dentro de si.
             </p>
             <CtaButton
               origem="diagnostico"
               variant="outline"
-              className="w-full shrink-0 border-gold-deep/40 text-gold-deep hover:bg-gold/10 sm:w-auto"
+              className="w-full shrink-0 border-ouro-deep/40 text-ouro-tinta hover:bg-ouro/10 sm:w-auto"
             />
           </div>
         </Reveal>

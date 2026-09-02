@@ -20,11 +20,11 @@ export const Route = createFileRoute("/privacidade")({
 function Privacidade() {
   return (
     <main className="mx-auto max-w-3xl px-5 py-24 sm:px-8">
-      <Link to="/" className="font-body text-[0.75rem] uppercase tracking-[0.24em] text-gold-deep">
+      <Link to="/" className="font-body text-xs uppercase tracking-[0.12em] text-ouro-tinta">
         ← Voltar
       </Link>
-      <h1 className="mt-8 font-display text-4xl font-semibold text-ink">Política de privacidade</h1>
-      <div className="mt-8 space-y-5 font-body text-[0.95rem] leading-[1.8] text-graphite">
+      <h1 className="mt-8 font-display text-4xl font-semibold text-tinta">Política de privacidade</h1>
+      <div className="mt-8 space-y-5 font-body text-[0.95rem] leading-[1.8] text-corpo">
         <p>
           Coletamos nome, e-mail e telefone informados no checkout para viabilizar o acesso à imersão{" "}
           {IMERSAO.nome} e enviar comunicações relacionadas ao evento.
@@ -40,7 +40,7 @@ function Privacidade() {
         </p>
         <p>
           Você pode solicitar acesso, correção ou exclusão dos seus dados a qualquer momento pelo{" "}
-          <a href={IMERSAO.suporte} className="text-gold-deep underline" target="_blank" rel="noopener noreferrer">
+          <a href={IMERSAO.suporte} className="text-ouro-tinta underline" target="_blank" rel="noopener noreferrer">
             nosso suporte
           </a>
           .

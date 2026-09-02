@@ -21,14 +21,14 @@ export function PrecoLote({
         <span
           className={cn(
             "font-body text-sm line-through",
-            tone === "dark" ? "text-bone/40" : "text-graphite/60",
+            tone === "dark" ? "text-pergaminho/80" : "text-corpo",
           )}
         >
           De {IMERSAO.valorCheio}
         </span>
         <span
           className={cn(
-            "font-display leading-none text-gold",
+            "font-display leading-none text-ouro-luz",
             size === "lg" ? "text-6xl sm:text-7xl" : "text-5xl",
           )}
         >
@@ -37,7 +37,7 @@ export function PrecoLote({
         <span
           className={cn(
             "mt-2 font-body text-sm",
-            tone === "dark" ? "text-bone/70" : "text-graphite",
+            tone === "dark" ? "text-pergaminho/80" : "text-corpo",
           )}
         >
           {lote.parcela} · {lote.nome}
@@ -51,21 +51,21 @@ export function PrecoLote({
       <span
         className={cn(
           "font-body text-sm line-through",
-          tone === "dark" ? "text-bone/40" : "text-graphite/60",
+          tone === "dark" ? "text-pergaminho/80" : "text-corpo",
         )}
       >
         De {IMERSAO.valorCheio}
       </span>
       <span
         className={cn(
-          "font-display leading-none text-gold",
+          "font-display leading-none text-ouro-luz",
           size === "lg" ? "text-6xl sm:text-7xl" : "text-5xl",
         )}
       >
         {lote.preco}
       </span>
       <span
-        className={cn("font-body text-sm", tone === "dark" ? "text-bone/70" : "text-graphite")}
+        className={cn("font-body text-sm", tone === "dark" ? "text-pergaminho/80" : "text-corpo")}
       >
         {lote.parcela} · {lote.nome}
       </span>
