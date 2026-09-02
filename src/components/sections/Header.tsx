@@ -67,13 +67,13 @@ export function Header() {
       <div className="border-b border-ouro/[0.28] bg-espresso">
         <div className="mx-auto flex h-14 max-w-6xl items-center justify-between gap-3 px-4 sm:px-8 md:h-auto md:gap-4 md:py-2.5">
           {/* Logo / marca */}
-          <a href="#" className="flex min-h-11 min-w-0 items-center gap-2.5 md:py-1">
+          <a href="#" className="flex min-h-11 min-w-0 items-center gap-[10px] md:gap-2.5 md:py-1">
             <img
               src="/logo-equilibrio.png"
               alt="Equilíbrio Sistêmico"
               width={30}
               height={30}
-              className="h-[30px] w-auto shrink-0 object-contain"
+              className="h-[24px] w-auto shrink-0 object-contain md:h-[30px]"
             />
             <span className="whitespace-nowrap font-display text-sm font-semibold leading-none tracking-[-0.01em] text-pergaminho md:text-[0.82rem] md:tracking-[0.06em]">
               {IMERSAO.nome}
