@@ -84,12 +84,6 @@ export const IMERSAO = {
       descricao:
         "Aula 'A Postura Sistêmica Diante do Dinheiro': lealdades invisíveis e como assumir a postura de adulto potente na prosperidade.",
     },
-    {
-      icone: "Sparkles",
-      titulo: "Valor total do programa",
-      descricao:
-        "Programa completo com imersão, material e bônus. Valor real de R$ 497, hoje por uma fração.",
-    },
   ],
 
   // ——— Autoridade (placeholders) ———
