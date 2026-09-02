@@ -56,17 +56,32 @@ export function Header() {
   const pct = useProgressoProgramado();
   const [compacto, setCompacto] = useState(false);
   const ultimaRolagem = useRef(0);
+  const rolagemAcumulada = useRef(0);
 
   useEffect(() => {
     const onScroll = () => {
       const y = window.scrollY;
-      const anterior = ultimaRolagem.current;
-
-      if (y < 80) setCompacto(false);
-      else if (y > anterior + 4) setCompacto(true);
-      else if (y < anterior - 4) setCompacto(false);
-
+      const delta = y - ultimaRolagem.current;
       ultimaRolagem.current = y;
+
+      if (y < 80) {
+        rolagemAcumulada.current = 0;
+        setCompacto(false);
+        return;
+      }
+
+      if (Math.sign(delta) !== Math.sign(rolagemAcumulada.current)) {
+        rolagemAcumulada.current = 0;
+      }
+      rolagemAcumulada.current += delta;
+
+      if (rolagemAcumulada.current > 24) {
+        setCompacto(true);
+        rolagemAcumulada.current = 0;
+      } else if (rolagemAcumulada.current < -24) {
+        setCompacto(false);
+        rolagemAcumulada.current = 0;
+      }
     };
 
     onScroll();
