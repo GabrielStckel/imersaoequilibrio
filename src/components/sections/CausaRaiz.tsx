@@ -65,7 +65,7 @@ export function CausaRaiz() {
         </div>
 
         <Reveal>
-          <div className="mt-16 border-t border-borda pt-8 pb-14">
+          <div className="mt-16 border-t border-borda pt-8 pb-0">
             <p className="texto-justificado max-w-[52ch] font-body text-[0.95rem] leading-relaxed text-corpo">
               A boa notícia: o que foi aprendido pode ser desaprendido. Quando você enxerga a raiz, o
               padrão perde a força.

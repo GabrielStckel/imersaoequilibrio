@@ -1,3 +1,4 @@
+import { Calendar } from "lucide-react";
 import { IMERSAO } from "@/config/imersao";
 import { Countdown } from "@/components/Countdown";
 import { ProgressoLote } from "@/components/ProgressoLote";
@@ -69,13 +70,17 @@ function MobilePurchase() {
 
         <CtaButton to="oferta" origem="hero" size="lg" className="mt-5 h-[52px] w-full" />
 
-        <p className="mt-[10px] text-center font-body text-xs text-pergaminho/75 md:hidden">
-          06 e 07 de outubro · 19h30 às 21h30 · ao vivo pelo Zoom
-        </p>
-
-        <p className="mt-3 font-body text-xs leading-relaxed text-pergaminho/80">
-          Pagamento seguro via Hotmart · Garantia incondicional de 7 dias
-        </p>
+        <div className="mx-auto mt-[14px] inline-flex items-center gap-[10px] rounded-[12px] border border-ouro/35 bg-[rgb(34_28_18_/_0.55)] px-[14px] py-[10px] md:hidden">
+          <Calendar className="h-4 w-4 text-ouro-luz" strokeWidth={1.5} aria-hidden="true" />
+          <div className="text-left">
+            <p className="whitespace-nowrap font-display text-[13px] font-semibold text-ouro-luz">
+              06 e 07 de outubro
+            </p>
+            <p className="whitespace-nowrap font-body text-xs text-pergaminho/80">
+              19h30 às 21h30 · ao vivo pelo Zoom
+            </p>
+          </div>
+        </div>
       </Reveal>
 
       <Reveal delay={240}>
@@ -109,9 +114,6 @@ function DesktopPurchase() {
           <span aria-hidden="true" className="filete-ouro absolute inset-x-0 top-0" />
           <PrecoLote />
           <CtaButton to="oferta" origem="hero" size="lg" className="mt-6 w-auto" />
-          <p className="mt-4 text-left font-body text-[0.75rem] leading-relaxed text-pergaminho/80">
-            Pagamento seguro via Hotmart · Garantia incondicional de 7 dias
-          </p>
         </div>
       </Reveal>
     </div>
