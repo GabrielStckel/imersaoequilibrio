@@ -61,6 +61,13 @@
   color: transparent;
 }
 
+@utility ouro-texto-escuro {
+  background: linear-gradient(100deg, #c9a83f 0%, #f2dfa0 45%, #c9a83f 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 @utility filete-ouro {
   height: 1px;
   background: linear-gradient(
