@@ -1,4 +1,3 @@
-import { Play } from "lucide-react";
 import { IMERSAO } from "@/config/imersao";
 import { Countdown } from "@/components/Countdown";
 import { ProgressoLote } from "@/components/ProgressoLote";
@@ -22,26 +21,21 @@ function HeroVideo() {
             allowFullScreen
           />
         ) : (
-          <>
-            <span
-              aria-hidden="true"
-              className="absolute left-3.5 top-3.5 h-12 w-12 border-l border-t border-ouro-luz/50"
-            />
-            <span
-              aria-hidden="true"
-              className="absolute bottom-3.5 right-3.5 h-12 w-12 border-b border-r border-ouro-luz/50"
-            />
-            <div className="absolute inset-0 flex flex-col items-center justify-center gap-3.5">
-              <span className="ouro-metal flex h-[74px] w-[74px] items-center justify-center rounded-full shadow-[0_12px_40px_-8px_rgba(138,106,32,0.5)]">
-                <Play className="ml-1 h-6 w-6 text-tinta" fill="currentColor" strokeWidth={0} />
-              </span>
-              <span className="font-body text-xs uppercase tracking-[0.12em] text-ouro-luz">
-                {legenda}
-              </span>
-            </div>
-          </>
+          <img
+            src={IMERSAO.autoridade.foto}
+            alt={`Retrato de ${IMERSAO.autoridade.nome}`}
+            width={640}
+            height={360}
+            className="absolute inset-0 h-full w-full object-cover"
+          />
         )}
       </div>
+
+      {!embedUrl && (
+        <p className="mt-3 font-body text-xs uppercase tracking-[0.12em] text-ouro-luz">
+          {legenda}
+        </p>
+      )}
 
       <p className="mt-5 max-w-[48ch] font-body text-[0.9375rem] leading-[1.65] text-pergaminho/80 sm:mt-[18px]">
         Desarme a carência de infância que faz você aceitar migalhas no amor e se submeter à

@@ -85,18 +85,10 @@ export function Diagnostico() {
           <div className="grid gap-5 lg:grid-cols-2 lg:gap-6">
             {cards.map((c, i) => (
               <Reveal key={c.titulo} delay={i * 90}>
-                <article className="group relative flex h-full flex-col overflow-hidden rounded-[var(--radius-card)] border border-borda bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-ouro/50 hover:bg-white hover:shadow-[var(--shadow-soft)] sm:p-9">
-                  {/* Large translucent index */}
-                  <span
-                    aria-hidden
-                    className="absolute right-4 top-2 font-display text-[5.5rem] font-semibold leading-none text-ouro-tinta/10 transition-colors duration-300 group-hover:text-ouro-tinta/20"
-                  >
-                    0{i + 1}
-                  </span>
-
+                <article className="card-nivel-a group relative flex h-full flex-col overflow-hidden transition-transform duration-300 hover:-translate-y-1 sm:p-9">
                   {/* Icon badge */}
-                  <span className="relative flex h-11 w-11 items-center justify-center rounded-xl border border-ouro/25 bg-white text-ouro-tinta shadow-sm transition-colors duration-300 group-hover:border-ouro/50 group-hover:bg-pergaminho">
-                    <c.icone className="h-5 w-5" strokeWidth={1.5} aria-hidden="true" />
+                  <span className="icone-card relative">
+                    <c.icone strokeWidth={1.5} aria-hidden="true" />
                   </span>
 
                   <h3 className="relative mt-6 font-display text-xl font-semibold leading-snug text-tinta sm:text-[1.35rem]">

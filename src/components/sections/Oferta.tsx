@@ -85,28 +85,31 @@ export function Oferta() {
               </div>
 
               <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
-                {IMERSAO.stackValor.map((item, i) => {
+                {IMERSAO.stackValor.map((item) => {
                   const Icon = iconMap[item.icone] || Check;
+                  const destaque = item.icone === "Gift";
                   return (
                     <article
                       key={item.titulo}
-                       className="group relative flex flex-col overflow-hidden rounded-[var(--radius-card)] border border-borda bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:border-ouro/40 hover:bg-white hover:shadow-[var(--shadow-soft)] sm:p-6 lg:aspect-square lg:justify-between lg:gap-3 lg:p-5 xl:p-6"
+                      className={cn(
+                        "group relative flex flex-col overflow-hidden p-[26px] transition-transform duration-300 hover:-translate-y-1 lg:aspect-square lg:justify-between lg:gap-3",
+                        destaque ? "card-nivel-c" : "card-nivel-b",
+                      )}
                     >
-                      <span
-                        aria-hidden="true"
-                        className="absolute right-2 top-1 font-display text-[2.75rem] font-semibold leading-none text-ouro-luz/[0.06] transition-colors duration-300 group-hover:text-ouro-luz/[0.12]"
-                      >
-                        0{i + 1}
-                      </span>
+                      {destaque && (
+                        <span className="absolute right-3 top-3 rounded-full bg-ouro-tinta px-2.5 py-1 font-body text-xs font-semibold uppercase tracking-[0.1em] text-pergaminho">
+                          Bônus
+                        </span>
+                      )}
                       <div>
-                          <span className="relative flex h-11 w-11 items-center justify-center rounded-xl border border-ouro/25 bg-pergaminho/80 text-ouro-tinta shadow-sm transition-colors duration-300 group-hover:border-ouro/50 group-hover:bg-pergaminho group-hover:text-ouro-tinta">
-                           <Icon className="h-[1.125rem] w-[1.125rem]" strokeWidth={1.5} aria-hidden="true" />
+                          <span className="icone-card relative">
+                            <Icon strokeWidth={1.5} aria-hidden="true" />
                         </span>
                          <h3 className="relative mt-4 font-display text-[0.95rem] font-semibold leading-snug text-tinta sm:text-[1.05rem] lg:text-[1rem] lg:leading-snug xl:text-[1.08rem]">
                           {item.titulo}
                         </h3>
                       </div>
-                       <p className="relative mt-2 line-clamp-4 font-body text-[0.9375rem] leading-[1.6] text-corpo sm:text-[0.9375rem] lg:mt-0 lg:line-clamp-5 lg:text-[0.9375rem] lg:leading-[1.5] xl:text-[0.9375rem]">
+                       <p className="relative mt-2 font-body text-[0.9375rem] leading-[1.6] text-corpo sm:text-[0.9375rem] lg:mt-0 lg:line-clamp-5 lg:text-[0.9375rem] lg:leading-[1.5] xl:text-[0.9375rem]">
                         {item.descricao}
                       </p>
                     </article>
@@ -155,8 +158,11 @@ export function Oferta() {
                   const l = IMERSAO.lotes[indice] ?? IMERSAO.lotes[0];
                   const { cifra, numero } = precoPartes(l.preco);
                   return (
-                    <div className="moldura-ouro-escura flex w-full flex-col items-center justify-center rounded-2xl bg-gradient-to-b from-ouro/18 to-ouro/[0.03] px-3 py-6 shadow-[0_0_55px_-10px_rgba(138,106,32,0.38)] transition-all duration-300 lg:py-8">
-                      <span className="font-body text-xs font-semibold uppercase tracking-[0.12em] text-ouro-luz">
+                    <div className="card-nivel-c relative flex w-full flex-col items-center justify-center px-3 pb-6 pt-12 transition-all duration-300 lg:pb-8 lg:pt-12">
+                      <span className="absolute right-3 top-3 rounded-full bg-ouro-tinta px-2.5 py-1 font-body text-xs font-semibold uppercase tracking-[0.1em] text-pergaminho">
+                        Oferta principal
+                      </span>
+                      <span className="font-body text-xs font-semibold uppercase tracking-[0.12em] text-ouro-tinta">
                         Lote especial
                       </span>
                       <span className="ouro-texto mt-2 font-display font-semibold leading-none">

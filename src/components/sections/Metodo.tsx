@@ -54,17 +54,15 @@ export function Metodo() {
         <div className="mt-14 grid gap-5 lg:grid-cols-2 lg:gap-6">
           {pilares.map((p, i) => (
             <Reveal key={p.n} delay={i * 90}>
-              <article className="group relative flex h-full flex-col overflow-hidden rounded-[var(--radius-card)] border border-borda bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-ouro/50 hover:bg-white hover:shadow-[var(--shadow-soft)] sm:p-9">
-                <span
-                  aria-hidden
-                  className="absolute right-5 top-3 font-display text-[5.5rem] font-semibold leading-none text-ouro-tinta/10 transition-colors duration-300 group-hover:text-ouro-tinta/20"
-                >
-                  0{p.n}
-                </span>
-
-                <span className="inline-flex w-fit items-center gap-2 rounded-full border border-ouro/35 bg-white px-3 py-1 font-body text-xs font-semibold uppercase tracking-[0.12em] text-ouro-tinta">
-                  Pilar 0{p.n} · {p.tag}
-                </span>
+              <article className="card-nivel-a group relative flex h-full flex-col overflow-hidden transition-transform duration-300 hover:-translate-y-1 sm:p-9">
+                <div className="flex items-center gap-3">
+                  <span className="marcador-sequencia" aria-label={`Pilar ${p.n}`}>
+                    {p.n.padStart(2, "0")}
+                  </span>
+                  <span className="font-body text-xs font-semibold uppercase tracking-[0.12em] text-ouro-tinta">
+                    Pilar · {p.tag}
+                  </span>
+                </div>
 
                 <h3 className="relative mt-5 font-display text-xl font-semibold leading-snug text-tinta sm:text-[1.4rem] lg:max-w-[18ch]">
                   {p.titulo}
