@@ -93,7 +93,7 @@ export const IMERSAO = {
   autoridade: {
     nome: "Jonas Peres",
     papel: "Terapeuta sistêmico · Antiparadigma",
-    foto: "/jonas.jpg", // Substitua o arquivo em public/jonas.jpg pelo retrato oficial.
+    foto: "/jonas.png", // Substitua o arquivo em public/jonas.png pelo retrato oficial.
     bio: [
       "Jonas Peres conduz processos de terapia sistêmica há mais de uma década, unindo o pensamento de Hellinger à filosofia e à epistemologia para desarmar padrões de hipercompensação.",
       "Seu trabalho é direto e sem clichês de autoajuda: o objetivo é que a pessoa saia do lugar de criança carente e assuma a postura de adulto potente nas relações, no dinheiro e na carreira.",
