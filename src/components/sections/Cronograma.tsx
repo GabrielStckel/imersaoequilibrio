@@ -39,7 +39,7 @@ export function Cronograma() {
                 <h3 className="mt-5 font-display text-[1.4rem] font-semibold leading-snug text-tinta">
                   {d.titulo}
                 </h3>
-                <div className="my-6 h-px w-full bg-ouro/15" aria-hidden="true" />
+                <div className="filete-ouro my-6 w-full" aria-hidden="true" />
                 <p className="font-body text-[0.9375rem] leading-[1.8] text-corpo">{d.texto}</p>
               </article>
             </Reveal>

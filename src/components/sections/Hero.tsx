@@ -12,7 +12,7 @@ function HeroVideo() {
 
   return (
     <div>
-      <div className="relative aspect-video w-full overflow-hidden rounded-card border border-ouro/20 bg-espresso-alt/60 shadow-soft">
+      <div className="moldura-ouro-escura relative aspect-video w-full overflow-hidden rounded-card bg-espresso-alt/60 shadow-soft">
         {embedUrl ? (
           <iframe
             src={embedUrl}
@@ -25,14 +25,14 @@ function HeroVideo() {
           <>
             <span
               aria-hidden="true"
-              className="absolute left-3.5 top-3.5 h-12 w-12 border-l border-t border-ouro/50"
+              className="absolute left-3.5 top-3.5 h-12 w-12 border-l border-t border-ouro-luz/50"
             />
             <span
               aria-hidden="true"
-              className="absolute bottom-3.5 right-3.5 h-12 w-12 border-b border-r border-ouro/50"
+              className="absolute bottom-3.5 right-3.5 h-12 w-12 border-b border-r border-ouro-luz/50"
             />
             <div className="absolute inset-0 flex flex-col items-center justify-center gap-3.5">
-              <span className="flex h-[74px] w-[74px] items-center justify-center rounded-full bg-ouro shadow-[0_12px_40px_-8px_rgba(194,162,76,0.7)]">
+              <span className="ouro-metal flex h-[74px] w-[74px] items-center justify-center rounded-full shadow-[0_12px_40px_-8px_rgba(138,106,32,0.5)]">
                 <Play className="ml-1 h-6 w-6 text-tinta" fill="currentColor" strokeWidth={0} />
               </span>
               <span className="font-body text-xs uppercase tracking-[0.12em] text-ouro-luz">
@@ -47,7 +47,7 @@ function HeroVideo() {
         Desarme a carência de infância que faz você aceitar migalhas no amor e se submeter à
         escassez financeira — e retome o seu lugar de adulto potente.
       </p>
-      <p className="mt-3 border-l border-ouro/40 pl-3 font-body text-xs uppercase leading-relaxed tracking-[0.12em] text-ouro-luz sm:border-0 sm:pl-0 sm:text-xs sm:tracking-[0.12em]">
+      <p className="mt-3 border-l border-ouro-luz/40 pl-3 font-body text-xs uppercase leading-relaxed tracking-[0.12em] text-ouro-luz sm:border-0 sm:pl-0 sm:text-xs sm:tracking-[0.12em]">
         {IMERSAO.autoridade.nome} · Ao vivo pelo Zoom · {IMERSAO.horario}
       </p>
     </div>
@@ -92,7 +92,7 @@ export function Hero() {
         </Reveal>
 
         {/* Compra: countdown + progresso + preço + CTA */}
-        <div className="mt-8 rounded-card border border-ouro/15 bg-espresso-alt/25 p-4 sm:mt-10 sm:border-0 sm:bg-transparent sm:p-0 lg:col-start-1 lg:row-start-2 lg:mt-8">
+        <div className="moldura-ouro-escura mt-8 rounded-card bg-espresso-alt/25 p-4 sm:mt-10 sm:border-0 sm:bg-transparent sm:p-0 sm:shadow-none lg:col-start-1 lg:row-start-2 lg:mt-8">
           <Reveal delay={200}>
             <p className="mb-3 font-body text-xs font-medium uppercase tracking-[0.12em] text-ouro-luz sm:hidden">
               A imersão começa em
@@ -103,7 +103,8 @@ export function Hero() {
             <ProgressoLote className="mt-5 sm:mt-6" />
           </Reveal>
           <Reveal delay={280}>
-            <div className="mt-6 border-t border-ouro/15 pt-6 sm:mt-7 sm:pt-7">
+            <div className="relative mt-6 pt-6 sm:mt-7 sm:pt-7">
+              <span aria-hidden="true" className="filete-ouro absolute inset-x-0 top-0" />
               <PrecoLote />
               <CtaButton origem="hero" size="lg" className="mt-5 w-full sm:mt-6 sm:w-auto" />
               <p className="mt-3 text-center font-body text-xs leading-relaxed text-pergaminho/80 sm:mt-4 sm:text-left sm:text-[0.75rem]">

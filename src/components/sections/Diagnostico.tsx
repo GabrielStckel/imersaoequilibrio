@@ -54,7 +54,7 @@ export function Diagnostico() {
                 em gavetas
                 <span
                   aria-hidden
-                  className="absolute inset-x-[-0.15em] -bottom-[0.12em] h-[0.12em] rounded-full bg-ouro/60"
+                  className="filete-ouro absolute inset-x-[-0.15em] -bottom-[0.12em]"
                 />
               </span>
               .
@@ -121,7 +121,7 @@ export function Diagnostico() {
             <CtaButton
               origem="diagnostico"
               variant="outline"
-              className="w-full shrink-0 border-ouro-deep/40 text-ouro-tinta hover:bg-ouro/10 sm:w-auto"
+              className="w-full shrink-0 border-ouro-tinta/40 text-ouro-tinta hover:bg-ouro/10 sm:w-auto"
             />
           </div>
         </Reveal>
