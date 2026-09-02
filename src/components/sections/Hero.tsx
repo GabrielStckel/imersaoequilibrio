@@ -1,3 +1,4 @@
+import { Calendar } from "lucide-react";
 import { IMERSAO } from "@/config/imersao";
 import { Countdown } from "@/components/Countdown";
 import { ProgressoLote } from "@/components/ProgressoLote";
