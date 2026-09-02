@@ -31,14 +31,20 @@ export function Autoridade() {
 
         {/* Foto com selos — mobile segundo, desktop coluna da esquerda */}
         <Reveal delay={90} className="order-2 lg:col-start-1 lg:row-start-1 lg:row-span-2">
-          <div className="relative mx-auto w-full max-w-[420px]">
+          <div
+            className="relative mx-auto aspect-square w-full max-w-[420px] overflow-visible rounded-[20px]"
+            style={{
+              background:
+                "radial-gradient(circle at 50% 35%, #F6F2E8 0%, #EDE6D6 55%, #E4DAC4 100%)",
+            }}
+          >
             <img
               src={autoridade.foto}
-              alt={`Retrato de ${autoridade.nome}`}
-              width={420}
-              height={525}
+              alt={autoridade.nome}
+              width={1000}
+              height={1000}
               loading="lazy"
-              className="aspect-[4/5] w-full rounded-[20px] object-cover shadow-[var(--shadow-soft)]"
+              className="h-full w-full object-contain object-bottom"
             />
 
             {autoridade.numeros.map((n, i) => {
