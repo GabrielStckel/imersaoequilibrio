@@ -30,7 +30,7 @@ export function Oferta() {
   const loteAtivo = IMERSAO.lotes[indice] ?? IMERSAO.lotes[0];
 
   return (
-    <section id="oferta" className="relative overflow-hidden bg-espresso py-16 lg:py-32">
+    <section id="oferta" className="relative overflow-hidden bg-espresso py-12 lg:py-32">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_110%_70%_at_50%_100%,rgb(201_168_63_/_0.11),transparent_65%)]"
@@ -40,11 +40,11 @@ export function Oferta() {
         <Reveal>
           <div className="flex flex-col items-center text-center">
             <SectionLabel tone="dark">GARANTA SUA VAGA</SectionLabel>
-            <h2 className="mt-6 max-w-3xl font-display text-[30px] font-bold leading-[1.1] tracking-[-0.02em] text-pergaminho sm:text-[2.75rem] lg:text-[3.25rem]">
+            <h2 className="mt-5 max-w-3xl font-display text-[30px] font-bold leading-[1.1] tracking-[-0.02em] text-pergaminho sm:text-[2.75rem] lg:text-[3.25rem]">
               O que você garante ao entrar <span className="ouro-texto">ainda hoje</span> na Imersão
               Equilíbrio?
             </h2>
-            <div className="mt-5 flex max-w-2xl flex-col items-center gap-4">
+            <div className="mt-4 flex max-w-2xl flex-col items-center gap-4">
               <div className="filete-ouro w-16" />
               <p className="font-body text-base leading-[1.7] text-pergaminho/80">
                 Tudo o que você precisa para romper com a hipercompensação e assumir sua postura de
@@ -55,12 +55,12 @@ export function Oferta() {
         </Reveal>
 
         <Reveal delay={90}>
-          <ul className="mx-auto mt-12 max-w-[620px] rounded-[18px] border border-[rgb(201_168_63_/_0.30)] bg-[rgb(34_28_18_/_0.55)] p-[22px]">
+          <ul className="mx-auto mt-7 max-w-[620px]">
             {IMERSAO.stackValor.map((item, index) => (
               <li
                 key={item.texto}
                 className={cn(
-                  "flex items-start gap-3 py-[14px]",
+                  "flex items-start gap-3 py-[10px]",
                   index < IMERSAO.stackValor.length - 1 &&
                     "border-b border-[rgb(201_168_63_/_0.18)]",
                 )}
@@ -82,54 +82,51 @@ export function Oferta() {
         </Reveal>
 
         <Reveal delay={180}>
-          <div className="mx-auto mt-12 max-w-[560px]">
+          <div
+            className="mx-auto mt-10 max-w-[560px] rounded-[22px] border border-borda px-5 py-[24px] sm:px-7"
+            style={{
+              backgroundColor: "#FCFBF8",
+              boxShadow: "0 4px 12px rgba(0,0,0,.30), 0 24px 60px rgba(0,0,0,.40)",
+            }}
+          >
             <div className="text-center">
-              <span className="inline-flex items-center gap-2 rounded-full bg-terracota-luz px-4 py-2 font-body text-xs font-semibold uppercase tracking-[0.1em] text-espresso">
-                <span className="relative flex h-1.5 w-1.5">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-espresso opacity-60" />
-                  <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-espresso" />
-                </span>
+              <span className="font-body text-xs font-semibold uppercase tracking-[0.1em] text-ouro-tinta">
                 {loteAtivo.nome} · Valor promocional
               </span>
-              <p className="mx-auto mt-5 max-w-[38ch] font-body text-[15px] leading-[1.65] text-pergaminho/80">
+              <p className="mx-auto mt-3 max-w-[38ch] font-body text-[15px] leading-[1.65] text-corpo">
                 Para que mais pessoas possam viver essa experiência,{" "}
-                <b className="font-medium italic text-ouro-luz">
+                <b className="font-medium italic text-ouro-tinta">
                   o primeiro lote tem valor especial.
                 </b>
               </p>
-              <p className="mt-5 font-body text-base text-pergaminho/85">
-                Hoje você garante tudo isso por:
-              </p>
             </div>
 
-            <div className="mt-6 rounded-[18px] border border-ouro/35 bg-espresso-alt/55 p-5 shadow-[inset_0_1px_0_rgb(240_223_164_/_0.14)] sm:p-7">
-              <div className="space-y-4">
-                {IMERSAO.composicaoValor.map((item) => (
-                  <div
-                    key={item.label}
-                    className="grid grid-cols-[minmax(0,1fr)_auto] items-end gap-3 font-body text-[15px] text-pergaminho/85"
-                  >
-                    <span className="min-w-0">{item.label}</span>
-                    <span className="tabular-nums text-right">{item.valor}</span>
-                  </div>
-                ))}
+            <div className="mt-5 space-y-3">
+              {IMERSAO.composicaoValor.map((item) => (
+                <div
+                  key={item.label}
+                  className="grid grid-cols-[minmax(0,1fr)_auto] items-end gap-3 font-body text-[15px] text-corpo"
+                >
+                  <span className="min-w-0">{item.label}</span>
+                  <span className="tabular-nums text-right text-tinta">{item.valor}</span>
+                </div>
+              ))}
+            </div>
+
+            <div className="my-5 h-px w-full bg-borda" aria-hidden="true" />
+
+            <div className="space-y-3">
+              <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3 font-body text-[15px] text-corpo/55">
+                <span>Valor total</span>
+                <s className="tabular-nums">{IMERSAO.valorCheio}</s>
               </div>
-
-              <div className="filete-ouro my-6 w-full" aria-hidden="true" />
-
-              <div className="space-y-3">
-                <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3 font-body text-[15px] text-pergaminho/55">
-                  <span>Valor total</span>
-                  <s className="tabular-nums">{IMERSAO.valorCheio}</s>
-                </div>
-                <div className="grid grid-cols-[minmax(0,1fr)_auto] items-end gap-3">
-                  <span className="font-body text-[15px] font-medium text-pergaminho/85">
-                    Hoje você paga
-                  </span>
-                  <span className="ouro-texto font-display text-[44px] font-bold leading-none tabular-nums">
-                    {loteAtivo.preco}
-                  </span>
-                </div>
+              <div className="grid grid-cols-[minmax(0,1fr)_auto] items-end gap-3">
+                <span className="font-body text-[15px] font-medium text-corpo">
+                  Hoje você paga
+                </span>
+                <span className="font-display text-[46px] font-bold leading-none text-ouro-tinta tabular-nums">
+                  {loteAtivo.preco}
+                </span>
               </div>
             </div>
 
@@ -140,42 +137,36 @@ export function Oferta() {
                   <div
                     key={lote.nome}
                     className={cn(
-                      "relative flex min-w-0 flex-col items-center justify-center rounded-[14px] px-2 pb-4 pt-5 text-center sm:px-3 sm:pb-5 sm:pt-6",
-                      ativo
-                        ? "border-[1.5px] border-ouro bg-[rgb(34_28_18_/_0.7)]"
-                        : "border border-[rgb(201_168_63_/_0.18)] bg-transparent",
+                      "relative flex min-w-0 flex-col items-center justify-center rounded-[14px] bg-white px-2 pb-4 pt-5 text-center sm:px-3 sm:pb-5 sm:pt-6",
+                      ativo ? "border-[1.5px] border-[#7D5F1C]" : "border border-borda",
                     )}
                   >
                     {ativo && (
-                      <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-terracota-luz px-2 py-1 font-body text-[10px] font-semibold uppercase tracking-[0.08em] text-espresso sm:text-[11px]">
+                      <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-terracota px-2 py-1 font-body text-[10px] font-semibold uppercase tracking-[0.08em] text-white sm:text-[11px]">
                         Lote atual
                       </span>
                     )}
                     <span
                       className={cn(
                         "font-body text-xs font-semibold uppercase tracking-[0.1em]",
-                        ativo ? "text-ouro-luz" : "text-pergaminho/55",
+                        ativo ? "text-ouro-tinta" : "text-corpo/55",
                       )}
                     >
                       {lote.nome}
                     </span>
                     {ativo ? (
                       <>
-                        <span className="mt-2 font-display text-xl font-bold leading-none text-ouro-luz tabular-nums sm:text-2xl">
+                        <span className="mt-2 font-display text-xl font-bold leading-none text-ouro-tinta tabular-nums sm:text-2xl">
                           {lote.preco}
                         </span>
-                        <span className="mt-2 font-body text-[12px] text-pergaminho/80">
-                          5x de R$ 9,68
-                        </span>
+                        <span className="mt-2 font-body text-[12px] text-corpo">5x de R$ 9,68</span>
                       </>
                     ) : (
                       <>
-                        <s className="mt-2 font-display text-xl font-semibold leading-none text-pergaminho/45 tabular-nums sm:text-2xl">
+                        <s className="mt-2 font-display text-xl font-semibold leading-none text-corpo/45 tabular-nums sm:text-2xl">
                           {lote.preco}
                         </s>
-                        <span className="mt-2 font-body text-[11px] text-pergaminho/55">
-                          em breve
-                        </span>
+                        <span className="mt-2 font-body text-[11px] text-corpo/55">em breve</span>
                       </>
                     )}
                   </div>
@@ -183,22 +174,16 @@ export function Oferta() {
               })}
             </div>
 
-            <p className="mt-5 text-center font-body text-xs uppercase tracking-[0.1em] text-pergaminho/80">
-              Preço exclusivo enquanto durar o lote
-            </p>
+            <CtaButton origem="oferta" size="lg" surface="light" className="mt-5 w-full" />
+            <ProgressoLote tone="light" className="mx-auto mt-5 max-w-none" />
 
-            <CtaButton origem="oferta" size="lg" className="mt-5 w-full" />
-            <ProgressoLote tone="dark" className="mx-auto mt-5 max-w-none" />
-
-            <div className="relative mt-6 pt-5 text-center">
-              <span aria-hidden="true" className="filete-ouro absolute inset-x-0 top-0" />
+            <div className="mt-5 border-t border-borda pt-5 text-center">
               <div className="flex items-center justify-center gap-2">
-                <ChamaHotmart className="h-5 w-5 shrink-0" />
-                <span className="font-body text-[14px] font-medium text-pergaminho">
-                  Pagamento Seguro
-                </span>
+                <ChamaHotmart className="h-[22px] w-[22px] shrink-0" />
+                <span className="font-display text-[15px] font-semibold text-tinta">Hotmart</span>
               </div>
-              <p className="mt-2 font-body text-[12px] text-pergaminho/70">
+              <p className="mt-1 font-body text-[13px] font-medium text-corpo">Pagamento Seguro</p>
+              <p className="mt-1 font-body text-[12px] text-corpo/75">
                 Garantia incondicional de 7 dias
               </p>
             </div>
