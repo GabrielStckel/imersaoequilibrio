@@ -14,7 +14,7 @@ export function ProgressoLote({
     <div className={cn("w-full max-w-sm", className)}>
       <div
         className="h-[5px] w-full overflow-hidden rounded-full"
-        style={{ backgroundColor: tone === "dark" ? "rgba(228,211,163,0.18)" : "var(--color-line)" }}
+        style={{ backgroundColor: tone === "dark" ? "color-mix(in srgb, var(--color-ouro-luz) 18%, transparent)" : "var(--color-borda)" }}
         role="progressbar"
         aria-valuenow={pct}
         aria-valuemin={0}

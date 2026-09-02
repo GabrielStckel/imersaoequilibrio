@@ -49,7 +49,7 @@ export function Oferta() {
         <Reveal>
           <div className="flex flex-col items-center text-center">
             <SectionLabel tone="dark">GARANTA SUA VAGA</SectionLabel>
-            <h2 className="mt-6 max-w-3xl font-display text-[2rem] font-semibold leading-[1.08] tracking-[-0.03em] text-pergaminho sm:text-[2.75rem] lg:text-[3.25rem]">
+            <h2 className="mt-6 max-w-3xl font-display text-[2rem] font-semibold leading-[1.08] tracking-[-0.02em] text-pergaminho sm:text-[2.75rem] lg:text-[3.25rem]">
               O que você garante ao entrar{" "}
               <span className="relative inline-block">
                 ainda hoje

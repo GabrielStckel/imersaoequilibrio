@@ -48,7 +48,7 @@ export function Diagnostico() {
           <SectionLabel>O DIAGNÓSTICO</SectionLabel>
 
           <div className="mt-8 grid gap-8 lg:grid-cols-[1.15fr_1fr] lg:items-end lg:gap-12">
-            <h2 className="font-display text-[2.25rem] font-semibold leading-[1.08] tracking-[-0.03em] text-tinta sm:text-[3.25rem] lg:text-[3.75rem]">
+            <h2 className="font-display text-[2.25rem] font-semibold leading-[1.08] tracking-[-0.02em] text-tinta sm:text-[3.25rem] lg:text-[3.75rem]">
               A vida não funciona{" "}
               <span className="relative inline-block">
                 em gavetas

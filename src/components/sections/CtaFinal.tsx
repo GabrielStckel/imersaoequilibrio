@@ -6,7 +6,7 @@ import { Reveal } from "@/components/Reveal";
 
 export function CtaFinal() {
   return (
-    <footer className="relative overflow-hidden bg-espresso">
+    <footer className="relative overflow-hidden bg-espresso-alt">
       <div
         aria-hidden="true"
         className="grain-overlay pointer-events-none absolute inset-0 opacity-[0.05] mix-blend-overlay"

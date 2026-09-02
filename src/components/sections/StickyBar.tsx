@@ -18,7 +18,7 @@ export function StickyBar() {
   return (
     <div
       className={cn(
-        "fixed inset-x-0 top-0 z-50 border-b border-ouro/15 bg-espresso/95 backdrop-blur transition-all duration-300",
+        "fixed inset-x-0 top-0 z-50 border-b border-ouro/15 bg-espresso-alt/95 backdrop-blur transition-all duration-300",
         visivel ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0",
       )}
     >

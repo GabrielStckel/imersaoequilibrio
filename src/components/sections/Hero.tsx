@@ -33,7 +33,7 @@ function HeroVideo() {
             />
             <div className="absolute inset-0 flex flex-col items-center justify-center gap-3.5">
               <span className="flex h-[74px] w-[74px] items-center justify-center rounded-full bg-ouro shadow-[0_12px_40px_-8px_rgba(194,162,76,0.7)]">
-                <Play className="ml-1 h-6 w-6 text-ink" fill="currentColor" strokeWidth={0} />
+                <Play className="ml-1 h-6 w-6 text-tinta" fill="currentColor" strokeWidth={0} />
               </span>
               <span className="font-body text-xs uppercase tracking-[0.12em] text-ouro-luz">
                 {legenda}
@@ -63,7 +63,7 @@ export function Hero() {
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-ink via-espresso to-espresso"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-espresso-alt via-espresso to-espresso"
       />
 
       <div className="relative mx-auto grid max-w-6xl gap-x-14 px-5 pb-14 pt-10 sm:px-8 sm:pb-20 sm:pt-16 lg:grid-cols-[1.02fr_0.98fr] lg:items-start lg:pb-28 lg:pt-28">

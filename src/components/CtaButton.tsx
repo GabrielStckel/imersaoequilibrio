@@ -38,7 +38,7 @@ export function CtaButton({
         trackInitiateCheckout({ origem, lote: lote.nome, value: lote.preco, currency: "BRL" })
       }
       className={cn(
-        "group inline-flex items-center justify-center gap-2 rounded-[10px] font-medium tracking-[0.01em] transition-all duration-300",
+        "group inline-flex items-center justify-center gap-2 rounded-[10px] font-display font-semibold tracking-[0.01em] transition-all duration-300",
         "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ouro focus-visible:ring-offset-2 focus-visible:ring-offset-transparent",
         variant === "solid"
           ? "bg-ouro text-espresso shadow-[0_10px_30px_-14px_rgba(201,168,63,0.9)] hover:bg-ouro-luz"
