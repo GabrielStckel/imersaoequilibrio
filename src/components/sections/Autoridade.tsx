@@ -6,7 +6,7 @@ export function Autoridade() {
   const { autoridade } = IMERSAO;
 
   const selos = [
-    { classes: "left-4 top-[12%]" },
+    { classes: "left-4 top-[4%] lg:top-[12%]" },
     { classes: "right-4 top-[42%]" },
     { classes: "left-4 top-[72%]" },
   ] as const;
