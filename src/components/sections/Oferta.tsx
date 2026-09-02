@@ -55,12 +55,12 @@ export function Oferta() {
         </Reveal>
 
         <Reveal delay={90}>
-          <ul className="mx-auto mt-8 max-w-[620px]">
+          <ul className="mx-auto mt-7 max-w-[620px]">
             {IMERSAO.stackValor.map((item, index) => (
               <li
                 key={item.texto}
                 className={cn(
-                  "flex items-start gap-3 py-[11px]",
+                  "flex items-start gap-3 py-[10px]",
                   index < IMERSAO.stackValor.length - 1 &&
                     "border-b border-[rgb(201_168_63_/_0.18)]",
                 )}
@@ -83,7 +83,7 @@ export function Oferta() {
 
         <Reveal delay={180}>
           <div
-            className="mx-auto mt-10 max-w-[560px] rounded-[22px] border border-borda px-5 py-[26px] sm:px-7"
+            className="mx-auto mt-10 max-w-[560px] rounded-[22px] border border-borda px-5 py-[24px] sm:px-7"
             style={{
               backgroundColor: "#FCFBF8",
               boxShadow: "0 4px 12px rgba(0,0,0,.30), 0 24px 60px rgba(0,0,0,.40)",
@@ -93,7 +93,7 @@ export function Oferta() {
               <span className="font-body text-xs font-semibold uppercase tracking-[0.1em] text-ouro-tinta">
                 {loteAtivo.nome} · Valor promocional
               </span>
-              <p className="mx-auto mt-4 max-w-[38ch] font-body text-[15px] leading-[1.65] text-corpo">
+              <p className="mx-auto mt-3 max-w-[38ch] font-body text-[15px] leading-[1.65] text-corpo">
                 Para que mais pessoas possam viver essa experiência,{" "}
                 <b className="font-medium italic text-ouro-tinta">
                   o primeiro lote tem valor especial.
@@ -101,7 +101,7 @@ export function Oferta() {
               </p>
             </div>
 
-            <div className="mt-6 space-y-3.5">
+            <div className="mt-5 space-y-3">
               {IMERSAO.composicaoValor.map((item) => (
                 <div
                   key={item.label}
@@ -113,7 +113,7 @@ export function Oferta() {
               ))}
             </div>
 
-            <div className="my-6 h-px w-full bg-borda" aria-hidden="true" />
+            <div className="my-5 h-px w-full bg-borda" aria-hidden="true" />
 
             <div className="space-y-3">
               <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3 font-body text-[15px] text-corpo/55">
