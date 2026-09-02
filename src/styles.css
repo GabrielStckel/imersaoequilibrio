@@ -80,6 +80,15 @@
   );
 }
 
+@utility texto-justificado {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphenate-limit-chars: 6 3 3;
+  hyphenate-limit-lines: 2;
+}
+
 @utility moldura-ouro-escura {
   border: 1px solid rgb(201 168 63 / 35%);
   box-shadow: inset 0 1px 0 rgb(240 223 164 / 18%);

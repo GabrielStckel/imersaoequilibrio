@@ -21,11 +21,11 @@ export function ParaQuem() {
     <section className="bg-pergaminho py-16 lg:py-32">
       <div className="mx-auto grid max-w-6xl gap-12 px-5 sm:px-8 lg:grid-cols-[1fr_1fr] lg:gap-20">
         <Reveal>
-          <SectionLabel>05 — Para quem é esta imersão</SectionLabel>
-          <h2 className="mt-6 font-display text-[1.9rem] font-semibold leading-[1.14] text-tinta sm:text-[2.4rem]">
+          <SectionLabel>Para quem é esta imersão</SectionLabel>
+          <h2 className="mx-auto mt-6 max-w-[320px] text-balance text-center font-display text-[clamp(1.5rem,5.6vw,2.5rem)] font-semibold leading-[1.18] tracking-[-0.02em] text-tinta md:mx-0 md:max-w-none md:text-left md:text-[2.4rem] md:leading-[1.14]">
             Para quem decidiu assumir a própria força.
           </h2>
-          <p className="mt-6 max-w-md font-body text-[0.95rem] leading-[1.8] text-corpo">
+          <p className="texto-justificado mt-6 max-w-md font-body text-[0.95rem] leading-[1.8] text-corpo">
             Este movimento é exclusivo para quem decidiu abandonar o papel de vítima da ingratidão
             alheia e deseja assumir a responsabilidade pela sua própria força. É para você se:
           </p>
@@ -47,7 +47,7 @@ export function ParaQuem() {
 
           <Reveal delay={320}>
             <div className="mt-8 rounded-2xl border border-terracota/25 bg-areia p-5 sm:p-6">
-              <h3 className="font-display text-base font-semibold tracking-[-0.01em] text-tinta">
+              <h3 className="text-balance text-left font-display text-[18px] font-semibold leading-[1.3] text-tinta">
                 Esta imersão não é para:
               </h3>
               <ul className="mt-4 space-y-3">

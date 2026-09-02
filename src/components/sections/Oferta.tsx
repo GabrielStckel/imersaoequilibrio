@@ -74,7 +74,7 @@ export function Oferta() {
                   <span className="icone-card">
                     <Icon strokeWidth={1.5} aria-hidden="true" />
                   </span>
-                  <h3 className="mt-5 max-w-[22ch] pr-10 font-display text-[19px] font-semibold leading-snug text-tinta">
+                  <h3 className="mt-5 pr-10 text-balance text-left font-display text-[18px] font-semibold leading-[1.3] text-tinta">
                     {item.titulo}
                   </h3>
                   <p className="mt-3 font-body text-[15px] leading-[1.65] text-corpo">
