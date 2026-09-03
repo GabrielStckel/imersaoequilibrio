@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import { useLoteAtivo } from "@/hooks/useLoteAtivo";
 import { useCheckoutUrl } from "@/hooks/useCheckoutUrl";
 import { IMERSAO } from "@/config/imersao";
-import { trackInitiateCheckout } from "@/lib/tracking";
+import { trackInitiateCheckout, precoParaNumero } from "@/lib/tracking";
 
 type Props = {
   label?: string;
@@ -47,9 +47,15 @@ export function CtaButton({
       target={to === "checkout" ? "_blank" : undefined}
       rel={to === "checkout" ? "noopener noreferrer" : undefined}
       aria-label={textoCta}
-      onClick={() =>
-        trackInitiateCheckout({ origem, lote: lote.nome, value: lote.preco, currency: "BRL" })
-      }
+      onClick={() => {
+        if (to !== "checkout") return;
+        trackInitiateCheckout({
+          origem,
+          lote: lote.nome,
+          value: precoParaNumero(lote.preco),
+          currency: "BRL",
+        });
+      }}
       className={cn(
         "group inline-flex items-center justify-center gap-2 rounded-xl font-display text-base font-semibold tracking-[0.01em] transition-[filter,transform,box-shadow] duration-300",
         "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ouro focus-visible:ring-offset-2 focus-visible:ring-offset-transparent",
