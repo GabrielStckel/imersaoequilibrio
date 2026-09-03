@@ -84,6 +84,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     links: [
       {
+        rel: "stylesheet",
+        href: appCss,
+      },
+      {
         rel: "preload",
         href: poppins700Woff2,
         as: "font",
