@@ -123,6 +123,7 @@ function RootShell({ children }: { children: ReactNode }) {
             <script suppressHydrationWarning dangerouslySetInnerHTML={{ __html: PIXEL_SNIPPET }} />
           </>
         )}
+        <style dangerouslySetInnerHTML={{ __html: appCss }} />
         <HeadContent />
       </head>
       <body>
