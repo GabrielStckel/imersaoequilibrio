@@ -57,7 +57,7 @@ export const IMERSAO = {
   ],
 
   // ——— Rastreio ———
-  metaPixelId: "", // preencha com o ID do Meta Pixel
+  metaPixelId: "489930819102829", // ID do Meta Pixel
   utmifyAtivo: true,
 
   // Texto base do botão. O nome do lote ativo é adicionado automaticamente:
