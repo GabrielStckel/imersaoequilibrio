@@ -41,12 +41,12 @@ Este projeto é TanStack Start e não tem `index.html`; o HTML é montado pelo `
 
 | Evento         | Gatilho                                                                 |
 |----------------|-------------------------------------------------------------------------|
-| `PageView`     | Carregamento inicial + toda mudança de rota (`/`, `/termos`, `/privacidade`). |
+| `PageView`     | Snippet inline no `<head>`, apenas na rota `/`, antes da hidratação. Nenhum disparo em `/termos` e `/privacidade`. |
 | `ViewContent`  | Seção `#oferta` entra 50% no viewport, uma vez por sessão.             |
-| `InitiateCheckout` | Clique nos dois CTAs que abrem o checkout Hotmart (Oferta e CTA final), com `value: 47`, `currency: 'BRL'`. |
+| `InitiateCheckout` | Clique nos dois CTAs que abrem o checkout Hotmart (Oferta e CTA final), com `value` do lote ativo e `currency: 'BRL'`. |
 
 ## Verificação
 - `bun run build` sem erros.
-- Confirmar que `metaPixelId` está preenchido e que o script `fbevents.js` aparece no `<head>` da página.
-- Confirmar que o `<noscript>` de imagem do Pixel está no body.
+- Ver o HTML de `/` retornado pelo servidor (`curl`): o snippet do pixel aparece no topo do `<head>`, antes do CSS, com `init` e `PageView`, e o `<noscript>` no início do `<body>`.
+- Ver o HTML de `/termos` e `/privacidade`: nenhuma ocorrência de `fbevents` ou do Pixel ID.
 - Confirmar que CTAs de âncora (`#oferta`) não disparam `InitiateCheckout`.
