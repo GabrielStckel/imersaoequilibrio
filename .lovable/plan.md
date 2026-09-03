@@ -9,18 +9,21 @@ Objetivo: instalar o Meta Pixel ID `489930819102829` apenas no lado do cliente, 
 
 ### 2. `src/components/Tracking.tsx`
 - Manter o script base oficial do Meta Pixel injetado no `<head>` (código padrão `fbevents.js`, sem biblioteca de terceiros).
-- Adicionar a tag `<noscript>` com o pixel de imagem logo após a abertura do `<body>` (renderizada pelo próprio componente `Tracking`, que é montado dentro de `<main>`).
-- Implementar PageView em mudanças de rota da SPA usando `useRouter` do TanStack Router, disparando `fbq('track', 'PageView')` ao trocar de rota (`/`, `/termos`, `/privacidade`).
-- Implementar ViewContent para a seção `#oferta` usando `IntersectionObserver` com `threshold: 0.5`, disparando `fbq('track', 'ViewContent')` uma única vez por sessão (controle via `sessionStorage`).
+- **Remover o `fbq('track','PageView')` do snippet base** — o script só inicializa o pixel. Todo `PageView` sai do listener de rota, inclusive o da primeira renderização, evitando disparo duplicado.
+- Implementar PageView usando `useRouter` do TanStack Router, disparando `fbq('track', 'PageView')` no mount inicial e em cada troca de rota (`/`, `/termos`, `/privacidade`) — fonte única do evento.
+- Implementar ViewContent para a seção `#oferta` usando `IntersectionObserver` com `threshold: 0.5`, disparando `fbq('track', 'ViewContent')` uma única vez por sessão (controle via `sessionStorage` envolto em `try/catch` para não derrubar o observer quando o armazenamento estiver bloqueado).
 
-### 3. `src/lib/tracking.ts`
-- Ajustar `trackInitiateCheckout` para receber e enviar `value: 47` e `currency: 'BRL'` de forma padronizada.
+### 3. `src/routes/__root.tsx`
+- Este projeto é TanStack Start e não tem `index.html`; o HTML do shell é o `RootShell` do `__root.tsx`. Colocar o `<noscript>` do pixel (tag de imagem de rastreio) **estático**, logo após a abertura do `<body>` no `RootShell`. Por sair do HTML renderizado no servidor, o noscript funciona de verdade — não é código morto renderizado pelo React.
+
+### 4. `src/lib/tracking.ts`
+- `trackInitiateCheckout` envia `currency: 'BRL'` e o `value` **lido do preço do lote ativo** (não fixo).
 - Adicionar helpers `trackPageView()` e `trackViewContent()` para centralizar as chamadas ao `window.fbq`.
 
-### 4. `src/components/CtaButton.tsx`
+### 5. `src/components/CtaButton.tsx`
 - Alterar o `onClick` para disparar `InitiateCheckout` **apenas** quando `to === "checkout"` (os CTAs da oferta e do CTA final).
 - Não disparar `InitiateCheckout` nos botões de âncora (`to === "oferta"`, que vão para `#oferta`).
-- Enviar os parâmetros exatos: `value: 47`, `currency: 'BRL'`.
+- Enviar `value` derivado de `IMERSAO.lotes[indice].preco` (o mesmo exibido na página, ex.: 47 hoje, 97 no 2º lote) com `currency: 'BRL'`.
 
 ## O que NÃO será feito
 - Nenhum evento `Purchase` será criado (a compra acontece na Hotmart).
