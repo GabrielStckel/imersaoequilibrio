@@ -4,6 +4,7 @@ import {
   Link,
   createRootRouteWithContext,
   useRouter,
+  useRouterState,
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
@@ -12,6 +13,7 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import poppins700Woff2 from "@fontsource/poppins/files/poppins-latin-700-normal.woff2?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { IMERSAO } from "../config/imersao";
 
 function NotFoundComponent() {
   return (
@@ -103,13 +105,42 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   errorComponent: ErrorComponent,
 });
 
+const PIXEL_SNIPPET = `!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','${IMERSAO.metaPixelId}');fbq('track','PageView');`;
+
 function RootShell({ children }: { children: ReactNode }) {
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  // O pixel só carrega na landing ("/"), nunca em /termos e /privacidade.
+  const comPixel = Boolean(IMERSAO.metaPixelId) && (pathname === "/" || pathname === "");
+
   return (
     <html lang="pt-BR">
       <head>
+        {comPixel && (
+          <>
+            <link rel="preconnect" href="https://connect.facebook.net" crossOrigin="anonymous" />
+            <link rel="dns-prefetch" href="https://connect.facebook.net" />
+            <script suppressHydrationWarning dangerouslySetInnerHTML={{ __html: PIXEL_SNIPPET }} />
+          </>
+        )}
         <HeadContent />
       </head>
       <body>
+        {comPixel && (
+          <noscript>
+            <img
+              height="1"
+              width="1"
+              style={{ display: "none" }}
+              alt=""
+              src={`https://www.facebook.com/tr?id=${IMERSAO.metaPixelId}&ev=PageView&noscript=1`}
+            />
+          </noscript>
+        )}
         {children}
         <Scripts />
       </body>
