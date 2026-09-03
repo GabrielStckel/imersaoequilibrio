@@ -151,7 +151,7 @@ function ObrigadoPage() {
                 key={passo.titulo}
                 className={
                   passo.destaque
-                    ? "-mx-2 flex gap-4 rounded-xl border-1.5 border border-borda-forte bg-areia p-4 shadow-[0_8px_24px_rgb(138_106_32/14%)]"
+                    ? "-mx-2 flex gap-4 rounded-xl border-[1.5px] border-borda-forte bg-areia p-4 shadow-[0_8px_24px_rgb(138_106_32/14%)]"
                     : "flex gap-4"
                 }
               >
