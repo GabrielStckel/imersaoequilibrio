@@ -26,8 +26,11 @@ function HeroVideo() {
           <img
             src={IMERSAO.autoridade.foto}
             alt={`Retrato de ${IMERSAO.autoridade.nome}`}
-            width={640}
-            height={360}
+            width={1000}
+            height={1000}
+            fetchPriority="high"
+            loading="eager"
+            decoding="async"
             className="absolute inset-0 h-full w-full object-cover"
           />
         )}

@@ -93,7 +93,7 @@ export const IMERSAO = {
   autoridade: {
     nome: "Jonas Peres",
     papel: "TERAPEUTA SISTÊMICO",
-    foto: "/jonas.png", // Substitua o arquivo em public/jonas.png pelo retrato oficial.
+    foto: "/jonas.webp", // Substitua o arquivo em public/jonas.webp pelo retrato oficial.
     bio: [
       "Os mais de 10 anos como constelador e terapeuta são o coração de uma vida inteira destinada ao servir consciente à vida, com o suporte de uma espiritualidade laica e filosófica, que traz clareza, sabedoria e verdade ao meu processo e ao de quem posso auxiliar.",
       "Mais de 3.000 horas conduzindo constelações e vivências terapêuticas, presenciais e online. Mais de 5.000 clientes e alunos que viveram o poder transformador do autoconhecimento, resolvendo questões urgentes e aprendendo a conduzir melhor suas vidas, seguindo o meu método.",

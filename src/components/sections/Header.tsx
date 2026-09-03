@@ -69,10 +69,12 @@ export function Header() {
           {/* Logo / marca */}
           <a href="#" className="flex min-h-11 min-w-0 items-center gap-[10px] md:gap-2.5 md:py-1">
             <img
-              src="/logo-equilibrio.png"
+              src="/logo-equilibrio.webp"
               alt="Equilíbrio Sistêmico"
               width={30}
               height={30}
+              loading="eager"
+              decoding="async"
               className="h-[24px] w-auto shrink-0 object-contain md:h-[30px]"
             />
             <span className="whitespace-nowrap font-display text-sm font-semibold leading-none tracking-[-0.01em] text-pergaminho md:text-[0.82rem] md:tracking-[0.06em]">

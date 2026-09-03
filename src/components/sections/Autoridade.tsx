@@ -44,6 +44,7 @@ export function Autoridade() {
               width={1000}
               height={1000}
               loading="lazy"
+              decoding="async"
               className="h-full w-full object-contain object-bottom"
             />
 

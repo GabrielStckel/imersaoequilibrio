@@ -26,6 +26,14 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: titulo },
       { property: "og:description", content: descricao },
     ],
+    links: [
+      {
+        rel: "preload",
+        as: "image",
+        href: "/jonas.webp",
+        fetchPriority: "high",
+      },
+    ],
   }),
   component: Index,
 });
