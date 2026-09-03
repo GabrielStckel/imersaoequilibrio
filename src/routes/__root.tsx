@@ -125,7 +125,6 @@ function RootShell({ children }: { children: ReactNode }) {
           <>
             <link rel="preconnect" href="https://connect.facebook.net" crossOrigin="anonymous" />
             <link rel="dns-prefetch" href="https://connect.facebook.net" />
-            <script suppressHydrationWarning dangerouslySetInnerHTML={{ __html: PIXEL_SNIPPET }} />
           </>
         )}
         <HeadContent />
