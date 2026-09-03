@@ -1,23 +1,32 @@
 import { useEffect } from "react";
 import { IMERSAO } from "@/config/imersao";
+import { trackViewContent } from "@/lib/tracking";
 
-/** Injeta Meta Pixel (PageView) e UTMify conforme o config. */
+const CHAVE_VIEW_CONTENT = "fb_view_content_oferta";
+
+function jaDisparado() {
+  try {
+    return sessionStorage.getItem(CHAVE_VIEW_CONTENT) === "1";
+  } catch {
+    return false;
+  }
+}
+
+function marcarDisparado() {
+  try {
+    sessionStorage.setItem(CHAVE_VIEW_CONTENT, "1");
+  } catch {
+    /* armazenamento bloqueado: segue sem persistir */
+  }
+}
+
+/**
+ * Injeta o UTMify e dispara o ViewContent da seção de oferta.
+ * O script base do Meta Pixel (init + PageView) fica inline no <head>
+ * do RootShell, para disparar antes da hidratação.
+ */
 export function Tracking() {
   useEffect(() => {
-    const id = IMERSAO.metaPixelId;
-    if (id && !document.getElementById("meta-pixel")) {
-      const s = document.createElement("script");
-      s.id = "meta-pixel";
-      s.async = true;
-      s.innerHTML = `!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-document,'script','https://connect.facebook.net/en_US/fbevents.js');
-fbq('init','${id}');fbq('track','PageView');`;
-      document.head.appendChild(s);
-    }
-
     if (IMERSAO.utmifyAtivo && !document.getElementById("utmify")) {
       const u = document.createElement("script");
       u.id = "utmify";
@@ -28,6 +37,27 @@ fbq('init','${id}');fbq('track','PageView');`;
       u.setAttribute("data-utmify-prevent-subids", "");
       document.head.appendChild(u);
     }
+  }, []);
+
+  useEffect(() => {
+    const alvo = document.getElementById("oferta");
+    if (!alvo || jaDisparado()) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting && !jaDisparado()) {
+            marcarDisparado();
+            trackViewContent({ content_name: "Oferta", content_category: IMERSAO.nome });
+            observer.disconnect();
+          }
+        }
+      },
+      { threshold: 0.5 },
+    );
+
+    observer.observe(alvo);
+    return () => observer.disconnect();
   }, []);
 
   return null;
