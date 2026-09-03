@@ -122,8 +122,8 @@ function RootShell({ children }: { children: ReactNode }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {comPixel && (
           <>
-            <link rel="preconnect" href="https://connect.facebook.net" crossOrigin="anonymous" precedence="default" />
-            <link rel="dns-prefetch" href="https://connect.facebook.net" precedence="default" />
+            <link rel="preconnect" href="https://connect.facebook.net" crossOrigin="anonymous" />
+            <link rel="dns-prefetch" href="https://connect.facebook.net" />
             <script suppressHydrationWarning dangerouslySetInnerHTML={{ __html: PIXEL_SNIPPET }} />
           </>
         )}
