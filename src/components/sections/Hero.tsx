@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { Calendar } from "lucide-react";
 import { IMERSAO } from "@/config/imersao";
 import { Countdown } from "@/components/Countdown";
@@ -14,20 +14,59 @@ function HeroVideo() {
   const { vturb } = IMERSAO.video;
   const elementoId = `vid-${vturb.playerId}`;
   const scriptSrc = `https://scripts.converteai.net/${vturb.contaId}/players/${vturb.playerId}/v4/player.js`;
+  const wrapperRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Trava: em StrictMode o React monta duas vezes; sem isso o custom
-    // element é registrado em duplicidade e o player não inicializa.
-    if (document.querySelector(`script[src="${scriptSrc}"]`)) return;
-    const s = document.createElement("script");
-    s.src = scriptSrc;
-    s.async = true;
-    document.head.appendChild(s);
+    const wrapper = wrapperRef.current;
+    let idleId: number | undefined;
+    let timeoutId: ReturnType<typeof setTimeout> | undefined;
+
+    const injetar = () => {
+      // Trava: em StrictMode o React monta duas vezes; sem isso o custom
+      // element é registrado em duplicidade e o player não inicializa.
+      if (document.querySelector(`script[src="${scriptSrc}"]`)) return;
+      const s = document.createElement("script");
+      s.src = scriptSrc;
+      s.async = true;
+      document.head.appendChild(s);
+    };
+
+    const cancelar = () => {
+      if (idleId !== undefined && typeof window.cancelIdleCallback === "function") {
+        window.cancelIdleCallback(idleId);
+        idleId = undefined;
+      }
+      if (timeoutId !== undefined) {
+        clearTimeout(timeoutId);
+        timeoutId = undefined;
+      }
+    };
+
+    // Toque no vídeo carrega o player na hora, sem esperar a ociosidade.
+    const aoTocar = () => {
+      cancelar();
+      injetar();
+    };
+    wrapper?.addEventListener("pointerdown", aoTocar, { once: true });
+
+    if (typeof window.requestIdleCallback === "function") {
+      idleId = window.requestIdleCallback(injetar, { timeout: 2000 });
+    } else {
+      timeoutId = setTimeout(injetar, 1200);
+    }
+
+    return () => {
+      cancelar();
+      wrapper?.removeEventListener("pointerdown", aoTocar);
+    };
   }, [scriptSrc]);
 
   return (
     <div>
-      <div className="moldura-ouro-escura relative w-full overflow-hidden rounded-card bg-espresso-alt/60 shadow-soft">
+      <div
+        ref={wrapperRef}
+        className="moldura-ouro-escura relative w-full overflow-hidden rounded-card bg-espresso-alt/60 shadow-soft"
+      >
         <vturb-smartplayer
           id={elementoId}
           style={{ display: "block", margin: "0 auto", width: "100%" }}
