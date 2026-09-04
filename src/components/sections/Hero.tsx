@@ -51,7 +51,7 @@ function HeroVideo() {
 
       <div className="mt-7 hidden lg:flex lg:flex-col">
         {IMERSAO.autoridade.numeros.map((numero) => (
-          <div key={numero.label} className="relative py-4 lg:py-8">
+          <div key={numero.label} className="relative py-4 lg:py-12">
             <span aria-hidden="true" className="filete-ouro absolute inset-x-0 top-0" />
             <p className="font-body text-[17px] leading-[1.5] text-pergaminho/85">
               <strong className="font-display font-bold text-ouro-luz">{numero.valor}</strong>{" "}
