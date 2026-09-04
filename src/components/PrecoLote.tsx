@@ -17,10 +17,10 @@ export function PrecoLote({
 
   if (align === "center") {
     return (
-      <div className={cn("flex flex-col items-center text-center", className)}>
+      <div className={cn("flex flex-col items-center gap-1 text-center", className)}>
         <span
           className={cn(
-            "font-body text-sm line-through",
+            "font-body text-sm line-through lg:text-[17px]",
             tone === "dark" ? "text-pergaminho/80" : "text-corpo",
           )}
         >
@@ -28,15 +28,16 @@ export function PrecoLote({
         </span>
         <span
           className={cn(
-            "font-display leading-none text-ouro-luz",
+            "ouro-texto-escuro font-display leading-none",
             size === "lg" ? "text-6xl sm:text-7xl" : "text-5xl",
+            "lg:text-[56px]",
           )}
         >
           {lote.preco}
         </span>
         <span
           className={cn(
-            "mt-2 font-body text-sm",
+            "font-body text-sm lg:text-base",
             tone === "dark" ? "text-pergaminho/80" : "text-corpo",
           )}
         >

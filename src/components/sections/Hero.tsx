@@ -51,7 +51,7 @@ function HeroVideo() {
 
       <div className="mt-7 hidden lg:flex lg:flex-col">
         {IMERSAO.autoridade.numeros.map((numero) => (
-          <div key={numero.label} className="relative py-4">
+          <div key={numero.label} className="relative py-4 lg:py-16">
             <span aria-hidden="true" className="filete-ouro absolute inset-x-0 top-0" />
             <p className="font-body text-[17px] leading-[1.5] text-pergaminho/85">
               <strong className="font-display font-bold text-ouro-luz">{numero.valor}</strong>{" "}
@@ -136,24 +136,26 @@ function DesktopPurchase() {
 
 function LargeDesktopPurchase() {
   return (
-    <div className="hidden lg:block">
+    <div className="moldura-ouro-escura hidden rounded-card bg-espresso-alt/25 p-8 text-center lg:block lg:w-[520px]">
       <Reveal delay={200}>
-        <PrecoLote />
-        <CtaButton to="oferta" origem="hero" size="lg" className="mt-6 h-[60px] w-[420px]" />
+        <PrecoLote align="center" />
+        <CtaButton to="oferta" origem="hero" size="lg" className="mt-6 h-[60px] w-full" />
       </Reveal>
       <Reveal delay={240}>
-        <HotmartGuarantee className="mt-6 w-[420px] pt-6" />
+        <div className="mt-5 flex justify-center">
+          <HotmartGuarantee semFilete />
+        </div>
       </Reveal>
       <Reveal delay={280}>
-        <ProgressoLote className="mt-6" />
+        <ProgressoLote className="mt-6 w-full text-center [&>p]:text-center [&>p]:lg:text-[15px] [&>p]:lg:leading-[1.6]" />
       </Reveal>
       <Reveal delay={320}>
-        <div className="relative mt-7 pt-7">
+        <div className="relative mt-6 pt-6">
           <span aria-hidden="true" className="filete-ouro absolute inset-x-0 top-0" />
-          <p className="mb-3 font-body text-xs font-medium uppercase tracking-[0.12em] text-ouro-luz lg:text-[14px]">
+          <p className="mb-5 font-body text-sm font-medium uppercase tracking-[0.12em] text-ouro-luz">
             A imersão começa em
           </p>
-          <Countdown />
+          <Countdown className="justify-center gap-2 [&>div]:min-w-0 [&>div]:flex-1" />
         </div>
       </Reveal>
     </div>
