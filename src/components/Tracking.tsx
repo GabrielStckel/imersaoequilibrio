@@ -21,24 +21,11 @@ function marcarDisparado() {
 }
 
 /**
- * Injeta o UTMify e dispara o ViewContent da seção de oferta.
+ * Dispara o ViewContent da seção de oferta quando ela entra na viewport.
  * O script base do Meta Pixel (init + PageView) fica inline no <head>
  * do RootShell, para disparar antes da hidratação.
  */
 export function Tracking() {
-  useEffect(() => {
-    if (IMERSAO.utmifyAtivo && !document.getElementById("utmify")) {
-      const u = document.createElement("script");
-      u.id = "utmify";
-      u.async = true;
-      u.defer = true;
-      u.src = "https://cdn.utmify.com.br/scripts/utms/latest.js";
-      u.setAttribute("data-utmify-prevent-xcod-sck", "");
-      u.setAttribute("data-utmify-prevent-subids", "");
-      document.head.appendChild(u);
-    }
-  }, []);
-
   useEffect(() => {
     const alvo = document.getElementById("oferta");
     if (!alvo || jaDisparado()) return;
