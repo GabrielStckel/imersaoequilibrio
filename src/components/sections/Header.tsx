@@ -36,7 +36,7 @@ function Faixa({ ocultar = false }: { ocultar?: boolean }) {
   return (
     <div
       aria-hidden={ocultar || undefined}
-      className="flex shrink-0 items-center gap-8 pr-8 font-body text-[11px] font-semibold uppercase leading-none tracking-[0.08em] text-espresso"
+      className="flex shrink-0 items-center gap-8 pr-8 font-body text-[11px] font-semibold uppercase leading-none tracking-[0.08em] text-espresso lg:text-[14px]"
     >
       {mensagens.map((m, i) => (
         <span key={i} className="flex items-center gap-8 whitespace-nowrap">
@@ -65,7 +65,7 @@ export function Header() {
 
       {/* Barra do header: faixa escura inferior */}
       <div className="border-b border-ouro/[0.28] bg-espresso">
-        <div className="mx-auto flex h-14 max-w-6xl items-center justify-between gap-3 px-4 sm:px-8 md:h-auto md:gap-4 md:py-2.5">
+        <div className="container-eq flex h-14 items-center justify-between gap-3 px-4 sm:px-8 md:h-auto md:gap-4 md:py-2.5">
           {/* Logo / marca */}
           <a href="#" className="flex min-h-11 min-w-0 items-center gap-[10px] md:gap-2.5 md:py-1">
             <img
@@ -77,7 +77,7 @@ export function Header() {
               decoding="async"
               className="h-[24px] w-auto shrink-0 object-contain md:h-[30px]"
             />
-            <span className="whitespace-nowrap font-display text-sm font-semibold leading-none tracking-[-0.01em] text-pergaminho md:text-[0.82rem] md:tracking-[0.06em]">
+            <span className="whitespace-nowrap font-display text-sm font-semibold leading-none tracking-[-0.01em] text-pergaminho md:text-[0.82rem] md:tracking-[0.06em] lg:text-[14px]">
               {IMERSAO.nome}
             </span>
           </a>
@@ -92,9 +92,9 @@ export function Header() {
 
           {/* Countdown + CTA no desktop */}
           <div className="hidden shrink-0 items-center gap-4 md:flex">
-            <span className="font-body text-xs uppercase tracking-[0.12em] text-pergaminho/80">
+            <span className="font-body text-xs uppercase tracking-[0.12em] text-pergaminho/80 lg:text-[14px]">
               Começa em{" "}
-              <CountdownInline className="text-xs font-semibold text-ouro-luz" />
+              <CountdownInline className="text-xs font-semibold text-ouro-luz lg:text-[14px]" />
             </span>
             <CtaButton to="oferta" size="sm" origem="header" className="min-h-11" />
           </div>

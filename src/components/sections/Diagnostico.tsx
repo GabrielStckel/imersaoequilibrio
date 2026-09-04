@@ -32,12 +32,12 @@ const cards = [
 export function Diagnostico() {
   return (
     <section className="bg-pergaminho py-16 lg:py-32">
-      <div className="mx-auto max-w-6xl px-5 sm:px-8">
+      <div className="container-eq px-5 sm:px-8">
         <Reveal>
           <SectionLabel>O DIAGNÓSTICO</SectionLabel>
 
-          <div className="mt-8 grid gap-8 lg:grid-cols-[1.15fr_1fr] lg:items-end lg:gap-12">
-            <h2 className="mx-auto max-w-[320px] text-balance text-center font-display text-[clamp(1.5rem,5.6vw,2.5rem)] font-semibold leading-[1.18] tracking-[-0.02em] text-tinta md:mx-0 md:max-w-none md:text-left md:text-[3.25rem] md:leading-[1.08] lg:text-[3.75rem]">
+          <div className="mt-8 grid gap-8 lg:grid-cols-[1.25fr_1fr] lg:items-end lg:gap-12">
+            <h2 className="mx-auto max-w-[320px] text-balance text-center font-display text-[clamp(1.5rem,5.6vw,2.5rem)] font-semibold leading-[1.18] tracking-[-0.02em] text-tinta md:mx-0 md:max-w-none md:text-left md:text-[3.25rem] md:leading-[1.08] lg:text-[40px] lg:leading-[1.15] lg:tracking-[-0.02em]">
               A vida não funciona{" "}
               <span className="relative inline-block">
                 em gavetas
@@ -49,7 +49,7 @@ export function Diagnostico() {
               .
             </h2>
 
-            <p className="texto-justificado max-w-xl font-body text-[1rem] leading-[1.85] text-corpo lg:pb-2">
+            <p className="texto-justificado max-w-xl font-body text-[1rem] leading-[1.85] text-corpo lg:pb-2 lg:text-[20px] lg:leading-[1.6]">
               Quando a Lei do Equilíbrio é violada, o sintoma se espalha por todos os pilares da sua
               existência. Identifique onde o desequilíbrio está drenando sua energia hoje:
             </p>
@@ -66,11 +66,11 @@ export function Diagnostico() {
                     <c.icone strokeWidth={1.5} aria-hidden="true" />
                   </span>
 
-                  <h3 className="relative mt-6 text-balance text-left font-display text-[18px] font-semibold leading-[1.3] text-tinta md:text-[1.35rem]">
+                  <h3 className="relative mt-6 text-balance text-left font-display text-[18px] font-semibold leading-[1.3] text-tinta md:text-[1.35rem] lg:text-[24px] lg:leading-[1.3]">
                     {c.titulo}
                   </h3>
 
-                  <p className="relative mt-4 font-body text-[0.95rem] leading-[1.8] text-corpo">
+                  <p className="lg:texto-justificado relative mt-4 font-body text-[0.95rem] leading-[1.8] text-corpo lg:text-[17px] lg:leading-[1.7]">
                     {c.texto}
                   </p>
                 </article>
@@ -81,7 +81,7 @@ export function Diagnostico() {
 
         <Reveal>
           <div className="mt-14 border-t border-borda pt-8 pb-0">
-            <p className="texto-justificado max-w-[52ch] font-body text-[0.95rem] leading-relaxed text-corpo">
+            <p className="texto-justificado max-w-[52ch] font-body text-[0.95rem] leading-relaxed text-corpo lg:text-[18px] lg:leading-[1.75]">
               O desequilíbrio não escolhe área. Ele se mostra no amor, no dinheiro, no trabalho e na
               família. E continua assim até você restaurar a ordem dentro de si.
             </p>

@@ -30,7 +30,7 @@ export function Countdown({ className }: { className?: string }) {
           <div className="font-display text-3xl font-bold leading-none text-ouro-luz sm:text-4xl">
             {pad(b.valor)}
           </div>
-          <div className="mt-1.5 font-body text-[11px] uppercase tracking-[0.1em] text-pergaminho/70">
+          <div className="mt-1.5 font-body text-[11px] uppercase tracking-[0.1em] text-pergaminho/70 lg:text-[14px]">
             {b.label}
           </div>
         </div>

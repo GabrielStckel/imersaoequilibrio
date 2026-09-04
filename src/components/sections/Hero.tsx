@@ -44,11 +44,11 @@ function HeroVideo() {
         </vturb-smartplayer>
       </div>
 
-      <p className="mt-5 hidden max-w-[48ch] font-body text-base leading-[1.65] text-pergaminho/80 md:block">
+      <p className="mt-5 hidden max-w-[48ch] font-body text-base leading-[1.65] text-pergaminho/80 md:block lg:text-[20px] lg:leading-[1.6]">
         Desarme a carência de infância que faz você aceitar migalhas no amor e se submeter à
         escassez financeira. E retome o seu lugar de adulto potente.
       </p>
-      <p className="mt-3 hidden font-body text-xs uppercase leading-relaxed tracking-[0.12em] text-ouro-luz md:block">
+      <p className="mt-3 hidden font-body text-xs uppercase leading-relaxed tracking-[0.12em] text-ouro-luz md:block lg:text-[14px]">
         {IMERSAO.autoridade.nome} · Ao vivo pelo Zoom · {IMERSAO.horario}
       </p>
     </div>
@@ -133,14 +133,14 @@ export function Hero() {
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_120%_80%_at_50%_0%,rgb(201_168_63_/_0.13),transparent_65%)]"
       />
 
-      <div className="relative mx-auto grid w-[calc(100%-2rem)] max-w-[340px] gap-x-14 pb-14 pt-8 text-center md:w-auto md:max-w-6xl md:px-8 md:pb-20 md:pt-16 md:text-left lg:grid-cols-[1.02fr_0.98fr] lg:items-start lg:pb-28 lg:pt-28">
+      <div className="relative mx-auto grid w-[calc(100%-2rem)] max-w-[340px] gap-x-14 pb-14 pt-8 text-center md:container-eq md:w-auto md:px-8 md:pb-20 md:pt-16 md:text-left lg:grid-cols-[1.02fr_0.98fr] lg:items-start lg:pb-28 lg:pt-28">
         {/* Topo: label + título (sempre 3 linhas) */}
         <div className="lg:col-start-1 lg:row-start-1">
           <Reveal className="hidden md:block">
             <SectionLabel tone="dark">Imersão Online e Ao Vivo · 06 e 07 de Outubro</SectionLabel>
           </Reveal>
           <Reveal delay={80}>
-            <h1 className="font-display text-[17px] font-bold leading-[1.18] tracking-[-0.02em] text-pergaminho md:mt-7 md:text-[clamp(1.75rem,6.2vw,3rem)] md:leading-[1.12]">
+            <h1 className="font-display text-[17px] font-bold leading-[1.18] tracking-[-0.02em] text-pergaminho md:mt-7 md:text-[clamp(1.75rem,6.2vw,3rem)] md:leading-[1.12] lg:text-[42px] lg:leading-[1.12] lg:tracking-[-0.02em]">
               <span className="block whitespace-nowrap md:inline md:whitespace-normal">Por que doar-se demais está afastando</span><span className="hidden md:inline"><br /></span>{" "}
               <span className="ouro-texto-escuro block whitespace-nowrap md:inline md:whitespace-normal">o respeito na sua relação amorosa</span><span className="hidden md:inline"><br /></span>{" "}
               <span className="block whitespace-nowrap md:inline md:whitespace-normal">e travando o fluxo do seu dinheiro?</span>
