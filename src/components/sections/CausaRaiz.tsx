@@ -45,11 +45,11 @@ export function CausaRaiz() {
                 />
                 <span
                   aria-hidden="true"
-                  className="pointer-events-none absolute left-3 top-2 font-display text-[56px] font-medium leading-none text-ouro-tinta/20 lg:left-4 lg:top-3 lg:text-[72px] lg:text-ouro-tinta/18"
+                  className="pointer-events-none absolute left-3 top-2 font-display text-[56px] font-semibold leading-none text-ouro-tinta/20 lg:left-4 lg:top-3 lg:text-[72px] lg:text-ouro-tinta/18"
                 >
                   “
                 </span>
-                <p className="relative mx-auto max-w-[300px] text-center font-display text-[17px] font-medium italic leading-[1.45] text-tinta lg:max-w-none lg:text-left lg:text-[22px] lg:leading-[1.5]">
+                <p className="relative mx-auto max-w-[300px] text-center font-display text-[17px] font-semibold italic leading-[1.45] text-tinta lg:max-w-none lg:text-left lg:text-[22px] lg:leading-[1.5]">
                   Você não é "bom demais"; você está tentando comprar o direito de pertencer através
                   da hipercompensação.
                 </p>
