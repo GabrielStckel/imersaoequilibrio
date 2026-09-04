@@ -5,6 +5,7 @@ import { Countdown } from "@/components/Countdown";
 import { ProgressoLote } from "@/components/ProgressoLote";
 import { PrecoLote } from "@/components/PrecoLote";
 import { CtaButton } from "@/components/CtaButton";
+import { HotmartGuarantee } from "@/components/HotmartGuarantee";
 import { SectionLabel } from "@/components/SectionLabel";
 import { Reveal } from "@/components/Reveal";
 import { useLoteAtivo } from "@/hooks/useLoteAtivo";
@@ -44,13 +45,21 @@ function HeroVideo() {
         </vturb-smartplayer>
       </div>
 
-      <p className="mt-5 hidden max-w-[48ch] font-body text-base leading-[1.65] text-pergaminho/80 md:block lg:text-[20px] lg:leading-[1.6]">
-        Desarme a carência de infância que faz você aceitar migalhas no amor e se submeter à
-        escassez financeira. E retome o seu lugar de adulto potente.
-      </p>
-      <p className="mt-3 hidden font-body text-xs uppercase leading-relaxed tracking-[0.12em] text-ouro-luz md:block lg:text-[14px]">
+      <p className="mt-3 hidden font-body text-xs uppercase leading-relaxed tracking-[0.12em] text-ouro-luz md:block lg:text-[15px]">
         {IMERSAO.autoridade.nome} · Ao vivo pelo Zoom · {IMERSAO.horario}
       </p>
+
+      <div className="mt-7 hidden lg:flex lg:flex-col">
+        {IMERSAO.autoridade.numeros.map((numero) => (
+          <div key={numero.label} className="relative py-4">
+            <span aria-hidden="true" className="filete-ouro absolute inset-x-0 top-0" />
+            <p className="font-body text-[17px] leading-[1.5] text-pergaminho/85">
+              <strong className="font-display font-bold text-ouro-luz">{numero.valor}</strong>{" "}
+              {numero.label}
+            </p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
@@ -107,7 +116,7 @@ function MobilePurchase() {
 
 function DesktopPurchase() {
   return (
-    <div className="hidden md:block">
+    <div className="hidden md:block lg:hidden">
       <Reveal delay={200}>
         <Countdown />
       </Reveal>
@@ -125,6 +134,32 @@ function DesktopPurchase() {
   );
 }
 
+function LargeDesktopPurchase() {
+  return (
+    <div className="hidden lg:block">
+      <Reveal delay={200}>
+        <PrecoLote />
+        <CtaButton to="oferta" origem="hero" size="lg" className="mt-6 h-[60px] w-[420px]" />
+      </Reveal>
+      <Reveal delay={240}>
+        <HotmartGuarantee className="mt-6 w-[420px] pt-6" />
+      </Reveal>
+      <Reveal delay={280}>
+        <ProgressoLote className="mt-6" />
+      </Reveal>
+      <Reveal delay={320}>
+        <div className="relative mt-7 pt-7">
+          <span aria-hidden="true" className="filete-ouro absolute inset-x-0 top-0" />
+          <p className="mb-3 font-body text-xs font-medium uppercase tracking-[0.12em] text-ouro-luz lg:text-[14px]">
+            A imersão começa em
+          </p>
+          <Countdown />
+        </div>
+      </Reveal>
+    </div>
+  );
+}
+
 export function Hero() {
   return (
     <section className="relative overflow-hidden border-b border-ouro/30 bg-espresso">
@@ -133,21 +168,28 @@ export function Hero() {
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_120%_80%_at_50%_0%,rgb(201_168_63_/_0.13),transparent_65%)]"
       />
 
-      <div className="relative mx-auto grid w-[calc(100%-2rem)] max-w-[340px] gap-x-14 pb-14 pt-8 text-center md:container-eq md:w-auto md:px-8 md:pb-20 md:pt-16 md:text-left lg:grid-cols-[1.02fr_0.98fr] lg:items-start lg:pb-28 lg:pt-28">
+      <div className="relative mx-auto grid w-[calc(100%-2rem)] max-w-[340px] gap-x-14 pb-14 pt-8 text-center md:container-eq md:w-auto md:px-8 md:pb-20 md:pt-16 md:text-left lg:grid-cols-[690px_534px] lg:items-start lg:px-0 lg:pb-28 lg:pt-28">
         {/* Topo: label + título (sempre 3 linhas) */}
         <div className="lg:col-start-1 lg:row-start-1">
-          <Reveal className="hidden md:block">
+          <Reveal className="hidden md:block lg:hidden">
             <SectionLabel tone="dark">Imersão Online e Ao Vivo · 06 e 07 de Outubro</SectionLabel>
           </Reveal>
           <Reveal delay={80}>
             <h1 className="font-display text-[17px] font-bold leading-[1.18] tracking-[-0.02em] text-pergaminho md:mt-7 md:text-[clamp(1.75rem,6.2vw,3rem)] md:leading-[1.12] lg:text-[42px] lg:leading-[1.12] lg:tracking-[-0.02em]">
-              <span className="block whitespace-nowrap md:inline md:whitespace-normal">Por que doar-se demais está afastando</span><span className="hidden md:inline"><br /></span>{" "}
-              <span className="ouro-texto-escuro block whitespace-nowrap md:inline md:whitespace-normal">o respeito na sua relação amorosa</span><span className="hidden md:inline"><br /></span>{" "}
-              <span className="block whitespace-nowrap md:inline md:whitespace-normal">e travando o fluxo do seu dinheiro?</span>
+              <span className="lg:hidden">
+                <span className="block whitespace-nowrap md:inline md:whitespace-normal">Por que doar-se demais está afastando</span><span className="hidden md:inline"><br /></span>{" "}
+                <span className="ouro-texto-escuro block whitespace-nowrap md:inline md:whitespace-normal">o respeito na sua relação amorosa</span><span className="hidden md:inline"><br /></span>{" "}
+                <span className="block whitespace-nowrap md:inline md:whitespace-normal">e travando o fluxo do seu dinheiro?</span>
+              </span>
+              <span className="hidden lg:inline">
+                <span>Por que doar-se demais</span><br />
+                <span className="ouro-texto-escuro">afasta o respeito</span><br />
+                <span>e trava o dinheiro?</span>
+              </span>
             </h1>
           </Reveal>
           <Reveal delay={120}>
-            <p className="mx-auto mt-[14px] max-w-[320px] font-body text-[15px] leading-[1.5] text-pergaminho/85 md:hidden">
+            <p className="mx-auto mt-[14px] max-w-[320px] font-body text-[15px] leading-[1.5] text-pergaminho/85 md:mx-0 md:max-w-[48ch] lg:mt-8 lg:max-w-none lg:text-[20px] lg:leading-[1.6]">
               Desarme a carência de infância que faz você aceitar migalhas no amor e se submeter à
               escassez financeira. E retome o seu lugar de adulto potente.
             </p>
@@ -155,7 +197,7 @@ export function Hero() {
         </div>
 
         {/* Vídeo + subtítulo realocado (menor) */}
-        <Reveal delay={160} className="mt-6 md:mt-7 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:mt-0 lg:self-center">
+        <Reveal delay={160} className="mt-6 md:mt-7 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:mt-0 lg:self-start">
           <HeroVideo />
         </Reveal>
 
@@ -163,6 +205,7 @@ export function Hero() {
         <div className="lg:col-start-1 lg:row-start-2 lg:mt-8">
           <MobilePurchase />
           <DesktopPurchase />
+          <LargeDesktopPurchase />
         </div>
       </div>
       <div aria-hidden="true" className="filete-ouro absolute inset-x-0 bottom-0" />
