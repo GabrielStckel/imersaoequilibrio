@@ -19,40 +19,48 @@ const naoItens = [
 export function ParaQuem() {
   return (
     <section className="bg-pergaminho py-16 lg:py-32">
-      <div className="container-eq grid gap-12 px-5 sm:px-8 lg:grid-cols-[1fr_1fr] lg:gap-20">
-        <Reveal>
-          <SectionLabel>Para quem é esta imersão</SectionLabel>
-          <h2 className="mx-auto mt-6 max-w-[320px] text-balance text-center font-display text-[clamp(1.5rem,5.6vw,2.5rem)] font-semibold leading-[1.18] tracking-[-0.02em] text-tinta md:mx-0 md:max-w-none md:text-left md:text-[2.4rem] md:leading-[1.14] lg:text-[40px] lg:leading-[1.15] lg:tracking-[-0.02em]">
-            Para quem decidiu assumir a própria força.
-          </h2>
-          <p className="texto-justificado mt-6 max-w-md font-body text-[0.95rem] leading-[1.8] text-corpo lg:max-w-[68ch] lg:text-[20px] lg:leading-[1.6]">
-            Este movimento é exclusivo para quem decidiu abandonar o papel de vítima da ingratidão
-            alheia e deseja assumir a responsabilidade pela sua própria força. É para você se:
-          </p>
-        </Reveal>
-
-        <div className="lg:pt-4">
+      <div className="container-eq px-5 sm:px-8 lg:grid lg:grid-rows-[auto_1fr] lg:gap-12">
+        {/* Cabeçalho — desktop: duas colunas */}
+        <div className="grid gap-12 lg:grid-cols-[1fr_1fr] lg:items-start lg:gap-16">
           <Reveal>
-            <div className="rounded-[18px] border border-[#E4DBC6] bg-white px-[18px] py-3.5 shadow-[0_1px_2px_rgba(25,21,16,0.05),0_6px_18px_rgba(25,21,16,0.06)]">
-              <h3 className="mb-2 font-display text-[15px] font-semibold text-tinta lg:text-[24px] lg:leading-[1.3]">
+            <SectionLabel>Para quem é esta imersão</SectionLabel>
+            <h2 className="mx-auto mt-6 max-w-[320px] text-balance text-center font-display text-[clamp(1.5rem,5.6vw,2.5rem)] font-semibold leading-[1.18] tracking-[-0.02em] text-tinta md:mx-0 md:max-w-none md:text-left md:text-[2.4rem] md:leading-[1.14] lg:mt-7 lg:max-w-[16ch] lg:text-[40px] lg:leading-[1.15]">
+              Para quem decidiu assumir a própria força.
+            </h2>
+          </Reveal>
+
+          <Reveal>
+            <div className="filete-ouro mb-5 w-12" aria-hidden="true" />
+            <p className="texto-justificado max-w-md font-body text-[0.95rem] leading-[1.8] text-corpo lg:max-w-none lg:text-[18px] lg:leading-[1.75]">
+              Este movimento é exclusivo para quem decidiu abandonar o papel de vítima da ingratidão
+              alheia e deseja assumir a responsabilidade pela sua própria força.
+            </p>
+          </Reveal>
+        </div>
+
+        {/* Listas — desktop: lado a lado */}
+        <div className="mt-12 lg:mt-0 lg:grid lg:grid-cols-2 lg:items-stretch lg:gap-8 lg:pt-12">
+          <Reveal>
+            <div className="h-full rounded-[18px] border border-[#E4DBC6] bg-white px-[18px] py-3.5 shadow-[0_1px_2px_rgba(25,21,16,0.05),0_6px_18px_rgba(25,21,16,0.06)] lg:p-8">
+              <h3 className="mb-2 font-display text-[15px] font-semibold text-tinta lg:mb-4 lg:text-[19px]">
                 É para você se:
               </h3>
               <ul>
                 {itens.map((t, i) => (
                   <li
                     key={t}
-                    className={`grid grid-cols-[18px_1fr] gap-3 py-2 ${
+                    className={`grid grid-cols-[20px_1fr] items-start gap-3 py-2 lg:py-3 ${
                       i !== itens.length - 1 ? "border-b border-[#E4DBC6]" : ""
                     }`}
                   >
                     <Check
-                      size={16}
+                      size={20}
                       strokeWidth={2}
                       color="#7D5F1C"
                       className="mt-0.5 shrink-0"
                       aria-hidden="true"
                     />
-                    <span className="font-body text-[15px] leading-[1.38] text-corpo text-left lg:text-[17px] lg:leading-[1.6]">
+                    <span className="text-left font-body text-[15px] leading-[1.38] text-corpo lg:text-[17px] lg:leading-[1.6]">
                       {t}
                     </span>
                   </li>
@@ -62,15 +70,15 @@ export function ParaQuem() {
           </Reveal>
 
           <Reveal delay={240}>
-            <div className="mt-6 rounded-[18px] border border-terracota/25 bg-areia px-[18px] py-3.5">
-              <h3 className="font-display text-[15px] font-semibold text-tinta lg:text-[24px] lg:leading-[1.3]">
+            <div className="mt-6 h-full rounded-[18px] border border-terracota/25 bg-areia px-[18px] py-3.5 lg:mt-0 lg:p-8">
+              <h3 className="mb-2 font-display text-[15px] font-semibold text-tinta lg:mb-4 lg:text-[19px]">
                 Esta imersão não é para:
               </h3>
-              <ul className="mt-2 space-y-2">
+              <ul className="space-y-2 lg:space-y-4">
                 {naoItens.map((item) => (
-                  <li key={item} className="grid grid-cols-[18px_1fr] gap-3 font-body text-[15px] leading-[1.38] text-corpo lg:text-[17px] lg:leading-[1.6]">
+                  <li key={item} className="grid grid-cols-[20px_1fr] items-start gap-3 font-body text-[15px] leading-[1.38] text-corpo lg:text-[17px] lg:leading-[1.6]">
                     <X
-                      size={16}
+                      size={20}
                       strokeWidth={2}
                       className="mt-0.5 shrink-0 text-terracota"
                       aria-hidden="true"
