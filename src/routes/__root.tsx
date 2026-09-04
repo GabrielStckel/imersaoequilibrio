@@ -12,6 +12,7 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import poppins700Woff2 from "@fontsource/poppins/files/poppins-latin-700-normal.woff2?url";
+import inter400Woff2 from "@fontsource/inter/files/inter-latin-400-normal.woff2?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { IMERSAO } from "../config/imersao";
 
@@ -90,6 +91,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         rel: "preload",
         href: poppins700Woff2,
+        as: "font",
+        type: "font/woff2",
+        crossOrigin: "anonymous",
+      },
+      {
+        rel: "preload",
+        href: inter400Woff2,
         as: "font",
         type: "font/woff2",
         crossOrigin: "anonymous",
