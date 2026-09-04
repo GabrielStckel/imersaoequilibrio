@@ -26,7 +26,7 @@ export function Metodo() {
       <div className="container-eq px-5 sm:px-8">
         <Reveal>
           <SectionLabel>O MÉTODO DA IMERSÃO</SectionLabel>
-          <div className="mt-6 grid gap-6 lg:grid-cols-[1.1fr_1fr] lg:items-end">
+          <div className="mt-6 grid gap-6 lg:grid-cols-[1.1fr_1fr] lg:items-start">
             <h2 className="mx-auto max-w-[320px] text-balance text-center font-display text-[clamp(1.5rem,5.6vw,2.5rem)] font-semibold leading-[1.18] tracking-[-0.02em] text-tinta md:mx-0 md:max-w-none md:text-left md:text-[2.75rem] md:leading-[1.1] lg:text-[40px] lg:leading-[1.15] lg:tracking-[-0.02em]">
               Dois pilares para{" "}
               <span className="relative inline-block">
@@ -38,7 +38,7 @@ export function Metodo() {
               </span>
               .
             </h2>
-            <p className="texto-justificado font-body text-[0.98rem] leading-[1.8] text-corpo lg:pb-2 lg:text-[20px] lg:leading-[1.6]">
+            <p className="texto-justificado font-body text-[0.98rem] leading-[1.8] text-corpo lg:text-[20px] lg:leading-[1.6]">
               Compreensão e vivência caminham juntas: primeiro você enxerga o padrão com nitidez,
               depois consolida no corpo a nova postura. É essa combinação que transforma insight em
               mudança real.
@@ -49,17 +49,17 @@ export function Metodo() {
         <div className="mt-14 grid gap-5 lg:grid-cols-2 lg:gap-6">
           {pilares.map((p, i) => (
             <Reveal key={p.n} delay={i * 90}>
-              <article className="card-nivel-a group relative flex h-full flex-col overflow-hidden transition-transform duration-300 hover:-translate-y-1 sm:p-9">
+              <article className="card-nivel-a group relative flex h-full flex-col overflow-hidden transition-transform duration-300 hover:-translate-y-1 lg:p-9">
                 <div className="flex items-center gap-3">
                   <span className="marcador-sequencia" aria-label={`Pilar ${p.n}`}>
                     {p.n.padStart(2, "0")}
                   </span>
-                  <span className="font-body text-xs font-semibold uppercase tracking-[0.12em] text-ouro-tinta lg:text-[14px]">
+                  <span className="font-body text-xs font-semibold uppercase tracking-[0.12em] text-ouro-tinta lg:text-[13px]">
                     Pilar · {p.tag}
                   </span>
                 </div>
 
-                <h3 className="relative mt-5 text-balance text-left font-display text-[18px] font-semibold leading-[1.3] text-tinta md:text-[1.4rem] lg:max-w-none lg:text-[24px] lg:leading-[1.3]">
+                <h3 className="relative mt-5 min-h-[62px] text-balance text-left font-display text-[18px] font-semibold leading-[1.3] text-tinta md:text-[1.4rem] lg:max-w-none lg:text-[24px] lg:leading-[1.3]">
                   {p.titulo}
                 </h3>
 
@@ -67,7 +67,7 @@ export function Metodo() {
                   {p.texto}
                 </p>
 
-                <ul className="relative mt-6 space-y-2 border-t border-borda pt-5">
+                <ul className="relative mt-6 space-y-2 border-t border-borda pt-5 lg:mt-auto lg:space-y-3">
                   {p.pontos.map((ponto) => (
                     <li
                       key={ponto}
@@ -87,8 +87,8 @@ export function Metodo() {
         </div>
 
         <Reveal>
-          <div className="mt-12 border-t border-borda pt-8 pb-0">
-            <p className="font-body text-[0.9375rem] leading-relaxed text-corpo sm:max-w-[46ch] lg:text-[18px] lg:leading-[1.75]">
+          <div className="mt-12 border-t border-borda pt-8 pb-0 lg:mt-10">
+            <p className="font-body text-[0.9375rem] leading-relaxed text-corpo sm:max-w-[46ch] lg:mx-auto lg:max-w-none lg:text-center lg:text-[18px] lg:leading-[1.75]">
               Dois encontros ao vivo pelo Zoom, conduzidos do começo ao fim.
             </p>
           </div>
