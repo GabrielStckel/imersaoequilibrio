@@ -24,7 +24,7 @@ export function ParaQuem() {
         <div className="grid gap-12 lg:grid-cols-[1fr_1fr] lg:items-start lg:gap-16">
           <Reveal>
             <SectionLabel>Para quem é esta imersão</SectionLabel>
-            <h2 className="mx-auto mt-6 max-w-[320px] text-balance text-center font-display text-[clamp(1.5rem,5.6vw,2.5rem)] font-semibold leading-[1.18] tracking-[-0.02em] text-tinta md:mx-0 md:max-w-none md:text-left md:text-[2.4rem] md:leading-[1.14] lg:mt-7 lg:max-w-[14ch] lg:text-[40px] lg:leading-[1.15]">
+            <h2 className="mx-auto mt-6 max-w-[320px] text-balance text-center font-display text-[clamp(1.5rem,5.6vw,2.5rem)] font-semibold leading-[1.18] tracking-[-0.02em] text-tinta md:mx-0 md:max-w-none md:text-left md:text-[2.4rem] md:leading-[1.14] lg:mt-7 lg:max-w-[12ch] lg:text-[40px] lg:leading-[1.15] lg:text-wrap lg:text-balance">
               Para quem decidiu assumir a própria força.
             </h2>
           </Reveal>
