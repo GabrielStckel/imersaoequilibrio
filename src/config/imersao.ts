@@ -14,11 +14,13 @@ export const IMERSAO = {
   dataDia2: DATA_DIA_2,
   horario: "19h30 às 21h30",
 
-  // ——— Vídeo do hero (VSL) ———
+  // ——— Vídeo do hero (VTurb) ———
   video: {
-    // Cole a URL de EMBED do seu player (YouTube, Vimeo, Panda, etc).
-    // Ex.: "https://www.youtube.com/embed/abc123". Vazio = mostra o player-placeholder.
-    embedUrl: "",
+    vturb: {
+      contaId: "ac22f9bb-c7ee-4060-9a6e-7ec3b5fa2ff8",
+      playerId: "6a9ab15b1b648a12b9944656",
+      videoId: "6a9ab13b0d0169708604d657",
+    },
     legenda: "Assista antes de garantir sua vaga",
   },
 
