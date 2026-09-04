@@ -10,13 +10,27 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BioRouteImport } from './routes/bio'
+import { Route as DmRouteImport } from './routes/dm'
 import { Route as ObrigadoRouteImport } from './routes/obrigado'
 import { Route as PrivacidadeRouteImport } from './routes/privacidade'
+import { Route as StoryRouteImport } from './routes/story'
 import { Route as TermosRouteImport } from './routes/termos'
+import { Route as WppRouteImport } from './routes/wpp'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BioRoute = BioRouteImport.update({
+  id: '/bio',
+  path: '/bio',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DmRoute = DmRouteImport.update({
+  id: '/dm',
+  path: '/dm',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ObrigadoRoute = ObrigadoRouteImport.update({
@@ -29,44 +43,95 @@ const PrivacidadeRoute = PrivacidadeRouteImport.update({
   path: '/privacidade',
   getParentRoute: () => rootRouteImport,
 } as any)
+const StoryRoute = StoryRouteImport.update({
+  id: '/story',
+  path: '/story',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TermosRoute = TermosRouteImport.update({
   id: '/termos',
   path: '/termos',
   getParentRoute: () => rootRouteImport,
 } as any)
+const WppRoute = WppRouteImport.update({
+  id: '/wpp',
+  path: '/wpp',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/bio': typeof BioRoute
+  '/dm': typeof DmRoute
   '/obrigado': typeof ObrigadoRoute
   '/privacidade': typeof PrivacidadeRoute
+  '/story': typeof StoryRoute
   '/termos': typeof TermosRoute
+  '/wpp': typeof WppRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/bio': typeof BioRoute
+  '/dm': typeof DmRoute
   '/obrigado': typeof ObrigadoRoute
   '/privacidade': typeof PrivacidadeRoute
+  '/story': typeof StoryRoute
   '/termos': typeof TermosRoute
+  '/wpp': typeof WppRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/bio': typeof BioRoute
+  '/dm': typeof DmRoute
   '/obrigado': typeof ObrigadoRoute
   '/privacidade': typeof PrivacidadeRoute
+  '/story': typeof StoryRoute
   '/termos': typeof TermosRoute
+  '/wpp': typeof WppRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/obrigado' | '/privacidade' | '/termos'
+  fullPaths:
+    | '/'
+    | '/bio'
+    | '/dm'
+    | '/obrigado'
+    | '/privacidade'
+    | '/story'
+    | '/termos'
+    | '/wpp'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/obrigado' | '/privacidade' | '/termos'
-  id: '__root__' | '/' | '/obrigado' | '/privacidade' | '/termos'
+  to:
+    | '/'
+    | '/bio'
+    | '/dm'
+    | '/obrigado'
+    | '/privacidade'
+    | '/story'
+    | '/termos'
+    | '/wpp'
+  id:
+    | '__root__'
+    | '/'
+    | '/bio'
+    | '/dm'
+    | '/obrigado'
+    | '/privacidade'
+    | '/story'
+    | '/termos'
+    | '/wpp'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BioRoute: typeof BioRoute
+  DmRoute: typeof DmRoute
   ObrigadoRoute: typeof ObrigadoRoute
   PrivacidadeRoute: typeof PrivacidadeRoute
+  StoryRoute: typeof StoryRoute
   TermosRoute: typeof TermosRoute
+  WppRoute: typeof WppRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -76,6 +141,20 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/bio': {
+      id: '/bio'
+      path: '/bio'
+      fullPath: '/bio'
+      preLoaderRoute: typeof BioRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dm': {
+      id: '/dm'
+      path: '/dm'
+      fullPath: '/dm'
+      preLoaderRoute: typeof DmRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/obrigado': {
@@ -92,6 +171,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PrivacidadeRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/story': {
+      id: '/story'
+      path: '/story'
+      fullPath: '/story'
+      preLoaderRoute: typeof StoryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/termos': {
       id: '/termos'
       path: '/termos'
@@ -99,14 +185,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TermosRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/wpp': {
+      id: '/wpp'
+      path: '/wpp'
+      fullPath: '/wpp'
+      preLoaderRoute: typeof WppRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BioRoute: BioRoute,
+  DmRoute: DmRoute,
   ObrigadoRoute: ObrigadoRoute,
   PrivacidadeRoute: PrivacidadeRoute,
+  StoryRoute: StoryRoute,
   TermosRoute: TermosRoute,
+  WppRoute: WppRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
