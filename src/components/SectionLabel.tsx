@@ -19,7 +19,7 @@ export function SectionLabel({
       <span aria-hidden="true" className="filete-ouro w-10" />
       <span
         className={cn(
-          "font-body text-xs font-semibold uppercase tracking-[0.1em]",
+          "font-body text-xs font-semibold uppercase tracking-[0.1em] lg:text-[13px] lg:tracking-[0.12em]",
           tone === "dark" ? "text-ouro-luz" : "text-ouro-tinta",
         )}
       >

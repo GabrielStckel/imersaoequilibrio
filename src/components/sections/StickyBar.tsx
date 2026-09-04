@@ -54,7 +54,7 @@ export function StickyBar() {
         />
       </div>
 
-      <div className="mx-auto flex max-w-6xl items-center gap-4 px-4 pt-2.5">
+      <div className="container-eq flex items-center gap-4 px-4 pt-2.5">
         <div className="min-w-0 flex-1">
           <p className="font-body text-[9px] font-medium uppercase leading-none tracking-[0.1em] text-ouro-luz">
             {lote.nome} · {pct}% vendido

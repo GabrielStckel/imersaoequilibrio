@@ -13,18 +13,18 @@ export function Autoridade() {
 
   return (
     <section className="bg-areia py-10 lg:py-20">
-      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 px-5 sm:px-8 lg:grid-cols-[42%_58%] lg:gap-12 lg:items-center">
+      <div className="container-eq grid grid-cols-1 gap-6 px-5 sm:px-8 lg:grid-cols-[42%_58%] lg:gap-12 lg:items-center">
         {/* Cabeçalho — mobile primeiro, desktop coluna da direita (linha 1) */}
         <Reveal className="order-1 lg:col-start-2 lg:row-start-1">
           <SectionLabel className="flex-col items-center text-center md:!flex-col lg:!flex-row lg:!items-start lg:!text-left">
             QUEM CONDUZ
           </SectionLabel>
 
-          <h2 className="mt-4 text-center font-display text-[28px] font-bold leading-[1.2] text-tinta lg:mt-5 lg:text-left">
+          <h2 className="mt-4 text-center font-display text-[28px] font-bold leading-[1.2] text-tinta lg:mt-5 lg:text-left lg:text-[40px] lg:leading-[1.15] lg:tracking-[-0.02em]">
             {autoridade.nome}
           </h2>
 
-          <p className="mt-1.5 text-center font-body text-[13px] uppercase tracking-[0.08em] text-ouro-tinta lg:mt-2 lg:text-left">
+          <p className="mt-1.5 text-center font-body text-[13px] uppercase tracking-[0.08em] text-ouro-tinta lg:mt-2 lg:text-left lg:text-[14px]">
             {autoridade.papel}
           </p>
         </Reveal>
@@ -68,7 +68,7 @@ export function Autoridade() {
 
         {/* Biografia — mobile terceiro, desktop coluna da direita (linha 2) */}
         <Reveal delay={160} className="order-3 lg:col-start-2 lg:row-start-2">
-          <div className="space-y-3 font-body text-[15px] leading-[1.6] text-corpo">
+          <div className="space-y-3 font-body text-[15px] leading-[1.6] text-corpo lg:text-[18px] lg:leading-[1.75]">
             {autoridade.bio.map((p) => (
               <p key={p} className="texto-justificado">
                 {p}

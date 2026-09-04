@@ -7,12 +7,12 @@ import { Reveal } from "@/components/Reveal";
 export function CtaFinal() {
   return (
     <footer className="bg-areia">
-      <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 lg:py-32">
+      <div className="container-eq px-5 py-16 sm:px-8 lg:py-32">
         <Reveal>
-          <h2 className="mx-auto max-w-[320px] text-balance text-center font-display text-[clamp(1.5rem,5.6vw,2.5rem)] font-semibold leading-[1.18] tracking-[-0.02em] text-tinta md:mx-0 md:max-w-[18ch] md:text-left md:text-[2.9rem] md:leading-[1.1]">
+          <h2 className="mx-auto max-w-[320px] text-balance text-center font-display text-[clamp(1.5rem,5.6vw,2.5rem)] font-semibold leading-[1.18] tracking-[-0.02em] text-tinta md:mx-0 md:max-w-[18ch] md:text-left md:text-[2.9rem] md:leading-[1.1] lg:max-w-[22ch] lg:text-[40px] lg:leading-[1.15] lg:tracking-[-0.02em]">
             O respeito não se pede. Ele nasce de quem sustenta o próprio limite.
           </h2>
-          <p className="texto-justificado mt-6 max-w-lg font-body text-[0.97rem] leading-[1.8] text-corpo">
+          <p className="texto-justificado mt-6 max-w-lg font-body text-[0.97rem] leading-[1.8] text-corpo lg:text-[20px] lg:leading-[1.6]">
             Dois encontros ao vivo para você sair do lugar de quem se doa demais e assumir a postura
             de adulto potente no amor, no dinheiro e na carreira.
           </p>
@@ -25,7 +25,7 @@ export function CtaFinal() {
           </div>
         </Reveal>
 
-        <div className="mt-20 border-t border-borda pt-8 text-center font-body text-[12px] text-corpo/60">
+        <div className="mt-20 border-t border-borda pt-8 text-center font-body text-[12px] text-corpo/60 lg:text-[14px]">
           <p>
             © 2026 {IMERSAO.marca} · {IMERSAO.nome}
           </p>

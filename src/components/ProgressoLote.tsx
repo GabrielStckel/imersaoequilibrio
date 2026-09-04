@@ -11,7 +11,7 @@ export function ProgressoLote({
   const pct = useProgressoProgramado();
 
   return (
-    <div className={cn("w-full max-w-sm", className)}>
+    <div className={cn("w-full max-w-sm lg:max-w-none", className)}>
       <div
         className="h-[5px] w-full overflow-hidden rounded-full"
         style={{ backgroundColor: tone === "dark" ? "color-mix(in srgb, var(--color-ouro-luz) 18%, transparent)" : "var(--color-borda)" }}
@@ -28,7 +28,7 @@ export function ProgressoLote({
       </div>
       <p
         className={cn(
-          "mt-2.5 font-body text-[0.9375rem]",
+          "mt-2.5 font-body text-[0.9375rem] lg:text-[18px] lg:leading-[1.75]",
           tone === "dark" ? "text-pergaminho/80" : "text-corpo",
         )}
       >

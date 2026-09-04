@@ -20,7 +20,7 @@ export function Cronograma() {
 
   return (
     <section className="bg-areia py-16 lg:py-32">
-      <div className="mx-auto max-w-6xl px-5 sm:px-8">
+      <div className="container-eq px-5 sm:px-8">
         <Reveal>
           <SectionLabel>SUA JORNADA EM 2 ENCONTROS</SectionLabel>
         </Reveal>
@@ -33,15 +33,15 @@ export function Cronograma() {
                   <span className="marcador-sequencia" aria-label={`Encontro ${i + 1}`}>
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <p className="font-body text-xs uppercase tracking-[0.12em] text-ouro-tinta">
+                  <p className="font-body text-xs uppercase tracking-[0.12em] text-ouro-tinta lg:text-[14px]">
                     {d.data} · {IMERSAO.horario}
                   </p>
                 </div>
-                <h3 className="mt-5 text-balance text-left font-display text-[18px] font-semibold leading-[1.3] text-tinta md:text-[1.4rem]">
+                <h3 className="mt-5 text-balance text-left font-display text-[18px] font-semibold leading-[1.3] text-tinta md:text-[1.4rem] lg:text-[24px] lg:leading-[1.3]">
                   {d.titulo}
                 </h3>
                 <div className="filete-ouro my-6 w-full" aria-hidden="true" />
-                <p className="font-body text-[0.9375rem] leading-[1.8] text-corpo">{d.texto}</p>
+                <p className="lg:texto-justificado font-body text-[0.9375rem] leading-[1.8] text-corpo lg:text-[17px] lg:leading-[1.7]">{d.texto}</p>
               </article>
             </Reveal>
           ))}
