@@ -54,7 +54,7 @@ export function Metodo() {
                   <span className="marcador-sequencia" aria-label={`Pilar ${p.n}`}>
                     {p.n.padStart(2, "0")}
                   </span>
-                  <span className="font-body text-xs font-semibold uppercase tracking-[0.12em] text-ouro-tinta">
+                  <span className="font-body text-xs font-semibold uppercase tracking-[0.12em] text-ouro-tinta lg:text-[14px]">
                     Pilar · {p.tag}
                   </span>
                 </div>

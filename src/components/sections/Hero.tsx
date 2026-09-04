@@ -133,7 +133,7 @@ export function Hero() {
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_120%_80%_at_50%_0%,rgb(201_168_63_/_0.13),transparent_65%)]"
       />
 
-      <div className="container-eq relative grid w-[calc(100%-2rem)] max-w-[340px] gap-x-14 pb-14 pt-8 text-center md:w-auto md:max-w-6xl md:px-8 md:pb-20 md:pt-16 md:text-left lg:max-w-[80rem] lg:grid-cols-[1.02fr_0.98fr] lg:items-start lg:pb-28 lg:pt-28">
+      <div className="relative mx-auto grid w-[calc(100%-2rem)] max-w-[340px] gap-x-14 pb-14 pt-8 text-center md:container-eq md:w-auto md:px-8 md:pb-20 md:pt-16 md:text-left lg:grid-cols-[1.02fr_0.98fr] lg:items-start lg:pb-28 lg:pt-28">
         {/* Topo: label + título (sempre 3 linhas) */}
         <div className="lg:col-start-1 lg:row-start-1">
           <Reveal className="hidden md:block">

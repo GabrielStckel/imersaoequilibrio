@@ -54,7 +54,7 @@ export function Autoridade() {
               return (
                 <div
                   key={n.label}
-                  className={`selo-flutuante absolute z-10 lg:px-2.5 lg:py-1.5 lg:text-[11px] ${posicao.classes}`}
+                  className={`selo-flutuante absolute z-10 lg:px-2.5 lg:py-1.5 lg:text-[12px] ${posicao.classes}`}
                 >
                   <span className="font-display font-bold text-ouro-luz">
                     {n.valor}

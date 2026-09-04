@@ -84,7 +84,7 @@ export function Oferta() {
         <Reveal delay={180}>
           <div className="mx-auto mt-9 max-w-[560px] rounded-[22px] border border-ouro/35 bg-espresso-alt px-5 py-[26px]">
             <div className="text-center">
-              <span className="inline-flex items-center gap-2 font-body text-xs font-semibold uppercase tracking-[0.1em] text-ouro-luz">
+              <span className="inline-flex items-center gap-2 font-body text-xs font-semibold uppercase tracking-[0.1em] text-ouro-luz lg:text-[14px]">
                 <span className="relative flex h-1.5 w-1.5">
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-ouro-luz opacity-60" />
                   <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-ouro-luz" />
@@ -147,7 +147,7 @@ export function Oferta() {
                     )}
                   >
                     {ativo && (
-                      <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-terracota-luz px-2 py-1 font-body text-[10px] font-semibold uppercase tracking-[0.08em] text-espresso sm:text-[11px]">
+                      <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-terracota-luz px-2 py-1 font-body text-[10px] font-semibold uppercase tracking-[0.08em] text-espresso sm:text-[11px] lg:text-[12px]">
                         Lote atual
                       </span>
                     )}
