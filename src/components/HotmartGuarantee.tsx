@@ -21,19 +21,23 @@ function ChamaHotmart({ className }: { className?: string }) {
 export function HotmartGuarantee({
   className,
   claroNoDesktop = false,
+  semFilete = false,
 }: {
   className?: string;
   claroNoDesktop?: boolean;
+  semFilete?: boolean;
 }) {
   return (
     <div className={cn("relative flex flex-col items-center gap-1 text-center", className)}>
-      <span
-        aria-hidden="true"
-        className={cn(
-          "absolute inset-x-0 top-0 h-px bg-ouro/25",
-          claroNoDesktop && "lg:bg-borda",
-        )}
-      />
+      {!semFilete && (
+        <span
+          aria-hidden="true"
+          className={cn(
+            "absolute inset-x-0 top-0 h-px bg-ouro/25",
+            claroNoDesktop && "lg:bg-borda",
+          )}
+        />
+      )}
       <div className="flex items-center justify-center gap-2">
         <ChamaHotmart className="h-[22px] w-[22px] shrink-0" />
         <span
