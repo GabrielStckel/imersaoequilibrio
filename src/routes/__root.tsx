@@ -110,10 +110,13 @@ t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
 document,'script','https://connect.facebook.net/en_US/fbevents.js');
 fbq('init','${IMERSAO.metaPixelId}');fbq('track','PageView');`;
 
+const VTURB_PLT_SNIPPET = `!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);`;
+
 function RootShell({ children }: { children: ReactNode }) {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
-  // O pixel só carrega na landing ("/"), nunca em /termos e /privacidade.
+  // Pixel e preloads do VTurb só na landing ("/"), nunca em /termos, /privacidade ou /obrigado.
   const comPixel = Boolean(IMERSAO.metaPixelId) && (pathname === "/" || pathname === "");
+  const { contaId, playerId, videoId } = IMERSAO.video.vturb;
 
   return (
     <html lang="pt-BR">
@@ -125,6 +128,27 @@ function RootShell({ children }: { children: ReactNode }) {
             <link rel="preconnect" href="https://connect.facebook.net" crossOrigin="anonymous" />
             <link rel="dns-prefetch" href="https://connect.facebook.net" />
             <script suppressHydrationWarning dangerouslySetInnerHTML={{ __html: PIXEL_SNIPPET }} />
+            <script suppressHydrationWarning dangerouslySetInnerHTML={{ __html: VTURB_PLT_SNIPPET }} />
+            <link
+              rel="preload"
+              as="script"
+              href={`https://scripts.converteai.net/${contaId}/players/${playerId}/v4/player.js`}
+            />
+            <link
+              rel="preload"
+              as="script"
+              href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js"
+            />
+            <link
+              rel="preload"
+              as="fetch"
+              crossOrigin="anonymous"
+              href={`https://cdn.converteai.net/${contaId}/${videoId}/main.m3u8`}
+            />
+            <link rel="dns-prefetch" href="https://cdn.converteai.net" />
+            <link rel="dns-prefetch" href="https://scripts.converteai.net" />
+            <link rel="dns-prefetch" href="https://images.converteai.net" />
+            <link rel="dns-prefetch" href="https://license.vturb.com" />
           </>
         )}
         <HeadContent />
