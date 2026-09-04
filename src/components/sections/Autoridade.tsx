@@ -13,7 +13,7 @@ export function Autoridade() {
 
   return (
     <section className="bg-areia py-10 lg:py-20">
-      <div className="container-eq grid grid-cols-1 gap-6 px-5 sm:px-8 lg:grid-cols-[42%_58%] lg:gap-12 lg:items-center">
+      <div className="container-eq grid grid-cols-1 gap-6 px-5 sm:px-8 lg:grid-cols-[minmax(0,42fr)_minmax(0,58fr)] lg:gap-12 lg:items-center">
         {/* Cabeçalho — mobile primeiro, desktop coluna da direita (linha 1) */}
         <Reveal className="order-1 lg:col-start-2 lg:row-start-1">
           <SectionLabel className="flex-col items-center text-center md:!flex-col lg:!flex-row lg:!items-start lg:!text-left">
