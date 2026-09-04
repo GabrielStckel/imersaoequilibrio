@@ -10,38 +10,39 @@ import { Reveal } from "@/components/Reveal";
 import { useLoteAtivo } from "@/hooks/useLoteAtivo";
 
 function HeroVideo() {
-  const { embedUrl, legenda } = IMERSAO.video;
+  const { vturb } = IMERSAO.video;
+  const elementoId = `vid-${vturb.playerId}`;
+  const scriptSrc = `https://scripts.converteai.net/${vturb.contaId}/players/${vturb.playerId}/v4/player.js`;
+
+  useEffect(() => {
+    // Trava: em StrictMode o React monta duas vezes; sem isso o custom
+    // element é registrado em duplicidade e o player não inicializa.
+    if (document.querySelector(`script[src="${scriptSrc}"]`)) return;
+    const s = document.createElement("script");
+    s.src = scriptSrc;
+    s.async = true;
+    document.head.appendChild(s);
+  }, [scriptSrc]);
 
   return (
     <div>
-      <div className="moldura-ouro-escura relative aspect-video w-full overflow-hidden rounded-card bg-espresso-alt/60 shadow-soft">
-        {embedUrl ? (
-          <iframe
-            src={embedUrl}
-            title={legenda}
-            className="absolute inset-0 h-full w-full"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
+      <div className="moldura-ouro-escura relative w-full overflow-hidden rounded-card bg-espresso-alt/60 shadow-soft">
+        <vturb-smartplayer
+          id={elementoId}
+          style={{ display: "block", margin: "0 auto", width: "100%" }}
+        >
+          <div
+            className="vturb-player-placeholder"
+            style={{
+              position: "relative",
+              width: "100%",
+              padding: "56.25% 0 0",
+              zIndex: 0,
+              backgroundColor: "black",
+            }}
           />
-        ) : (
-          <img
-            src={IMERSAO.autoridade.foto}
-            alt={`Retrato de ${IMERSAO.autoridade.nome}`}
-            width={1000}
-            height={1000}
-            fetchPriority="high"
-            loading="eager"
-            decoding="async"
-            className="absolute inset-0 h-full w-full object-cover"
-          />
-        )}
+        </vturb-smartplayer>
       </div>
-
-      {!embedUrl && (
-        <p className="mt-3 hidden font-body text-xs uppercase tracking-[0.12em] text-ouro-luz md:block">
-          {legenda}
-        </p>
-      )}
 
       <p className="mt-5 hidden max-w-[48ch] font-body text-base leading-[1.65] text-pergaminho/80 md:block">
         Desarme a carência de infância que faz você aceitar migalhas no amor e se submeter à
