@@ -40,13 +40,12 @@ export function Diagnostico() {
               <h2 className="mx-auto mt-8 max-w-[320px] text-balance text-center font-display text-[clamp(1.5rem,5.6vw,2.5rem)] font-semibold leading-[1.18] tracking-[-0.02em] text-tinta md:mx-0 md:max-w-none md:text-left md:text-[3.25rem] md:leading-[1.08] lg:text-[40px] lg:leading-[1.15] lg:tracking-[-0.02em]">
                 A vida não funciona{" "}
                 <span className="relative inline-block lg:block lg:w-fit">
-                  em gavetas
+                  em gavetas.
                   <span
                     aria-hidden
                     className="filete-ouro absolute inset-x-[-0.15em] -bottom-[0.12em]"
                   />
                 </span>
-                .
               </h2>
             </div>
 
