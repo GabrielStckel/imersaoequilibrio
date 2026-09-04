@@ -18,18 +18,47 @@ function ChamaHotmart({ className }: { className?: string }) {
   );
 }
 
-export function HotmartGuarantee({ className }: { className?: string }) {
+export function HotmartGuarantee({
+  className,
+  claroNoDesktop = false,
+}: {
+  className?: string;
+  claroNoDesktop?: boolean;
+}) {
   return (
     <div className={cn("relative flex flex-col items-center gap-1 text-center", className)}>
-      <span aria-hidden="true" className="absolute inset-x-0 top-0 h-px bg-ouro/25" />
+      <span
+        aria-hidden="true"
+        className={cn(
+          "absolute inset-x-0 top-0 h-px bg-ouro/25",
+          claroNoDesktop && "lg:bg-borda",
+        )}
+      />
       <div className="flex items-center justify-center gap-2">
         <ChamaHotmart className="h-[22px] w-[22px] shrink-0" />
-        <span className="font-display text-[15px] font-semibold text-pergaminho">Hotmart</span>
+        <span
+          className={cn(
+            "font-display text-[15px] font-semibold text-pergaminho",
+            claroNoDesktop && "lg:text-tinta",
+          )}
+        >
+          Hotmart
+        </span>
       </div>
-      <p className="font-body text-[13px] font-medium text-pergaminho/85 lg:text-[14px]">
+      <p
+        className={cn(
+          "font-body text-[13px] font-medium text-pergaminho/85 lg:text-[14px]",
+          claroNoDesktop && "lg:text-tinta",
+        )}
+      >
         Pagamento Seguro
       </p>
-      <p className="font-body text-[12px] font-normal text-pergaminho/70 lg:text-[14px]">
+      <p
+        className={cn(
+          "font-body text-[12px] font-normal text-pergaminho/70 lg:text-[14px]",
+          claroNoDesktop && "lg:text-corpo",
+        )}
+      >
         Garantia incondicional de 7 dias
       </p>
     </div>

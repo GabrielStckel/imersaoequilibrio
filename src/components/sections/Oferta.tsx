@@ -244,7 +244,7 @@ export function Oferta() {
               <ProgressoLote tone="dark" className="mx-auto mt-5 max-w-none lg:hidden" />
               <ProgressoLote tone="light" className="mx-auto mt-5 hidden max-w-none lg:block" />
 
-              <HotmartGuarantee className="mt-5 pt-5" />
+              <HotmartGuarantee className="mt-5 pt-5" claroNoDesktop />
             </div>
           </Reveal>
         </div>
