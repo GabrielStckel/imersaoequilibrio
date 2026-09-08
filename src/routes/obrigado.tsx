@@ -86,6 +86,23 @@ function IconeCheck({ className }: { className?: string }) {
   );
 }
 
+function BotaoGrupo() {
+  return (
+    <div className="text-center">
+      <a
+        href={WHATSAPP_GRUPO_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`botao-ouro-metal inline-flex min-h-12 items-center justify-center gap-3 rounded-full px-8 py-3 font-display text-base font-semibold text-espresso ${FOCO}`}
+      >
+        <IconeWhatsApp className="relative z-10 h-5 w-5" />
+        <span className="relative z-10">Entrar no grupo do WhatsApp</span>
+      </a>
+      <p className="mt-3 text-[13px] text-corpo">Leva menos de 10 segundos.</p>
+    </div>
+  );
+}
+
 function ObrigadoPage() {
   return (
     <div className="min-h-screen bg-pergaminho font-body text-tinta">
@@ -100,14 +117,14 @@ function ObrigadoPage() {
         }
       `}</style>
 
-      {/* 1 — Faixa espresso */}
+      {/* Faixa espresso */}
       <div className="flex h-10 items-center justify-center bg-espresso px-4">
         <p className="text-center text-[12px] font-medium tracking-wide text-pergaminho/90">
           Inscrição confirmada — Imersão {IMERSAO.nome}
         </p>
       </div>
 
-      {/* 2 — Header: apenas logo, sem link */}
+      {/* Header: apenas logo, sem link */}
       <header className="border-b border-borda bg-pergaminho">
         <div className="mx-auto flex h-16 max-w-3xl items-center justify-center px-4">
           <img
@@ -123,13 +140,16 @@ function ObrigadoPage() {
       </header>
 
       <main className="obrigado-fade mx-auto max-w-3xl px-4">
-        {/* 3 — Selo + H1 */}
-        <section className="py-14 text-center md:py-20">
+        {/* 1 — Bloco de confirmação */}
+        <section aria-labelledby="confirmacao" className="py-14 text-center md:py-20">
           <span className="inline-flex items-center gap-2 rounded-full border border-ouro/40 bg-areia px-4 py-2 text-[12px] font-semibold tracking-[0.14em] text-ouro-tinta uppercase">
             <IconeCheck className="h-4 w-4" />
             Pagamento confirmado
           </span>
-          <h1 className="mt-6 font-display text-3xl font-semibold text-tinta md:text-[40px] md:leading-[1.15]">
+          <h1
+            id="confirmacao"
+            className="mt-6 font-display text-3xl font-semibold text-tinta md:text-[40px] md:leading-[1.15]"
+          >
             Pagamento confirmado.
             <br />
             <span className="ouro-texto">Falta um passo.</span>
@@ -140,11 +160,25 @@ function ObrigadoPage() {
           </p>
         </section>
 
+        {/* 2 — Vídeo (container com 16/9 reservado antes de o player montar) */}
+        <section aria-label="Recado em vídeo" className="pb-14 md:pb-20">
+          <div className="card-nivel-a flex aspect-video items-center justify-center bg-areia">
+            {/* VTURB */}
+            <p className="text-sm text-corpo">
+              Em breve: um recado em vídeo do Jonas para você.
+            </p>
+          </div>
+        </section>
+
+        {/* 3 — Botão do WhatsApp */}
+        <div className="pb-14 md:pb-20">
+          <BotaoGrupo />
+        </div>
+
+        <div className="filete-ouro" aria-hidden="true" />
+
         {/* 4 — Card de 3 passos */}
-        <section aria-labelledby="passos" className="pb-14 md:pb-20">
-          <h2 id="passos" className="sr-only">
-            Próximos passos
-          </h2>
+        <section aria-label="Próximos passos" className="py-14 md:py-20">
           <ol className="card-nivel-b space-y-6">
             {PASSOS.map((passo, i) => (
               <li
@@ -167,63 +201,16 @@ function ObrigadoPage() {
               </li>
             ))}
           </ol>
-
-          {/* 5 — Botão primário WhatsApp */}
-          <div className="mt-8 text-center">
-            <a
-              href={WHATSAPP_GRUPO_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`botao-ouro-metal inline-flex min-h-12 items-center justify-center gap-3 rounded-full px-8 py-3 font-display text-base font-semibold text-espresso ${FOCO}`}
-            >
-              <IconeWhatsApp className="relative z-10 h-5 w-5" />
-              <span className="relative z-10">Entrar no grupo do WhatsApp</span>
-            </a>
-            <p className="mt-3 text-[13px] text-corpo">
-              Leva menos de 10 segundos.
-            </p>
-          </div>
         </section>
+
+        {/* 5 — Botão do WhatsApp */}
+        <div className="pb-14 md:pb-20">
+          <BotaoGrupo />
+        </div>
 
         <div className="filete-ouro" aria-hidden="true" />
 
-        {/* 6 — Vídeo (embed futuro) */}
-        <section className="py-14 md:py-20">
-          <div className="card-nivel-a flex aspect-video items-center justify-center bg-areia">
-            {/* VTURB */}
-            <p className="text-sm text-corpo">
-              Em breve: um recado em vídeo do Jonas para você.
-            </p>
-          </div>
-        </section>
-
-        <div className="filete-ouro" aria-hidden="true" />
-
-        {/* 7 — O que é enviado só no grupo */}
-        <section aria-labelledby="so-no-grupo" className="py-14 md:py-20">
-          <h2
-            id="so-no-grupo"
-            className="text-center font-display text-2xl font-semibold text-tinta md:text-3xl"
-          >
-            O que é enviado <span className="ouro-texto">só no grupo</span>
-          </h2>
-          <ul className="card-nivel-a mt-8 space-y-4">
-            {CONTEUDOS_GRUPO.map((item) => (
-              <li key={item} className="flex items-start gap-3">
-                <span className="icone-card mt-0.5 h-8 w-8 rounded-lg">
-                  <IconeCheck className="h-4 w-4" />
-                </span>
-                <span className="text-[15px] leading-relaxed text-corpo">
-                  {item}
-                </span>
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        <div className="filete-ouro" aria-hidden="true" />
-
-        {/* 8 — Detalhes do encontro */}
+        {/* 6 — Detalhes do encontro */}
         <section aria-labelledby="detalhes" className="py-14 md:py-20">
           <h2
             id="detalhes"
@@ -261,6 +248,33 @@ function ObrigadoPage() {
 
         <div className="filete-ouro" aria-hidden="true" />
 
+        {/* 7 — O que é enviado só no grupo */}
+        <section aria-labelledby="so-no-grupo" className="py-14 md:py-20">
+          <h2
+            id="so-no-grupo"
+            className="text-center font-display text-2xl font-semibold text-tinta md:text-3xl"
+          >
+            O que é enviado <span className="ouro-texto">só no grupo</span>
+          </h2>
+          <ul className="mx-auto mt-8 max-w-[560px] space-y-3.5">
+            {CONTEUDOS_GRUPO.map((item) => (
+              <li key={item} className="flex items-start gap-3">
+                <IconeCheck className="mt-0.5 h-[18px] w-[18px] shrink-0 text-ouro-tinta" />
+                <span className="text-[15px] leading-relaxed text-corpo">
+                  {item}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        {/* 8 — Botão do WhatsApp */}
+        <div className="pb-14 md:pb-20">
+          <BotaoGrupo />
+        </div>
+
+        <div className="filete-ouro" aria-hidden="true" />
+
         {/* 9 — E-mail e suporte */}
         <section aria-labelledby="suporte" className="py-14 text-center md:py-20">
           <h2
@@ -294,7 +308,7 @@ function ObrigadoPage() {
         </section>
       </main>
 
-      {/* 10 — Rodapé espresso */}
+      {/* Rodapé espresso */}
       <footer className="bg-espresso px-4 py-10 text-center">
         <img
           src="/logo-equilibrio.webp"
