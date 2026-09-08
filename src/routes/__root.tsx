@@ -124,7 +124,9 @@ function RootShell({ children }: { children: ReactNode }) {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   // Pixel e preloads do VTurb só na landing ("/"), nunca em /termos, /privacidade ou /obrigado.
   const comPixel = Boolean(IMERSAO.metaPixelId) && (pathname === "/" || pathname === "");
-  const { contaId, playerId, videoId } = IMERSAO.video.vturb;
+  // Preloads do VTurb da página de obrigado (player diferente do hero).
+  const comVturbObrigado = pathname === "/obrigado";
+  const { contaId } = IMERSAO.video.vturb;
 
   return (
     <html lang="pt-BR">
