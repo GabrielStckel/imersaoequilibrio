@@ -3,8 +3,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { IMERSAO } from "@/config/imersao";
 import {
   WHATSAPP_GRUPO_URL,
-  WHATSAPP_SUPORTE_URL,
-  EMAIL_SUPORTE,
+  // WHATSAPP_SUPORTE_URL,
+  // EMAIL_SUPORTE,
 } from "@/config/obrigado";
 
 export const Route = createFileRoute("/obrigado")({
@@ -306,7 +306,8 @@ function ObrigadoPage() {
 
         <div className="filete-ouro" aria-hidden="true" />
 
-        {/* 9 — E-mail e suporte */}
+        {/* 9 — E-mail e suporte (oculto temporariamente) */}
+        {/*
         <section aria-labelledby="suporte" className="py-14 text-center md:py-20">
           <h2
             id="suporte"
@@ -337,6 +338,7 @@ function ObrigadoPage() {
             </a>
           </div>
         </section>
+        */}
       </main>
 
       {/* Rodapé espresso */}
