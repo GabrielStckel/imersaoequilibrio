@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { IMERSAO } from "@/config/imersao";
 import {
@@ -86,6 +87,39 @@ function IconeCheck({ className }: { className?: string }) {
   );
 }
 
+const VTURB_SRC =
+  "https://scripts.converteai.net/ac22f9bb-c7ee-4060-9a6e-7ec3b5fa2ff8/players/6aa010e85c371440402918eb/v4/player.js";
+
+function VideoRecado() {
+  // Sem cleanup: o player registra um custom element; reinjetar o script
+  // quebraria com "already defined". A guarda por src cobre o StrictMode.
+  useEffect(() => {
+    if (document.querySelector(`script[src="${VTURB_SRC}"]`)) return;
+    const s = document.createElement("script");
+    s.src = VTURB_SRC;
+    s.async = true;
+    document.head.appendChild(s);
+  }, []);
+
+  return (
+    <vturb-smartplayer
+      id="vid-6aa010e85c371440402918eb"
+      style={{ display: "block", margin: "0 auto", width: "100%" }}
+    >
+      <div
+        className="vturb-player-placeholder"
+        style={{
+          position: "relative",
+          width: "100%",
+          padding: "56.25% 0 0",
+          zIndex: 0,
+          backgroundColor: "black",
+        }}
+      />
+    </vturb-smartplayer>
+  );
+}
+
 function BotaoGrupo() {
   return (
     <div className="text-center">
@@ -93,10 +127,10 @@ function BotaoGrupo() {
         href={WHATSAPP_GRUPO_URL}
         target="_blank"
         rel="noopener noreferrer"
-        className={`botao-ouro-metal inline-flex min-h-12 items-center justify-center gap-3 rounded-full px-8 py-3 font-display text-base font-semibold text-espresso ${FOCO}`}
+        className="inline-flex min-h-14 items-center justify-center gap-3 rounded-full border border-[#17A94F] bg-[#25D366] px-8 py-3 font-display text-[17px] font-semibold text-[#0B2A14] shadow-[0_6px_18px_rgba(11,42,20,0.18)] transition-[background-color,transform] duration-160 hover:-translate-y-px hover:bg-[#1FC25C] active:bg-[#1AAF52] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0B2A14]"
       >
-        <IconeWhatsApp className="relative z-10 h-5 w-5" />
-        <span className="relative z-10">Entrar no grupo do WhatsApp</span>
+        <IconeWhatsApp className="h-[22px] w-[22px]" />
+        <span>Entrar no grupo do WhatsApp</span>
       </a>
       <p className="mt-3 text-[13px] text-corpo">Leva menos de 10 segundos.</p>
     </div>
@@ -162,11 +196,8 @@ function ObrigadoPage() {
 
         {/* 2 — Vídeo (container com 16/9 reservado antes de o player montar) */}
         <section aria-label="Recado em vídeo" className="pb-14 md:pb-20">
-          <div className="card-nivel-a flex aspect-video items-center justify-center bg-areia">
-            {/* VTURB */}
-            <p className="text-sm text-corpo">
-              Em breve: um recado em vídeo do Jonas para você.
-            </p>
+          <div className="card-nivel-a aspect-video overflow-hidden">
+            <VideoRecado />
           </div>
         </section>
 
