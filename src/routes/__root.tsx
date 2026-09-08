@@ -145,6 +145,31 @@ function RootShell({ children }: { children: ReactNode }) {
             <link rel="dns-prefetch" href="https://license.vturb.com" />
           </>
         )}
+        {comVturbObrigado && (
+          <>
+            <script suppressHydrationWarning dangerouslySetInnerHTML={{ __html: VTURB_PLT_SNIPPET }} />
+            <link
+              rel="preload"
+              as="script"
+              href={`https://scripts.converteai.net/${contaId}/players/6aa010e85c371440402918eb/v4/player.js`}
+            />
+            <link
+              rel="preload"
+              as="script"
+              href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js"
+            />
+            <link
+              rel="preload"
+              as="fetch"
+              crossOrigin="anonymous"
+              href={`https://cdn.converteai.net/${contaId}/6aa010e06da0a5d652a3410c/main.m3u8`}
+            />
+            <link rel="dns-prefetch" href="https://cdn.converteai.net" />
+            <link rel="dns-prefetch" href="https://scripts.converteai.net" />
+            <link rel="dns-prefetch" href="https://images.converteai.net" />
+            <link rel="dns-prefetch" href="https://license.vturb.com" />
+          </>
+        )}
         <HeadContent />
       </head>
       <body>
