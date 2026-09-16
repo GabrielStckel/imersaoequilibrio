@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { CtaButton } from "@/components/CtaButton";
 import { IMERSAO } from "@/config/imersao";
 import { useLoteAtivo } from "@/hooks/useLoteAtivo";
-import { useProgressoProgramado } from "@/hooks/useProgressoProgramado";
+
 import { cn } from "@/lib/utils";
 
 export function StickyBar() {

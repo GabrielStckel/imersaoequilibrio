@@ -14,7 +14,7 @@ const MARQUEE_CSS = `
 
 function Faixa({ ocultar = false }: { ocultar?: boolean }) {
   const { lote } = useLoteAtivo();
-  const pct = useProgressoProgramado();
+  
   const d1 = IMERSAO.dataDia1.slice(0, 5);
   const d2 = IMERSAO.dataDia2.slice(0, 5);
   const hora = IMERSAO.horario.split(" ")[0];
