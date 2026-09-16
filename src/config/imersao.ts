@@ -5,7 +5,7 @@ const DATA_DIA_1 = "06/10/2026";
 const DATA_DIA_2 = "07/10/2026";
 
 export const IMERSAO = {
-  loteAtual: 1, // 0 = 1º lote, 1 = 2º lote, 2 = 3º lote. Troque à mão.
+  loteAtual: 0, // 0 = 1º lote, 1 = 2º lote, 2 = 3º lote. Troque à mão.
 
   nome: "Equilíbrio Sistêmico",
   marca: "Antiparadigma",
