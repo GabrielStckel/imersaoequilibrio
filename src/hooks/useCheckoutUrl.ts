@@ -6,7 +6,7 @@ import { useLoteAtivo } from "@/hooks/useLoteAtivo";
 export function useCheckoutUrl() {
   const { lote } = useLoteAtivo();
   const base = lote.checkout || IMERSAO.lotes[0].checkout;
-  const [url, setUrl] = useState(base);
+  const [url, setUrl] = useState<string>(base);
 
   useEffect(() => {
     setUrl(buildCheckoutUrl(base));
