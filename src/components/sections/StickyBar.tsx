@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 
 export function StickyBar() {
   const { lote } = useLoteAtivo();
-  const pct = useProgressoProgramado();
+  
   const [aposRolagem, setAposRolagem] = useState(false);
   const [ofertaVisivel, setOfertaVisivel] = useState(false);
 
