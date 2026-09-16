@@ -5,6 +5,8 @@ const DATA_DIA_1 = "06/10/2026";
 const DATA_DIA_2 = "07/10/2026";
 
 export const IMERSAO = {
+  loteAtual: 0, // 0 = 1º lote, 1 = 2º lote, 2 = 3º lote. Troque à mão.
+
   nome: "Equilíbrio Sistêmico",
   marca: "Antiparadigma",
 
@@ -24,14 +26,6 @@ export const IMERSAO = {
     legenda: "Assista antes de garantir sua vaga",
   },
 
-  // ——— Barra de progresso programada por data ———
-  progresso: {
-    aberturaVendas: "2026-09-05T09:00:00-03:00",
-    percentInicial: 22,
-    percentAlvo: 96,
-    curva: "easeOut" as "linear" | "easeOut",
-  },
-
   // ——— Lotes ———
   valorCheio: "R$ 797",
   lotes: [
@@ -39,21 +33,18 @@ export const IMERSAO = {
       nome: "1º Lote",
       preco: "R$ 47",
       parcela: "ou 5x de R$ 9,68",
-      ateData: "2026-09-20T23:59:00-03:00",
       checkout: "https://pay.hotmart.com/R107409111D?off=19cnl1jc&checkoutMode=10",
     },
     {
       nome: "2º Lote",
       preco: "R$ 97",
       parcela: "ou 5x de R$ 19,97",
-      ateData: "2026-09-30T23:59:00-03:00",
       checkout: "",
     },
     {
       nome: "3º Lote",
       preco: "R$ 147",
       parcela: "ou 5x de R$ 30,26",
-      ateData: "2026-10-06T19:00:00-03:00",
       checkout: "",
     },
   ],

@@ -3,7 +3,6 @@ import { IMERSAO } from "@/config/imersao";
 import { SectionLabel } from "@/components/SectionLabel";
 import { Reveal } from "@/components/Reveal";
 import { CtaButton } from "@/components/CtaButton";
-import { ProgressoLote } from "@/components/ProgressoLote";
 import { HotmartGuarantee } from "@/components/HotmartGuarantee";
 import { useLoteAtivo } from "@/hooks/useLoteAtivo";
 import { cn } from "@/lib/utils";
@@ -133,7 +132,7 @@ export function Oferta() {
                 <p className="mx-auto mt-2.5 max-w-[38ch] font-body text-[15px] leading-[1.4] text-pergaminho/80 sm:mt-4 sm:leading-[1.55] lg:max-w-none lg:text-[18px] lg:leading-[1.75] lg:text-corpo">
                   Para que mais pessoas possam viver essa experiência,{" "}
                   <b className="font-medium italic text-ouro-luz lg:text-ouro-tinta">
-                    o primeiro lote tem valor especial.
+                    o {loteAtivo.nome} tem valor especial.
                   </b>
                 </p>
                 <p className="mt-3 font-body text-base text-pergaminho/85 sm:mt-4 lg:text-[18px] lg:leading-[1.75] lg:text-tinta">
@@ -241,8 +240,6 @@ export function Oferta() {
                 surface="light"
                 className="mt-4 hidden w-full sm:mt-5 lg:inline-flex"
               />
-              <ProgressoLote tone="dark" className="mx-auto mt-5 max-w-none lg:hidden" />
-              <ProgressoLote tone="light" className="mx-auto mt-5 hidden max-w-none lg:block" />
 
               <HotmartGuarantee className="mt-5 pt-5" claroNoDesktop />
             </div>

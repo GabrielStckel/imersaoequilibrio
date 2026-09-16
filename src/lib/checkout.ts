@@ -15,8 +15,9 @@ const PARAMS_RASTREAMENTO = [
  * Monta a URL final do checkout Hotmart, anexando apenas os parâmetros
  * de rastreamento presentes na URL atual. Sem parâmetros, retorna a base.
  */
-export function buildCheckoutUrl(): string {
-  if (typeof window === "undefined") return CHECKOUT_BASE;
+export function buildCheckoutUrl(base: string = CHECKOUT_BASE): string {
+  const url = base || CHECKOUT_BASE;
+  if (typeof window === "undefined") return url;
 
   const atuais = new URLSearchParams(window.location.search);
   const capturados = new URLSearchParams();
@@ -26,5 +27,6 @@ export function buildCheckoutUrl(): string {
   }
 
   const extras = capturados.toString();
-  return extras ? `${CHECKOUT_BASE}&${extras}` : CHECKOUT_BASE;
+  if (!extras) return url;
+  return `${url}${url.includes("?") ? "&" : "?"}${extras}`;
 }

@@ -2,7 +2,6 @@ import { useEffect, useRef } from "react";
 import { Calendar } from "lucide-react";
 import { IMERSAO } from "@/config/imersao";
 import { Countdown } from "@/components/Countdown";
-import { ProgressoLote } from "@/components/ProgressoLote";
 import { PrecoLote } from "@/components/PrecoLote";
 import { CtaButton } from "@/components/CtaButton";
 import { HotmartGuarantee } from "@/components/HotmartGuarantee";
@@ -136,10 +135,6 @@ function MobilePurchase() {
         </div>
       </Reveal>
 
-      <Reveal delay={240}>
-        <ProgressoLote className="mx-auto mt-5 text-center" />
-      </Reveal>
-
       <Reveal delay={280}>
         <div className="relative mt-6 pt-6">
           <span aria-hidden="true" className="filete-ouro absolute inset-x-0 top-0" />
@@ -158,9 +153,6 @@ function DesktopPurchase() {
     <div className="hidden md:block lg:hidden">
       <Reveal delay={200}>
         <Countdown />
-      </Reveal>
-      <Reveal delay={240}>
-        <ProgressoLote className="mt-6" />
       </Reveal>
       <Reveal delay={280}>
         <div className="relative mt-7 pt-7">
@@ -184,9 +176,6 @@ function LargeDesktopPurchase() {
         <div className="mt-5 flex justify-center">
           <HotmartGuarantee semFilete />
         </div>
-      </Reveal>
-      <Reveal delay={280}>
-        <ProgressoLote className="mt-6 w-full text-center [&>p]:text-center [&>p]:lg:text-[15px] [&>p]:lg:leading-[1.6]" />
       </Reveal>
       <Reveal delay={320}>
         <div className="relative mt-6 pt-6">
