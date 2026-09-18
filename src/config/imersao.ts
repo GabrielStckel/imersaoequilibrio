@@ -26,6 +26,15 @@ export const IMERSAO = {
     legenda: "Assista antes de garantir sua vaga",
   },
 
+  // ——— Porcentagem programada (independente da troca manual de lote) ———
+  progresso: {
+    aberturaVendas: "2026-09-05T09:00:00-03:00",
+    dataLimite: "2026-10-06T17:00:00-03:00",
+    percentInicial: 22,
+    percentAlvo: 99,
+    curva: "easeOut" as "linear" | "easeOut",
+  },
+
   // ——— Lotes ———
   valorCheio: "R$ 797",
   lotes: [
