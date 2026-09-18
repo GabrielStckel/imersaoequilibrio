@@ -3,6 +3,7 @@ import { IMERSAO } from "@/config/imersao";
 import { SectionLabel } from "@/components/SectionLabel";
 import { Reveal } from "@/components/Reveal";
 import { CtaButton } from "@/components/CtaButton";
+import { ProgressoLote } from "@/components/ProgressoLote";
 import { HotmartGuarantee } from "@/components/HotmartGuarantee";
 import { useLoteAtivo } from "@/hooks/useLoteAtivo";
 import { cn } from "@/lib/utils";
@@ -240,6 +241,8 @@ export function Oferta() {
                 surface="light"
                 className="mt-4 hidden w-full sm:mt-5 lg:inline-flex"
               />
+              <ProgressoLote tone="dark" className="mx-auto mt-5 max-w-none lg:hidden" />
+              <ProgressoLote tone="light" className="mx-auto mt-5 hidden max-w-none lg:block" />
 
               <HotmartGuarantee className="mt-5 pt-5" claroNoDesktop />
             </div>
